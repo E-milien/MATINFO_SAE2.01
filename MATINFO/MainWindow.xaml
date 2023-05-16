@@ -6,7 +6,56 @@
         xmlns:local="clr-namespace:MATINFO"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="9*"/>
+        </Grid.RowDefinitions>
 
+        <!-- En-tête -->
+        <Border Background="#333" Grid.Row="0" Padding="10">
+            <TextBlock Text="MATINFO - Gestion des attributions de matériel" FontSize="22" Foreground="White" Margin="0,-3,0,-2"/>
+        </Border>
+
+        <!-- Contenu principal -->
+        <Grid Grid.Row="1" Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="6*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Liste des référentiels -->
+            <StackPanel Grid.Column="0" Margin="0,0,10,0">
+                <TextBlock Text="Menu" FontSize="24" FontWeight="Bold"/>
+                <Button x:Name="btCategoriM" Content="Catégorie de Matériel" Click="btCategorie_Click" Margin="0,0,0,0" Height="50" BorderBrush="#FF707070"/>
+                <Button x:Name="btMat" Content="Matériel" Click="btMat_Click" Margin="0,5,0,0" Height="50" BorderBrush="#FF707070"/>
+                <Button x:Name="btPersonnel" Content="Personnel" Click="btPersonnel_Click" Margin="0,5,0,0" Height="50" BorderBrush="#FF707070"/>
+                <Button x:Name="btAttribution" Content="Attribution" Click="btAttribution_Click" Margin="0,5,0,0" Height="50" BorderBrush="#FF707070"/>
+            </StackPanel>
+
+            <!-- Liste des attributions -->
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="29.96"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <!-- Barre de recherche et bouton PlaceholderText="Rechercher..."-->
+                <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0 0 0 10">
+                    <Button Content="Afficher tout" Width="100"/>
+                </StackPanel>
+
+                <!-- Liste des attributions -->
+                <ListView Grid.Row="1">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Matériel" Width="150"/>
+                            <GridViewColumn Header="Personnel" Width="150"/>
+                            <GridViewColumn Header="Date d'attribution" Width="150"/>
+                            <GridViewColumn Header="Commentaire" Width="150"/>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </Grid>
+        </Grid>
     </Grid>
 </Window>
