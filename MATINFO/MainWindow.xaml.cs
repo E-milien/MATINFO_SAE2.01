@@ -20,9 +20,39 @@ namespace MATINFO
     /// </summary>
     public partial class MainWindow : Window
     {
+        Referenciel categorie = new Referenciel();
+        Referenciel materiel = new Referenciel();
+        Referenciel personnel = new Referenciel();
+        Referenciel attirbution = new Referenciel();
+
         public MainWindow()
         {
             InitializeComponent();
         }
+        private void btCategorie_Click(object sender, RoutedEventArgs e)
+        {
+            categorie.txTitre.Text = "Categories";
+            categorie.ShowDialog();
+        }
+
+        private void btMat_Click(object sender, RoutedEventArgs e)
+        {
+            materiel.txTitre.Text = "Materiels";
+            materiel.ShowDialog();
+        }
+
+        private void btPersonnel_Click(object sender, RoutedEventArgs e)
+        {
+            personnel.txTitre.Text = "Personnel";
+            personnel.ShowDialog();
+        }
+
+        private void btAttribution_Click(object sender, RoutedEventArgs e)
+        {
+            attirbution.txTitre.Text = "Attribution";
+            attirbution.ShowDialog();
+        }
+
+        
     }
 }

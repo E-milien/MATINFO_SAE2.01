@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:MATINFO"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid.RowDefinitions>
+    <Grid>
+        <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition Height="9*"/>
         </Grid.RowDefinitions>
