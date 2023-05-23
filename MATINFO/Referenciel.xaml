@@ -9,9 +9,12 @@
     Width="800"
     Height="450"
     mc:Ignorable="d">
+    <Window.DataContext>
+        <local:GestionAttribution x:Name="gestionAttribution" />
+    </Window.DataContext>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" MinHeight="19" />
             <RowDefinition />
         </Grid.RowDefinitions>
 
@@ -22,42 +25,36 @@
         </StackPanel>
 
         <!--  Liste des matériels  -->
-        <ListBox
-            Grid.Row="1"
-            Margin="0,0,198,15"
-            ItemsSource="{Binding Materiels}"
-            RenderTransformOrigin="0.5,0.5"
-            SelectedItem="{Binding SelectedMateriel}">
-            <ListBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform />
-                    <SkewTransform />
-                    <RotateTransform Angle="-0.096" />
-                    <TranslateTransform />
-                </TransformGroup>
-            </ListBox.RenderTransform>
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <TextBlock Text="{Binding Nom}" />
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
+
 
         <!--  Boutons d'actions  -->
         <Button
             Grid.Row="1"
-            Margin="614,24,10,355"
-            Click="DeleteButton_Click"
+            Height="40"
+            Margin="614,24,10,0"
+            VerticalAlignment="Top"
             Content="Supprimer" />
         <Button
             Grid.Row="1"
-            Margin="614,64,10,320"
-            Click="EditButton_Click"
+            Height="40"
+            Margin="614,69,10,0"
+            VerticalAlignment="Top"
             Content="Modifier" />
         <Button
             Grid.Row="1"
-            Margin="614,103,10,284"
-            Click="AddButton_Click"
+            Height="40"
+            Margin="614,114,10,0"
+            VerticalAlignment="Top"
             Content="Ajouter" />
+        <ListView
+            Grid.Row="1"
+            Margin="10,10,191,10"
+            ItemsSource="{Binding LesMateriel}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Nom}" Header="Nom" />
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Window>
