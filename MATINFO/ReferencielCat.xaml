@@ -46,7 +46,7 @@
         <DataGrid x:Name="dgCategorie"
             Grid.Row="1"
             Margin="10,10,10,56"
-            DataContext="{Binding LesCategorie}">
+            ItemsSource="{Binding LesCategorie}">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Nom}" Header="Nom" />
             </DataGrid.Columns>

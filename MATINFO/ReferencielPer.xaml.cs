@@ -19,6 +19,11 @@ namespace MATINFO
     /// </summary>
     public partial class ReferencielPer : Window
     {
+        private void Modale_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            e.Cancel = true;
+            this.Hide();
+        }
         public ReferencielPer()
         {
             InitializeComponent();

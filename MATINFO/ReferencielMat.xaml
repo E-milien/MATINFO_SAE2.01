@@ -51,7 +51,7 @@
             Grid.Row="1"
             Margin="10,10,10,56"
             AutoGenerateColumns="False"
-            DataContext="{Binding LesMateriel}">
+            ItemsSource="{Binding LesMateriel}">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Nom}" Header="Nom" />
             </DataGrid.Columns>
