@@ -21,8 +21,8 @@ namespace MATINFO
             LesMateriel.Add(new Materiel("HP"));
             LesPersonnel = new ObservableCollection<Personnel>();
             LesAttribution = new ObservableCollection<Attribution>();
-            LesAttribution.Add(new Attribution(new Categorie("apple"), new Materiel("mac m1"), new Personnel("Matteo"),new DateTime(2020,05,11), "wesh ?? yccc bv bv"));
-
+            LesAttribution.Add(new Attribution(new Categorie("apple"), new Materiel("mac m1"), new Personnel("Quentin"),new DateTime(2020,05,11), "wesh ?? yccc bv bv"));
+            LesAttribution.Add(new Attribution(new Categorie("windows"), new Materiel("hp"), new Personnel("hugo"), new DateTime(2019, 05, 11), "wesh"));
         }
 
         public ObservableCollection<Materiel> LesMateriel { get => lesMateriel; set => lesMateriel = value; }
