@@ -16,12 +16,16 @@ namespace MATINFO
         public GestionAttribution()
         {
             LesCategorie = new ObservableCollection<Categorie>();
+            LesCategorie.Add(new Categorie("Apple"));
+            LesCategorie.Add(new Categorie("Windows"));
             LesMateriel = new ObservableCollection<Materiel>();
             LesMateriel.Add(new Materiel("Mac"));
             LesMateriel.Add(new Materiel("HP"));
             LesPersonnel = new ObservableCollection<Personnel>();
+            LesPersonnel.Add(new Personnel("Jean"));
+            LesPersonnel.Add(new Personnel("Francois"));
             LesAttribution = new ObservableCollection<Attribution>();
-            LesAttribution.Add(new Attribution(new Categorie("apple"), new Materiel("mac m1"), new Personnel("Quentin"),new DateTime(2020,05,11), "wesh ?? yccc bv bv"));
+            LesAttribution.Add(new Attribution(new Categorie("apple"), new Materiel("mac m1"), new Personnel("Quentin"),new DateTime(2020,05,11), "sah"));
             LesAttribution.Add(new Attribution(new Categorie("windows"), new Materiel("hp"), new Personnel("hugo"), new DateTime(2019, 05, 11), "wesh"));
         }
 

@@ -23,6 +23,7 @@ namespace MATINFO
         ReferencielMat materiel = new ReferencielMat();
         ReferencielCat categorie = new ReferencielCat();
         ReferencielPer personnel = new ReferencielPer();
+        ReferencielAtt attribution = new ReferencielAtt();
 
         public MainWindow()
         {
@@ -45,9 +46,7 @@ namespace MATINFO
 
         private void btAttribution_Click(object sender, RoutedEventArgs e)
         {
-
+            attribution.ShowDialog();
         }
-
-        
     }
 }

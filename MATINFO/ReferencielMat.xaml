@@ -20,16 +20,11 @@
             <RowDefinition />
         </Grid.RowDefinitions>
 
-        <!--  En-tête  -->
         <StackPanel Grid.Row="0" Orientation="Horizontal">
             <TextBlock x:Name="txTitre" Text="Liste des matériels" />
 
         </StackPanel>
 
-        <!--  Liste des matériels  -->
-
-
-        <!--  Boutons d'actions  -->
         <Button
             x:Name="btSupprimer"
             Grid.Row="1"

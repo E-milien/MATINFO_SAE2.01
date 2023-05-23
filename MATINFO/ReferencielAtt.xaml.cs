@@ -17,26 +17,26 @@ namespace MATINFO
     /// <summary>
     /// Logique d'interaction pour Referenciel.xaml
     /// </summary>
-    public partial class ReferencielMat : Window
+    public partial class ReferencielAtt : Window
     {
         private void Modale_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             e.Cancel = true;
             this.Hide();
         }
-        public ReferencielMat()
+        public ReferencielAtt()
         {
             InitializeComponent();
         }
 
         private void btSupprimer_Click(object sender, RoutedEventArgs e)
         {
-            gestionAttribution.Remove((Materiel)dgMateriel.SelectedItem);
+            
         }
 
         private void btAjouter_Click(object sender, RoutedEventArgs e)
         {
-            gestionAttribution.LesMateriel.Insert(0, new Materiel(""));
+            
         }
     }
 }
