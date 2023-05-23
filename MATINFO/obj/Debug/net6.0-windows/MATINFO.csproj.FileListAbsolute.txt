@@ -190,3 +190,5 @@ C:\Users\roukinee\Source\Repos\MATINFO_SAE2.01\MATINFO\obj\Debug\net6.0-windows\
 C:\Users\roukinee\Source\Repos\MATINFO_SAE2.01\MATINFO\obj\Debug\net6.0-windows\ReferencielCat.baml
 C:\Users\roukinee\Source\Repos\MATINFO_SAE2.01\MATINFO\obj\Debug\net6.0-windows\ReferencielMat.baml
 C:\Users\roukinee\Source\Repos\MATINFO_SAE2.01\MATINFO\obj\Debug\net6.0-windows\ReferencielPer.baml
+C:\Users\roukinee\source\repos\Nouveau dossier (2)\MATINFO\obj\Debug\net6.0-windows\ReferencielAtt.g.cs
+C:\Users\roukinee\source\repos\Nouveau dossier (2)\MATINFO\obj\Debug\net6.0-windows\ReferencielAtt.baml

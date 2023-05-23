@@ -21,7 +21,7 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0" Orientation="Horizontal">
-            <TextBlock x:Name="txTitre" Text="Liste des personnels" />
+            <TextBlock x:Name="txTitre" Text="Liste des attribution" />
 
         </StackPanel>
 
@@ -43,15 +43,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <DataGrid
-            x:Name="dgCategorie"
-            Grid.Row="1"
-            Margin="10,10,10,56"
-            ItemsSource="{Binding LesCategorie}">
-            <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Nom}" Header="Nom" />
-            </DataGrid.Columns>
-        </DataGrid>
+       
         <Button
             x:Name="btAjouter"
             Grid.Row="1"
@@ -70,16 +62,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <DataGrid
-            x:Name="dgPersonnel"
-            Grid.Row="1"
-            Margin="10,10,10,56"
-            AutoGenerateColumns="False"
-            ItemsSource="{Binding LesPersonnel}">
-            <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Nom}" Header="Nom" />
-            </DataGrid.Columns>
-        </DataGrid>
+       
         <TextBox
             Grid.Row="1"
             Margin="264,11,10,385"
