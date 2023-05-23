@@ -32,7 +32,7 @@
         <Button
             Grid.Row="1"
             Height="41"
-            Margin="264,78,10,0"
+            Margin="10,364,10,0"
             VerticalAlignment="Top"
             Click="Button_Click"
             Content="Supprimer"
@@ -46,50 +46,16 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button
+        <DataGrid
+            x:Name="dgMateriel"
             Grid.Row="1"
-            Height="40"
-            Margin="352,33,10,0"
-            VerticalAlignment="Top"
-            Click="Button_Click_1"
-            Content="Modifier"
-            RenderTransformOrigin="0.5,0.5">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleX="1" />
-                    <SkewTransform />
-                    <RotateTransform />
-                    <TranslateTransform />
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
-        <Button
-            Grid.Row="1"
-            Height="40"
-            Margin="264,33,103,0"
-            VerticalAlignment="Top"
-            Content="Ajouter"
-            RenderTransformOrigin="0.5,0.5">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleX="1" />
-                    <SkewTransform />
-                    <RotateTransform />
-                    <TranslateTransform />
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
-        <ListView
-            x:Name="lvMateriel"
-            Grid.Row="1"
-            Margin="10,10,191,10"
-            ItemsSource="{Binding LesMateriel}">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn DisplayMemberBinding="{Binding Nom}" Header="Nom" />
-                </GridView>
-            </ListView.View>
-        </ListView>
+            Margin="10,10,10,56"
+            AutoGenerateColumns="False"
+            DataContext="{Binding LesMateriel}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Nom}" Header="Nom" />
+            </DataGrid.Columns>
+        </DataGrid>
         <TextBox
             Grid.Row="1"
             Margin="264,9,10,387"

@@ -26,7 +26,7 @@ namespace MATINFO
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            gestionAttribution.Remove((Personnel)lvPersonnel.SelectedItem);
+            gestionAttribution.Remove((Personnel)dgPersonnel.SelectedItem);
         }
     }
 }
