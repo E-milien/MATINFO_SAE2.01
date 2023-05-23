@@ -29,5 +29,23 @@ namespace MATINFO
         public ObservableCollection<Personnel> LesPersonnel { get => lesPersonnel; set => lesPersonnel = value; }
         public ObservableCollection<Attribution> LesAttribution { get => lesAttribution; set => lesAttribution = value; }
         internal ObservableCollection<Categorie> LesCategorie { get => lesCategorie; set => lesCategorie = value; }
+
+        public void Remove(Categorie categorie)
+        {
+            LesCategorie.Remove(categorie);
+        }
+        public void Remove(Materiel materiel)
+        {
+            LesMateriel.Remove(materiel);
+        }
+        public void Remove(Personnel personnel)
+        {
+            LesPersonnel.Remove(personnel);
+        }
+
+        public void Remove(Attribution attribution)
+        {
+            LesAttribution.Remove(attribution);
+        }
     }
 }

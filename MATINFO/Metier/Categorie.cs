@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media.Animation;
 
 namespace MATINFO
 {
@@ -17,5 +18,6 @@ namespace MATINFO
         }
 
         public string Nom { get => nom; set => nom = value; }
+
     }
 }

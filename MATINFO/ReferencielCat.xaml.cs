@@ -23,5 +23,14 @@ namespace MATINFO
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            gestionAttribution.Remove((Categorie)lvCategorie.SelectedItem);
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+        }
     }
 }
