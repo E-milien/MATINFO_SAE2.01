@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\roukinee\source\repos\MATINFO\obj\Debug\net6.0-windows\
+C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\
 MATINFO
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Users\roukinee\source\repos\MATINFO\App.xaml
-2152946583
+C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\App.xaml
+42044250489
 
-101482628479
+13-2039360523
 194237474483
-MainWindow.xaml;Referenciel.xaml;
+MainWindow.xaml;ReferencielCat.xaml;ReferencielMat.xaml;ReferencielPer.xaml;
 
 True
 

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MATINFO
 {
-    internal class Categorie
+    public class Categorie
     {
         private string nom;
 

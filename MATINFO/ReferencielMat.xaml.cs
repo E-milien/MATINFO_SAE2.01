@@ -17,9 +17,9 @@ namespace MATINFO
     /// <summary>
     /// Logique d'interaction pour Referenciel.xaml
     /// </summary>
-    public partial class Referenciel : Window
+    public partial class ReferencielMat : Window
     {
-        public Referenciel()
+        public ReferencielMat()
         {
             InitializeComponent();
         }
