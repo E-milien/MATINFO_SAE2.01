@@ -13,7 +13,7 @@ namespace MATINFO
 
         public Categorie(string nom)
         {
-            this.nom = nom;
+            this.Nom = nom;
         }
 
         public string Nom { get => nom; set => nom = value; }

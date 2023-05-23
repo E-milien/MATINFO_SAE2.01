@@ -94,15 +94,15 @@
                         <GridView>
                             <GridViewColumn
                                 Width="150"
-                                DisplayMemberBinding="{Binding Unecategorie}"
+                                DisplayMemberBinding="{Binding UneCategorie.Nom}"
                                 Header="Categorie" />
                             <GridViewColumn
                                 Width="150"
-                                DisplayMemberBinding="{Binding UnMateriel}"
+                                DisplayMemberBinding="{Binding UnMateriel.Nom}"
                                 Header="Matériel" />
                             <GridViewColumn
                                 Width="150"
-                                DisplayMemberBinding="{Binding UnPersonnel}"
+                                DisplayMemberBinding="{Binding UnPersonnel.Nom}"
                                 Header="Personnel" />
                             <GridViewColumn
                                 Width="150"
