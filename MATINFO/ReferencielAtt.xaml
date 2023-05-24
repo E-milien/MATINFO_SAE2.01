@@ -28,10 +28,10 @@
         <Button
             x:Name="btSupprimer"
             Grid.Row="1"
-            Margin="230,364,10,10"
+            Margin="230,364,10,0"
             Click="btSupprimer_Click"
             Content="Supprimer"
-            RenderTransformOrigin="0.5,0.5">
+            RenderTransformOrigin="0.5,0.5" Height="41" VerticalAlignment="Top">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleX="1" />
@@ -45,10 +45,10 @@
         <Button
             x:Name="btAjouter"
             Grid.Row="1"
-            Margin="10,364,225,10"
+            Margin="10,364,225,0"
             Click="btAjouter_Click"
             Content="Ajouter"
-            RenderTransformOrigin="0.5,0.5">
+            RenderTransformOrigin="0.5,0.5" Height="41" VerticalAlignment="Top">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleX="1" />
