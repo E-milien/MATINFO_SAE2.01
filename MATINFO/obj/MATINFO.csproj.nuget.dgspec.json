@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\roukinee\\source\\repos\\Nouveau dossier\\MATINFO\\MATINFO.csproj": {}
+    "C:\\Users\\roukinee\\source\\repos\\MATINFO\\MATINFO.csproj": {}
   },
   "projects": {
-    "C:\\Users\\roukinee\\source\\repos\\Nouveau dossier\\MATINFO\\MATINFO.csproj": {
+    "C:\\Users\\roukinee\\source\\repos\\MATINFO\\MATINFO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\roukinee\\source\\repos\\Nouveau dossier\\MATINFO\\MATINFO.csproj",
+        "projectUniqueName": "C:\\Users\\roukinee\\source\\repos\\MATINFO\\MATINFO.csproj",
         "projectName": "MATINFO",
-        "projectPath": "C:\\Users\\roukinee\\source\\repos\\Nouveau dossier\\MATINFO\\MATINFO.csproj",
+        "projectPath": "C:\\Users\\roukinee\\source\\repos\\MATINFO\\MATINFO.csproj",
         "packagesPath": "C:\\Users\\roukinee\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\roukinee\\source\\repos\\Nouveau dossier\\MATINFO\\obj\\",
+        "outputPath": "C:\\Users\\roukinee\\source\\repos\\MATINFO\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

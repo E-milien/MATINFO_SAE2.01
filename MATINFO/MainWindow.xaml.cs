@@ -24,11 +24,9 @@ namespace MATINFO
         ReferencielCat categorie = new ReferencielCat();
         ReferencielPer personnel = new ReferencielPer();
         ReferencielAtt attribution = new ReferencielAtt();
+        Connexion login = new Connexion();
 
-        public MainWindow()
-        {
-            InitializeComponent();
-        }
+        
         private void btCategorie_Click(object sender, RoutedEventArgs e)
         {
             categorie.ShowDialog();
