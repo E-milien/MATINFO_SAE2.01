@@ -1,5 +1,5 @@
 ﻿MATINFO
-
+1.0.0.0
 
 winexe
 C#
@@ -12,9 +12,9 @@ TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\roukinee\source\repos\MATINFO_SAE2.01\MATINFO\App.xaml
 6777095655
 
-13715831949
+15-1472834407
 194237474483
 AjtAttribution.xaml;MainWindow.xaml;ReferencielAtt.xaml;ReferencielCat.xaml;ReferencielMat.xaml;ReferencielPer.xaml;
 
-False
+True
 

@@ -93,7 +93,7 @@ namespace MATINFO {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MATINFO;V1.0.0.0;component/referencielatt.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MATINFO;component/referencielatt.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\ReferencielAtt.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

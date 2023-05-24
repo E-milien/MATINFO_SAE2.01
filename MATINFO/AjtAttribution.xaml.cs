@@ -30,9 +30,11 @@ namespace MATINFO
             dpDate.SelectedDate = DateTime.Now;
         }
 
-        private void btEnregistrer_Click(object sender, RoutedEventArgs e)
+        private async void btEnregistrer_Click(object sender, RoutedEventArgs e)
         {
             gestionAttribution.LesAttribution.Insert(0, new Attribution((Categorie)lvCat.SelectedItem,(Materiel)lvMat.SelectedItem,(Personnel)lvPer.SelectedItem,dpDate.DisplayDate,tbCom.Text));
+            await Task.Delay(1000);
+            Hide();
         }
     }
 }

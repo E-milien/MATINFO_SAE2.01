@@ -189,3 +189,10 @@ C:\Users\roukinee\source\repos\MATINFO_SAE2.01\MATINFO\obj\Debug\net6.0-windows\
 C:\Users\roukinee\source\repos\MATINFO_SAE2.01\MATINFO\obj\Debug\net6.0-windows\MATINFO.dll
 C:\Users\roukinee\source\repos\MATINFO_SAE2.01\MATINFO\obj\Debug\net6.0-windows\refint\MATINFO.dll
 C:\Users\roukinee\source\repos\MATINFO_SAE2.01\MATINFO\obj\Debug\net6.0-windows\MATINFO.pdb
+C:\Users\roukinee\source\repos\MATINFO_SAE2.01\MATINFO\bin\Debug\net6.0-windows\MATINFO.deps.json
+C:\Users\roukinee\source\repos\MATINFO_SAE2.01\MATINFO\bin\Debug\net6.0-windows\MATINFO.runtimeconfig.json
+C:\Users\roukinee\source\repos\MATINFO_SAE2.01\MATINFO\bin\Debug\net6.0-windows\MATINFO.pdb
+C:\Users\roukinee\source\repos\MATINFO_SAE2.01\MATINFO\obj\Debug\net6.0-windows\AjtAttribution.g.cs
+C:\Users\roukinee\source\repos\MATINFO_SAE2.01\MATINFO\obj\Debug\net6.0-windows\AjtAttribution.baml
+C:\Users\roukinee\source\repos\MATINFO_SAE2.01\MATINFO\obj\Debug\net6.0-windows\MATINFO.genruntimeconfig.cache
+C:\Users\roukinee\source\repos\MATINFO_SAE2.01\MATINFO\obj\Debug\net6.0-windows\ref\MATINFO.dll
