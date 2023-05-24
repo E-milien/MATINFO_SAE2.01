@@ -26,7 +26,13 @@ namespace MATINFO
         ReferencielAtt attribution = new ReferencielAtt();
         Connexion login = new Connexion();
 
-        
+        public MainWindow()
+        {
+            login.ShowDialog();
+            InitializeComponent();
+        }
+
+
         private void btCategorie_Click(object sender, RoutedEventArgs e)
         {
             categorie.ShowDialog();

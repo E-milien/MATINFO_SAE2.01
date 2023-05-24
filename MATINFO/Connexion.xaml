@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MATINFO"
         mc:Ignorable="d"
-        Title="Connexion" Height="300" Width="250"
+        Title="Connexion" Height="350" Width="250"
         Closing="Modale_Closing" ResizeMode="NoResize">
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">

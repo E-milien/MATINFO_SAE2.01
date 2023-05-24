@@ -19,10 +19,7 @@ namespace MATINFO
     /// </summary>
     public partial class Connexion : Window
     {
-        public Connexion()
-        {
-            InitializeComponent();
-        }
+
         private void Modale_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             e.Cancel = true;
