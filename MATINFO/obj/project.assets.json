@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\roukinee\\source\\repos\\Nouveau dossier (2)\\MATINFO\\MATINFO.csproj",
+      "projectUniqueName": "C:\\Users\\roukinee\\source\\repos\\MATINFO_SAE2.01\\MATINFO\\MATINFO.csproj",
       "projectName": "MATINFO",
-      "projectPath": "C:\\Users\\roukinee\\source\\repos\\Nouveau dossier (2)\\MATINFO\\MATINFO.csproj",
+      "projectPath": "C:\\Users\\roukinee\\source\\repos\\MATINFO_SAE2.01\\MATINFO\\MATINFO.csproj",
       "packagesPath": "C:\\Users\\roukinee\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\roukinee\\source\\repos\\Nouveau dossier (2)\\MATINFO\\obj\\",
+      "outputPath": "C:\\Users\\roukinee\\source\\repos\\MATINFO_SAE2.01\\MATINFO\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

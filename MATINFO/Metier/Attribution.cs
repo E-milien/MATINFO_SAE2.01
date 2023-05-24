@@ -29,6 +29,6 @@ namespace MATINFO
         public Personnel UnPersonnel { get => unPersonnel; set => unPersonnel = value; }
         public string Commentaire { get => commentaire; set => commentaire = value; }
         public DateTime Date { get => date; set => date = value; }
-        internal Categorie UneCategorie { get => uneCategorie; set => uneCategorie = value; }
+        public Categorie UneCategorie { get => uneCategorie; set => uneCategorie = value; }
     }
 }

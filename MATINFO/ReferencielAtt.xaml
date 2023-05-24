@@ -62,11 +62,14 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-       
-        <TextBox
-            Grid.Row="1"
-            Margin="264,11,10,385"
-            Text=""
-            TextWrapping="Wrap" />
+        <DataGrid ItemsSource="{Binding LesAttribution}" Margin="10,10,10,62" Grid.Row="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Categorie" Binding="{Binding UneCategorie.Nom}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Materiel" Binding="{Binding UnMateriel.Nom}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Personnel" Binding="{Binding UnPersonnel.Nom}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Date" Binding="{Binding Date}"/>
+                <DataGridTextColumn Header="Commentaire" Binding="{Binding Commentaire}"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>
