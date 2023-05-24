@@ -44,6 +44,7 @@
             </Button.RenderTransform>
         </Button>
         <DataGrid
+            AutoGenerateColumns="False"
             x:Name="dgCategorie"
             Grid.Row="1"
             Margin="10,10,10,56"

@@ -28,9 +28,7 @@
         <Button
             x:Name="btSupprimer"
             Grid.Row="1"
-            Height="41"
-            Margin="230,364,10,0"
-            VerticalAlignment="Top"
+            Margin="230,364,10,10"
             Click="btSupprimer_Click"
             Content="Supprimer"
             RenderTransformOrigin="0.5,0.5">
@@ -43,13 +41,11 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-       
+
         <Button
             x:Name="btAjouter"
             Grid.Row="1"
-            Height="41"
-            Margin="10,364,225,0"
-            VerticalAlignment="Top"
+            Margin="10,364,225,10"
             Click="btAjouter_Click"
             Content="Ajouter"
             RenderTransformOrigin="0.5,0.5">

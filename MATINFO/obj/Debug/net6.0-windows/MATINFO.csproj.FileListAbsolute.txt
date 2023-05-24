@@ -25,33 +25,7 @@ C:\Users\roukinee\source\repos\MATINFO\obj\Debug\net6.0-windows\MATINFO.csproj.C
 C:\Users\roukinee\source\repos\MATINFO\obj\Debug\net6.0-windows\MATINFO.genruntimeconfig.cache
 C:\Users\roukinee\source\repos\MATINFO\obj\Debug\net6.0-windows\ref\MATINFO.dll
 C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\bin\Debug\net6.0-windows\MATINFO.exe
-C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\bin\Debug\net6.0-windows\MATINFO.deps.json
-C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\bin\Debug\net6.0-windows\MATINFO.runtimeconfig.json
 C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\bin\Debug\net6.0-windows\MATINFO.dll
-C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\bin\Debug\net6.0-windows\MATINFO.pdb
-C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\MATINFO.csproj.AssemblyReference.cache
-C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\MainWindow.g.cs
-C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\App.g.cs
-C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
-C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\MATINFO_MarkupCompile.cache
-C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\MATINFO_MarkupCompile.lref
-C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\MainWindow.baml
-C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\MATINFO.g.resources
-C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\MATINFO.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\MATINFO.AssemblyInfoInputs.cache
-C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\MATINFO.AssemblyInfo.cs
-C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\MATINFO.csproj.CoreCompileInputs.cache
-C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\MATINFO.dll
-C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\refint\MATINFO.dll
-C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\MATINFO.pdb
-C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\MATINFO.genruntimeconfig.cache
-C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\ref\MATINFO.dll
-C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\ReferencielCat.g.cs
-C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\ReferencielMat.g.cs
-C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\ReferencielPer.g.cs
-C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\ReferencielCat.baml
-C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\ReferencielMat.baml
-C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\ReferencielPer.baml
 C:\Users\roukinee\source\repos\Nouveau dossier (2)\MATINFO\bin\Debug\net6.0-windows\MATINFO.exe
 C:\Users\roukinee\source\repos\Nouveau dossier (2)\MATINFO\bin\Debug\net6.0-windows\MATINFO.deps.json
 C:\Users\roukinee\source\repos\Nouveau dossier (2)\MATINFO\bin\Debug\net6.0-windows\MATINFO.runtimeconfig.json
@@ -196,3 +170,33 @@ C:\Users\roukinee\source\repos\MATINFO_SAE2.01\MATINFO\obj\Debug\net6.0-windows\
 C:\Users\roukinee\source\repos\MATINFO_SAE2.01\MATINFO\obj\Debug\net6.0-windows\AjtAttribution.baml
 C:\Users\roukinee\source\repos\MATINFO_SAE2.01\MATINFO\obj\Debug\net6.0-windows\MATINFO.genruntimeconfig.cache
 C:\Users\roukinee\source\repos\MATINFO_SAE2.01\MATINFO\obj\Debug\net6.0-windows\ref\MATINFO.dll
+C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\MATINFO.csproj.AssemblyReference.cache
+C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\AjtAttribution.g.cs
+C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\ReferencielAtt.g.cs
+C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\ReferencielCat.g.cs
+C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\ReferencielMat.g.cs
+C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\ReferencielPer.g.cs
+C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\MATINFO_MarkupCompile.cache
+C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\MATINFO_MarkupCompile.lref
+C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\AjtAttribution.baml
+C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\ReferencielAtt.baml
+C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\ReferencielCat.baml
+C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\ReferencielMat.baml
+C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\ReferencielPer.baml
+C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\MATINFO.g.resources
+C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\MATINFO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\MATINFO.AssemblyInfoInputs.cache
+C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\MATINFO.AssemblyInfo.cs
+C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\MATINFO.csproj.CoreCompileInputs.cache
+C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\MATINFO.dll
+C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\refint\MATINFO.dll
+C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\MATINFO.pdb
+C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\bin\Debug\net6.0-windows\MATINFO.deps.json
+C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\bin\Debug\net6.0-windows\MATINFO.runtimeconfig.json
+C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\bin\Debug\net6.0-windows\MATINFO.pdb
+C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\MATINFO.genruntimeconfig.cache
+C:\Users\roukinee\source\repos\Nouveau dossier\MATINFO\obj\Debug\net6.0-windows\ref\MATINFO.dll
