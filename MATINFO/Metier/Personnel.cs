@@ -12,9 +12,8 @@ namespace MATINFO
 
         public Personnel(string nom)
         {
-            this.nom = nom;
+            this.Nom = nom;
         }
-
         public string Nom { get => nom; set => nom = value; }
     }
 }
