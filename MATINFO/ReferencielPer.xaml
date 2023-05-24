@@ -75,15 +75,10 @@
             Grid.Row="1"
             Margin="10,10,10,56"
             AutoGenerateColumns="False"
-            ItemsSource="{Binding LesPersonnel}">
+            ItemsSource="{Binding LesPersonnel}" SelectedIndex="0">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Nom}" Header="Nom" />
             </DataGrid.Columns>
         </DataGrid>
-        <TextBox
-            Grid.Row="1"
-            Margin="264,11,10,385"
-            Text=""
-            TextWrapping="Wrap" />
     </Grid>
 </Window>

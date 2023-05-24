@@ -47,9 +47,9 @@
             x:Name="dgCategorie"
             Grid.Row="1"
             Margin="10,10,10,56"
-            ItemsSource="{Binding LesCategorie}">
+            ItemsSource="{Binding LesCategorie}" SelectedIndex="0">
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Nom}" Header="Nom" />
+                <DataGridTextColumn  Header="Nom" Binding="{Binding Nom}"/>
             </DataGrid.Columns>
         </DataGrid>
         <Button

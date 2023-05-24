@@ -1,0 +1,45 @@
+﻿<Window x:Class="MATINFO.AjtAttribution"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MATINFO"
+        mc:Ignorable="d"
+        Title="AjtAttribution" Height="450" Width="800">
+    <Window.DataContext>
+        <local:GestionAttribution x:Name="gestionAttribution"/>
+    </Window.DataContext>
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            <ListView Width="177" ItemsSource="{Binding LesCategorie}" SelectedIndex="0">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Categorie" Width="100" DisplayMemberBinding="{Binding Nom}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <ListView Width="177" ItemsSource="{Binding LesMateriel}" SelectedIndex="0">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Materiel" Width="50" DisplayMemberBinding="{Binding Nom}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <ListView Width="177" ItemsSource="{Binding LesPersonnel}" SelectedIndex="0">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Personnel" Width="100" DisplayMemberBinding="{Binding Nom}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <StackPanel Width="268">
+                <Label Height="26" Content="Date :"/>
+                <DatePicker x:Name="dpDate" Height="28" FirstDayOfWeek="Monday"/>
+                <Label Height="26" Content="Commentaire :"/>
+                <TextBox TextWrapping="Wrap" Text="" Width="268" Height="316"/>
+                <Button x:Name="btEnregistrer" Height="39" Content="Enregistrer"/>
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</Window>

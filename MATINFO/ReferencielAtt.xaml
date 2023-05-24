@@ -62,7 +62,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <DataGrid ItemsSource="{Binding LesAttribution}" Margin="10,10,10,62" Grid.Row="1" AutoGenerateColumns="False">
+        <DataGrid x:Name="dgAttribution" ItemsSource="{Binding LesAttribution}" Margin="10,10,10,62" Grid.Row="1" AutoGenerateColumns="False" SelectedIndex="0">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Categorie" Binding="{Binding UneCategorie.Nom}" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Materiel" Binding="{Binding UnMateriel.Nom}" IsReadOnly="True"/>

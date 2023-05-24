@@ -19,6 +19,8 @@ namespace MATINFO
     /// </summary>
     public partial class ReferencielAtt : Window
     {
+        AjtAttribution ajouter = new AjtAttribution();
+
         private void Modale_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             e.Cancel = true;
@@ -31,12 +33,12 @@ namespace MATINFO
 
         private void btSupprimer_Click(object sender, RoutedEventArgs e)
         {
-            
+            gestionAttribution.LesAttribution.Remove((Attribution)dgAttribution.SelectedItem);
         }
 
         private void btAjouter_Click(object sender, RoutedEventArgs e)
         {
-            
+            ajouter.ShowDialog();
         }
     }
 }
