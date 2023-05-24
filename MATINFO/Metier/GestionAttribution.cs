@@ -28,11 +28,10 @@ namespace MATINFO
             LesAttribution.Add(new Attribution(new Categorie("apple"), new Materiel("mac m1"), new Personnel("Quentin"),new DateTime(2020,05,11), "sah"));
             LesAttribution.Add(new Attribution(new Categorie("windows"), new Materiel("hp"), new Personnel("hugo"),new DateTime(2019, 05, 11), "wesh"));
         }
-
+        public ObservableCollection<Categorie> LesCategorie { get => lesCategorie; set => lesCategorie = value; }
         public ObservableCollection<Materiel> LesMateriel { get => lesMateriel; set => lesMateriel = value; }
         public ObservableCollection<Personnel> LesPersonnel { get => lesPersonnel; set => lesPersonnel = value; }
         public ObservableCollection<Attribution> LesAttribution { get => lesAttribution; set => lesAttribution = value; }
-        public ObservableCollection<Categorie> LesCategorie { get => lesCategorie; set => lesCategorie = value; }
 
         public void Remove(Categorie categorie)
         {

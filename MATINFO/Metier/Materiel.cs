@@ -14,7 +14,6 @@ namespace MATINFO
         {
             this.Nom = nom;
         }
-
         public string Nom { get => nom; set => nom = value; }
     }
 }

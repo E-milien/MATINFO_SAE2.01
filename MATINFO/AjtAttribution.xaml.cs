@@ -19,10 +19,20 @@ namespace MATINFO
     /// </summary>
     public partial class AjtAttribution : Window
     {
+        private void Modale_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            e.Cancel = true;
+            this.Hide();
+        }
         public AjtAttribution()
         {
             InitializeComponent();
             dpDate.SelectedDate = DateTime.Now;
+        }
+
+        private void btEnregistrer_Click(object sender, RoutedEventArgs e)
+        {
+            gestionAttribution.LesAttribution.Insert(0, new Attribution((Categorie)lvCat.SelectedItem,(Materiel)lvMat.SelectedItem,(Personnel)lvPer.SelectedItem,dpDate.DisplayDate,tbCom.Text));
         }
     }
 }

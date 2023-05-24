@@ -16,6 +16,5 @@ namespace MATINFO
         }
 
         public string Nom { get => nom; set => nom = value; }
-
     }
 }
