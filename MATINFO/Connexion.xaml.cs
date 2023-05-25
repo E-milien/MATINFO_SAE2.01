@@ -19,7 +19,7 @@ namespace MATINFO
     /// </summary>
     public partial class Connexion : Window
     {
-        private void MainWindow_Closed(object sender, EventArgs e)
+        private void Connexion_Closed(object sender, EventArgs e)
         {
             Application.Current.Shutdown();
         }
