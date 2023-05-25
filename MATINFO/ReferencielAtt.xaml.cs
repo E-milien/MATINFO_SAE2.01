@@ -40,5 +40,10 @@ namespace MATINFO
         {
             ajouter.ShowDialog();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            dgAttribution.UpdateLayout();
+        }
     }
 }

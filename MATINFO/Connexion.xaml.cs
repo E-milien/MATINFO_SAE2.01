@@ -14,9 +14,6 @@ using System.Windows.Shapes;
 
 namespace MATINFO
 {
-    /// <summary>
-    /// Logique d'interaction pour Connexion.xaml
-    /// </summary>
     public partial class Connexion : Window
     {
         private void Connexion_Closed(object sender, EventArgs e)
