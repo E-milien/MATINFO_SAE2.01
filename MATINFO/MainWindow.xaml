@@ -81,11 +81,11 @@
                     Grid.Row="0"
                     Margin="0,0,0,10"
                     Orientation="Horizontal">
-                    <Button Width="100" Content="Afficher" />
+                    <Button Width="100" Content="Afficher" Click="Button_Click" />
 
                 </StackPanel>
 
-                <ListView Grid.Row="1" ItemsSource="{Binding LesAttribution}">
+                <ListView x:Name="lvAttribution" Grid.Row="1" ItemsSource="{Binding LesAttribution}">
                     <ListView.View>
                         <GridView>
                             <GridViewColumn

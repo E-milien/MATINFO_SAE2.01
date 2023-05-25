@@ -56,5 +56,10 @@ namespace MATINFO
         {
             attribution.ShowDialog();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            lvAttribution.UpdateLayout();
+        }
     }
 }
