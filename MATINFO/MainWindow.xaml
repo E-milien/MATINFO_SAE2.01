@@ -8,6 +8,7 @@
     Title="MainWindow"
     Width="800"
     Height="450"
+    Closing="MainWindow_Closed"
     mc:Ignorable="d">
     <Window.DataContext>
         <local:GestionAttribution x:Name="gestionAttribution" />
