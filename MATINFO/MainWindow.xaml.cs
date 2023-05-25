@@ -26,6 +26,10 @@ namespace MATINFO
         ReferencielAtt attribution = new ReferencielAtt();
         Connexion login = new Connexion();
 
+        private void MainWindow_Closed(object sender, EventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
         public MainWindow()
         {
             login.ShowDialog();

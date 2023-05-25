@@ -19,12 +19,16 @@ namespace MATINFO
     /// </summary>
     public partial class Connexion : Window
     {
-
-        private void Modale_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        private void MainWindow_Closed(object sender, EventArgs e)
         {
-            e.Cancel = true;
-            this.Hide();
+            Application.Current.Shutdown();
         }
+        public Connexion()
+        {
+            InitializeComponent();
+            usernameTextBox.Focus();
+        }
+
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
             string username = usernameTextBox.Text;
@@ -32,9 +36,7 @@ namespace MATINFO
 
             if (username == "admin" && password == "admin")
             {
-                MainWindow mainWindow = new MainWindow();
-                mainWindow.Show();
-                Close();
+                Hide();
             }
             else
             {
