@@ -36,7 +36,7 @@ namespace MATINFO
 
         private void btAjouter_Click(object sender, RoutedEventArgs e)
         {
-            gestionAttribution.LesMateriel.Insert(0, new Materiel(""));
+            gestionAttribution.LesMateriel.Insert(0, new Materiel());
         }
     }
 }

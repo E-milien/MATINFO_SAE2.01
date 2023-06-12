@@ -36,7 +36,7 @@ namespace MATINFO
 
         private void btAjouter_Click(object sender, RoutedEventArgs e)
         {
-            gestionAttribution.LesCategorie.Insert(0, new Categorie(""));
+            gestionAttribution.LesCategorie.Insert(0, new Categorie());
         }
     }
 }

@@ -36,7 +36,7 @@ namespace MATINFO
 
         private void btAjouter_Click(object sender, RoutedEventArgs e)
         {
-            gestionAttribution.LesPersonnel.Insert(0, new Personnel(""));
+            gestionAttribution.LesPersonnel.Insert(0, new Personnel());
         }
     }
 }

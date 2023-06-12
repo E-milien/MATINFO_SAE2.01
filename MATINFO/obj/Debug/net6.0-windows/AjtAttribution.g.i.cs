@@ -109,7 +109,7 @@ namespace MATINFO {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MATINFO;V1.0.0.0;component/ajtattribution.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MATINFO;component/ajtattribution.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\AjtAttribution.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

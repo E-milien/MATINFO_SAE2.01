@@ -309,3 +309,6 @@ C:\Users\roukinee\Desktop\Nouveau dossier (3)\MATINFO\obj\Debug\net6.0-windows\r
 C:\Users\roukinee\Desktop\Nouveau dossier (3)\MATINFO\obj\Debug\net6.0-windows\MATINFO.pdb
 C:\Users\roukinee\Desktop\Nouveau dossier (3)\MATINFO\obj\Debug\net6.0-windows\MATINFO.genruntimeconfig.cache
 C:\Users\roukinee\Desktop\Nouveau dossier (3)\MATINFO\obj\Debug\net6.0-windows\ref\MATINFO.dll
+C:\Users\roukinee\source\repos\MATINFO\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\roukinee\source\repos\MATINFO\bin\Debug\net6.0-windows\Npgsql.dll
+C:\Users\roukinee\source\repos\MATINFO\obj\Debug\net6.0-windows\MATINFO.csproj.CopyComplete
