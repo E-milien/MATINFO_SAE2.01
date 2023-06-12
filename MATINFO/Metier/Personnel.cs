@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,10 @@ namespace MATINFO
         private string emailpersonnel;
         private string nompersonnel;
         private string prenompersonnel;
+
+        public Personnel()
+        {
+        }
 
         public Personnel(int idpersonnel, string emailpersonnel, string nompersonnel, string prenompersonnel)
         {
@@ -32,6 +37,16 @@ namespace MATINFO
         }
 
         public void Delete()
+        {
+            throw new NotImplementedException();
+        }
+
+        public ObservableCollection<Personnel> FindAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public ObservableCollection<Personnel> FindBySelection(string criteres)
         {
             throw new NotImplementedException();
         }

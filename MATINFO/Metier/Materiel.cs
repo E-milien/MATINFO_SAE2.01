@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,10 @@ namespace MATINFO
         private string codebarre;
         private string nommateriel;
         private string referencemateriel;
+
+        public Materiel()
+        {
+        }
 
         public Materiel(int idmateriel, string codebarre, string nommateriel, string referencemateriel)
         {
@@ -33,6 +38,16 @@ namespace MATINFO
         }
 
         public void Delete()
+        {
+            throw new NotImplementedException();
+        }
+
+        public ObservableCollection<Materiel> FindAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public ObservableCollection<Materiel> FindBySelection(string criteres)
         {
             throw new NotImplementedException();
         }

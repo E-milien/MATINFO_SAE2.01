@@ -5,7 +5,7 @@
 
 using System.Collections.ObjectModel;
 
-namespace Test_WPF_SQL.Model
+namespace MATINFO
 {
     public interface Crud<T>
    {
@@ -16,10 +16,5 @@ namespace Test_WPF_SQL.Model
       void Update();
       
       void Delete();
-      
-      ObservableCollection<T> FindAll();
-      
-      ObservableCollection<T> FindBySelection(string criteres);
-   
    }
 }

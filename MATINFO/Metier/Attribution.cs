@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,10 @@ namespace MATINFO
         private Personnel unPersonnel;
         private DateTime date;
         private string commentaire;
+
+        public Attribution()
+        {
+        }
 
         public Attribution(Materiel unMateriel, Personnel unPersonnel,DateTime date, string commentaire)
         {
@@ -33,6 +38,16 @@ namespace MATINFO
         }
 
         public void Delete()
+        {
+            throw new NotImplementedException();
+        }
+
+        public ObservableCollection<Attribution> FindAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public ObservableCollection<Attribution> FindBySelection(string criteres)
         {
             throw new NotImplementedException();
         }

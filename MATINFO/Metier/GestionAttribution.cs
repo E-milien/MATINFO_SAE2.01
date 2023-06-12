@@ -9,29 +9,22 @@ namespace MATINFO
 {
     public class GestionAttribution
     {
-        private ObservableCollection<Categorie> lesCategorie;
-        private ObservableCollection<Materiel> lesMateriel;
-        private ObservableCollection<Personnel> lesPersonnel;
-        private ObservableCollection<Attribution> lesAttribution;
+        public ObservableCollection<Categorie> LesCategorie { get; set; }
+        public ObservableCollection<Materiel> LesMateriel { get; set; }
+        public ObservableCollection<Personnel> LesPersonnel { get; set; }
+        public ObservableCollection<Attribution> LesAttribution { get; set; }
         public GestionAttribution()
         {
-            LesCategorie = new ObservableCollection<Categorie>();
-            LesCategorie.Add(new Categorie(1,"Apple"));
-            LesCategorie.Add(new Categorie(2,"Windows"));
-            LesMateriel = new ObservableCollection<Materiel>();
-            LesMateriel.Add(new Materiel("Mac"));
-            LesMateriel.Add(new Materiel("HP"));
-            LesPersonnel = new ObservableCollection<Personnel>();
-            LesPersonnel.Add(new Personnel("Jean"));
-            LesPersonnel.Add(new Personnel("Francois"));
-            LesAttribution = new ObservableCollection<Attribution>();
-            LesAttribution.Add(new Attribution(new Categorie("apple"), new Materiel("mac m1"), new Personnel("Quentin"),new DateTime(2020,05,11), "sah"));
-            LesAttribution.Add(new Attribution(new Categorie("windows"), new Materiel("hp"), new Personnel("hugo"),new DateTime(2019, 05, 11), "wesh"));
+            Categorie c = new Categorie();
+            Materiel m = new Materiel();
+            Personnel p = new Personnel();
+            Attribution a = new Attribution();
+            LesCategorie = c.FindAll();
+            LesMateriel = m.FindAll();
+            LesPersonnel = p.FindAll();
+            LesAttribution = a.FindAll();
         }
-        public ObservableCollection<Categorie> LesCategorie { get => lesCategorie; set => lesCategorie = value; }
-        public ObservableCollection<Materiel> LesMateriel { get => lesMateriel; set => lesMateriel = value; }
-        public ObservableCollection<Personnel> LesPersonnel { get => lesPersonnel; set => lesPersonnel = value; }
-        public ObservableCollection<Attribution> LesAttribution { get => lesAttribution; set => lesAttribution = value; }
+        
 
         public void Remove(Categorie categorie)
         {
