@@ -16,15 +16,45 @@ namespace MATINFO
         public GestionAttribution()
         {
             Categorie c = new Categorie();
-            Materiel m = new Materiel();
-            Personnel p = new Personnel();
-            Attribution a = new Attribution();
             LesCategorie = c.FindAll();
+            Materiel m = new Materiel();
             LesMateriel = m.FindAll();
+            Personnel p = new Personnel();
             LesPersonnel = p.FindAll();
+            Attribution a = new Attribution();
             LesAttribution = a.FindAll();
         }
-        
+
+        public Materiel SearchMat(int idMat)
+        {
+            foreach(Materiel mat in LesMateriel)
+            {
+                if(mat.Idmateriel==idMat)
+                    return mat;
+            }
+            throw new Exception();
+        }
+
+        public Personnel SearchPer(int idPer)
+        {
+            foreach (Personnel per in LesPersonnel)
+            {
+                if (per.Idpersonnel == idPer)
+                    return per;
+            }
+            throw new Exception();
+        }
+
+        public Categorie SearchCat(int idCat)
+        {
+            foreach (Categorie cat in LesCategorie)
+            {
+                if (cat.Idcategorie == idCat)
+                    return cat;
+            }
+            throw new Exception();
+        }
+
 
         public void Remove(Categorie categorie)
         {

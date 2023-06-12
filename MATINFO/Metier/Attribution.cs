@@ -13,25 +13,31 @@ namespace MATINFO
     {
         private Materiel unMateriel;
         private Personnel unPersonnel;
-        private DateTime dateatttribut;
+        private DateTime dateAtttribut;
         private string commentaire;
 
         public Attribution()
         {
         }
 
-        public Attribution(Materiel unMateriel, Personnel unPersonnel,DateTime date, string commentaire)
+        public Attribution(DateTime dateAtttribut, string commentaire)
+        {
+            Commentaire = commentaire;
+            DateAtttribut = dateAtttribut;
+        }
+
+        public Attribution(Materiel unMateriel, Personnel unPersonnel,DateTime dateAtttribut, string commentaire)
         {
             this.unMateriel = unMateriel;
             this.UnPersonnel = unPersonnel;
-            this.Date = date;
+            this.DateAtttribut = dateAtttribut;
             this.Commentaire = commentaire;
         }
 
         public Materiel UnMateriel { get => unMateriel; set => unMateriel = value; }
         public Personnel UnPersonnel { get => unPersonnel; set => unPersonnel = value; }
         public string Commentaire { get => commentaire; set => commentaire = value; }
-        public DateTime Date { get => date; set => date = value; }
+        public DateTime DateAtttribut { get => dateAtttribut; set => dateAtttribut = value; }
 
         public void Create()
         {
@@ -47,13 +53,13 @@ namespace MATINFO
         {
             ObservableCollection<Attribution> lesAttribution = new ObservableCollection<Attribution>();
             DataAccess accesBD = new DataAccess();
-            String requete = "select dateatttribut, commentaire from attribution ;";
+            String requete = "select dateatttribut, commentaire from attributions ;";
             DataTable datas = accesBD.GetData(requete);
             if (datas != null)
             {
                 foreach (DataRow row in datas.Rows)
                 {
-                    Attribution e = new Attribution(DateTime.Parse(row["date"].ToString()), (String)row["commentaire"]);
+                    Attribution e = new Attribution(DateTime.Parse(row["dateatttribut"].ToString()), (String)row["commentaire"]);
                     lesAttribution.Add(e);
                 }
             }

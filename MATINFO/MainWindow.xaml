@@ -88,18 +88,14 @@
                 <ListView x:Name="lvAttribution" Grid.Row="1" ItemsSource="{Binding LesAttribution}">
                     <ListView.View>
                         <GridView>
-                            <GridViewColumn
-                                Width="100"
-                                DisplayMemberBinding="{Binding UneCategorie.Nom}"
-                                Header="Categorie" />
-                            <GridViewColumn
+                           <!-- <GridViewColumn
                                 Width="100"
                                 DisplayMemberBinding="{Binding UnMateriel.Nom}"
                                 Header="Matériel" />
                             <GridViewColumn
                                 Width="100"
                                 DisplayMemberBinding="{Binding UnPersonnel.Nom}"
-                                Header="Personnel" />
+                                Header="Personnel" />-->
                             <GridViewColumn
                                 Width="150"
                                 DisplayMemberBinding="{Binding Date}"

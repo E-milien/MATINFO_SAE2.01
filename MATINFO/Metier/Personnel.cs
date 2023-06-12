@@ -46,13 +46,13 @@ namespace MATINFO
         {
             ObservableCollection<Personnel> lesPersonnel = new ObservableCollection<Personnel>();
             DataAccess accesBD = new DataAccess();
-            String requete = "select idpersonnel, emailpersonnel, nompersonnel, prenompersonnel from personnel ;";
+            String requete = "select idenseignant, email, nomenseignant, prenomenseignant from enseignant ;";
             DataTable datas = accesBD.GetData(requete);
             if (datas != null)
             {
                 foreach (DataRow row in datas.Rows)
                 {
-                    Personnel e = new Personnel(int.Parse(row["idpersonnel"].ToString()), (String)row["emailpersonnel"], (String)row["nompersonnel"], (String)row["prenompersonnel"]);
+                    Personnel e = new Personnel(int.Parse(row["idpersonnel"].ToString()),(String)row["emailpersonnel"], (String)row["nompersonnel"], (String)row["prenompersonnel"]);
                     lesPersonnel.Add(e);
                 }
             }
