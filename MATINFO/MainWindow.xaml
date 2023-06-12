@@ -98,7 +98,7 @@
                                 Header="Personnel" />-->
                             <GridViewColumn
                                 Width="150"
-                                DisplayMemberBinding="{Binding Date}"
+                                DisplayMemberBinding="{Binding DateAtttribut}"
                                 Header="Date d'attribution" />
                             <GridViewColumn
                                 Width="150"

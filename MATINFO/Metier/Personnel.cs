@@ -52,7 +52,7 @@ namespace MATINFO
             {
                 foreach (DataRow row in datas.Rows)
                 {
-                    Personnel e = new Personnel(int.Parse(row["idpersonnel"].ToString()),(String)row["emailpersonnel"], (String)row["nompersonnel"], (String)row["prenompersonnel"]);
+                    Personnel e = new Personnel(int.Parse(row["idenseignant"].ToString()),(String)row["email"], (String)row["nomenseignant"], (String)row["prenomenseignant"]);
                     lesPersonnel.Add(e);
                 }
             }

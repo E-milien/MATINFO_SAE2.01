@@ -44,12 +44,15 @@
             </Button.RenderTransform>
         </Button>
         <DataGrid
-            x:Name="dgCategorie"
+            x:Name="dgPersonnel"
             Grid.Row="1"
             Margin="10,10,10,56"
-            ItemsSource="{Binding LesCategorie}">
+            ItemsSource="{Binding LesPersonnel}"
+            SelectionChanged="dgCategorie_SelectionChanged">
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Nom}" Header="Nom" />
+                <DataGridTextColumn Binding="{Binding Prenompersonnel}" Header="Prenom" />
+                <DataGridTextColumn Binding="{Binding Nompersonnel}" Header="Nom" />
+                <DataGridTextColumn Binding="{Binding Emailpersonnel}" Header="Email" />
             </DataGrid.Columns>
         </DataGrid>
         <Button
@@ -70,15 +73,5 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <DataGrid
-            x:Name="dgPersonnel"
-            Grid.Row="1"
-            Margin="10,10,10,56"
-            AutoGenerateColumns="False"
-            ItemsSource="{Binding LesPersonnel}" SelectedIndex="0">
-            <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Nom}" Header="Nom" />
-            </DataGrid.Columns>
-        </DataGrid>
     </Grid>
 </Window>

@@ -50,7 +50,7 @@
             Margin="10,10,10,56"
             ItemsSource="{Binding LesCategorie}" SelectedIndex="0">
             <DataGrid.Columns>
-                <DataGridTextColumn  Header="Nom" Binding="{Binding Nom}"/>
+                <DataGridTextColumn  Header="Nom" Binding="{Binding Nomcategorie}"/>
             </DataGrid.Columns>
         </DataGrid>
         <Button

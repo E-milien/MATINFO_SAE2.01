@@ -8,9 +8,9 @@
     Title="ReferencielMat"
     Width="450"
     Height="450"
+    Closing="Modale_Closing"
     ResizeMode="NoResize"
-    mc:Ignorable="d"
-    Closing="Modale_Closing">
+    mc:Ignorable="d">
     <Window.DataContext>
         <local:GestionAttribution x:Name="gestionAttribution" />
     </Window.DataContext>
@@ -47,9 +47,11 @@
             x:Name="dgCategorie"
             Grid.Row="1"
             Margin="10,10,10,56"
-            ItemsSource="{Binding LesCategorie}">
+            ItemsSource="{Binding LesMateriel}">
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Nom}" Header="Nom" />
+                <DataGridTextColumn Binding="{Binding Nommateriel}" Header="Nom" />
+                <DataGridTextColumn Binding="{Binding Codebarre}" Header="Code barre" />
+                <DataGridTextColumn Binding="{Binding Referencemateriel}" Header="Reference" />
             </DataGrid.Columns>
         </DataGrid>
         <Button
@@ -70,16 +72,6 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <DataGrid
-            x:Name="dgMateriel"
-            Grid.Row="1"
-            Margin="10,10,10,56"
-            AutoGenerateColumns="False"
-            ItemsSource="{Binding LesMateriel}" SelectedIndex="0">
-            <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Nom}" Header="Nom" />
-            </DataGrid.Columns>
-        </DataGrid>
         <TextBox
             Grid.Row="1"
             Margin="264,9,10,387"
