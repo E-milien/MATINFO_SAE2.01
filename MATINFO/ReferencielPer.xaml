@@ -29,7 +29,7 @@
             x:Name="btSupprimer"
             Grid.Row="1"
             Height="41"
-            Margin="230,0,10,10"
+            Margin="230,0,10,56"
             VerticalAlignment="Bottom"
             Click="btSupprimer_Click"
             Content="Supprimer"
@@ -46,7 +46,7 @@
         <DataGrid
             x:Name="dgPersonnel"
             Grid.Row="1"
-            Margin="10,10,10,56"
+            Margin="10,10,10,102"
             ItemsSource="{Binding LesPersonnel}">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Prenompersonnel}" Header="Prenom" />
@@ -58,10 +58,28 @@
             x:Name="btAjouter"
             Grid.Row="1"
             Height="41"
-            Margin="10,0,225,10"
+            Margin="10,0,225,56"
             VerticalAlignment="Bottom"
             Click="btAjouter_Click"
             Content="Ajouter"
+            RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1" />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button
+            x:Name="btOK"
+            Grid.Row="1"
+            Height="41"
+            Margin="10,364,10,0"
+            VerticalAlignment="Top"
+            Click="btOK_Click"
+            Content="OK&#xD;&#xA;"
             RenderTransformOrigin="0.5,0.5">
             <Button.RenderTransform>
                 <TransformGroup>

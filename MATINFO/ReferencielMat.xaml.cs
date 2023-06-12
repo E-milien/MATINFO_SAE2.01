@@ -19,6 +19,7 @@ namespace MATINFO
     /// </summary>
     public partial class ReferencielMat : Window
     {
+        List<Materiel> listeMat = new List<Materiel>();
         private void Modale_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             e.Cancel = true;
@@ -36,7 +37,17 @@ namespace MATINFO
 
         private void btAjouter_Click(object sender, RoutedEventArgs e)
         {
-            gestionAttribution.LesMateriel.Insert(0, new Materiel());
+            Materiel materiel = new Materiel();
+            listeMat.Add(materiel);
+            gestionAttribution.LesMateriel.Insert(0, materiel);
+        }
+
+        private void btOK_Click(object sender, RoutedEventArgs e)
+        {
+            foreach(Materiel materiel in listeMat)
+            {
+                materiel.Create();
+            }
         }
     }
 }

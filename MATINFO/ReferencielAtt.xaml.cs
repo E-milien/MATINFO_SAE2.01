@@ -21,6 +21,7 @@ namespace MATINFO
     {
         AjtAttribution ajouter = new AjtAttribution();
 
+
         private void Modale_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             e.Cancel = true;
@@ -44,6 +45,10 @@ namespace MATINFO
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             dgAttribution.UpdateLayout();
+        }
+
+        private void btOK_Click(object sender, RoutedEventArgs e)
+        {
         }
     }
 }

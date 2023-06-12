@@ -19,6 +19,7 @@ namespace MATINFO
     /// </summary>
     public partial class ReferencielCat : Window
     {
+        List<Categorie> listeCategorie = new List<Categorie>();
         private void Modale_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             e.Cancel = true;
@@ -36,7 +37,17 @@ namespace MATINFO
 
         private void btAjouter_Click(object sender, RoutedEventArgs e)
         {
+            Categorie categorie = new Categorie();
+            listeCategorie.Add(categorie);
             gestionAttribution.LesCategorie.Insert(0, new Categorie());
+        }
+
+        private void btOK_Click(object sender, RoutedEventArgs e)
+        {
+            foreach(Categorie cat in listeCategorie)
+            {
+                cat.Create();
+            }
         }
     }
 }

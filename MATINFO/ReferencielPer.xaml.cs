@@ -19,6 +19,7 @@ namespace MATINFO
     /// </summary>
     public partial class ReferencielPer : Window
     {
+        List<Personnel> personnels = new List<Personnel>();
         private void Modale_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             e.Cancel = true;
@@ -36,7 +37,17 @@ namespace MATINFO
 
         private void btAjouter_Click(object sender, RoutedEventArgs e)
         {
-            gestionAttribution.LesPersonnel.Insert(0, new Personnel());
+            Personnel p = new Personnel();
+            personnels.Add(p);
+            gestionAttribution.LesPersonnel.Insert(0,p);
+        }
+
+        private void btOK_Click(object sender, RoutedEventArgs e)
+        {
+            foreach(Personnel personnel in personnels) 
+            {
+                personnel.Create();
+            }
         }
     }
 }
