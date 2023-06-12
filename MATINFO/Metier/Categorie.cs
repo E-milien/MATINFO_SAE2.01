@@ -6,15 +6,38 @@ using System.Threading.Tasks;
 
 namespace MATINFO
 {
-    public class Categorie
+    public class Categorie : Crud<Categorie>
     {
-        private string nom;
+        private int idcategorie;
+        private string nomcategorie;
 
-        public Categorie(string nom)
+        public Categorie(int idcategorie, string nomcategorie)
         {
-            this.Nom = nom;
+            this.Idcategorie = idcategorie;
+            this.Nomcategorie = nomcategorie;
         }
 
-        public string Nom { get => nom; set => nom = value; }
+        public int Idcategorie { get => idcategorie; set => idcategorie = value; }
+        public string Nomcategorie { get => nomcategorie; set => nomcategorie = value; }
+
+        public void Create()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Read()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

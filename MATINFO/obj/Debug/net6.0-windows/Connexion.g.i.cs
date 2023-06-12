@@ -69,7 +69,7 @@ namespace MATINFO {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MATINFO;component/connexion.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MATINFO;V1.0.0.0;component/connexion.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Connexion.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

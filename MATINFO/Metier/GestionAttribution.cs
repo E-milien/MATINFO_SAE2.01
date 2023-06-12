@@ -16,8 +16,8 @@ namespace MATINFO
         public GestionAttribution()
         {
             LesCategorie = new ObservableCollection<Categorie>();
-            LesCategorie.Add(new Categorie("Apple"));
-            LesCategorie.Add(new Categorie("Windows"));
+            LesCategorie.Add(new Categorie(1,"Apple"));
+            LesCategorie.Add(new Categorie(2,"Windows"));
             LesMateriel = new ObservableCollection<Materiel>();
             LesMateriel.Add(new Materiel("Mac"));
             LesMateriel.Add(new Materiel("HP"));

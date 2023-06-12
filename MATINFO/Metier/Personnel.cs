@@ -6,14 +6,44 @@ using System.Threading.Tasks;
 
 namespace MATINFO
 {
-    public class Personnel
+    public class Personnel : Crud<Personnel>
     {
-        private string nom;
+        private int idpersonnel;
+        private string emailpersonnel;
+        private string nompersonnel;
+        private string prenompersonnel;
 
-        public Personnel(string nom)
+        public Personnel(int idpersonnel, string emailpersonnel, string nompersonnel, string prenompersonnel)
         {
-            this.Nom = nom;
+            Idpersonnel = idpersonnel;
+            Emailpersonnel = emailpersonnel;
+            Nompersonnel = nompersonnel;
+            Prenompersonnel = prenompersonnel;
         }
-        public string Nom { get => nom; set => nom = value; }
+
+        public int Idpersonnel { get => idpersonnel; set => idpersonnel = value; }
+        public string Emailpersonnel { get => emailpersonnel; set => emailpersonnel = value; }
+        public string Nompersonnel { get => nompersonnel; set => nompersonnel = value; }
+        public string Prenompersonnel { get => prenompersonnel; set => prenompersonnel = value; }
+
+        public void Create()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Read()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
