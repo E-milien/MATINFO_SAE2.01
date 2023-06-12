@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\roukinee\Source\Repos\MATINFO_SAE2.01\MATINFO\obj\Release\net6.0-windows\
+C:\Users\roukinee\source\repos\MATINFO\obj\Release\net6.0-windows\
 MATINFO
 none
 false
 TRACE;RELEASE;NET;NET6_0;NETCOREAPP
-C:\Users\roukinee\Source\Repos\MATINFO_SAE2.01\MATINFO\App.xaml
-11407045341
+C:\Users\roukinee\source\repos\MATINFO\App.xaml
+7-955209216
 
-3-1233169557
-194237474483
-MainWindow.xaml;
+17-208120446
+196-875691206
+AjtAttribution.xaml;Connexion.xaml;MainWindow.xaml;ReferencielAtt.xaml;ReferencielCat.xaml;ReferencielMat.xaml;ReferencielPer.xaml;
 
 True
 

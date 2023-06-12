@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -44,7 +45,19 @@ namespace MATINFO
 
         public ObservableCollection<Materiel> FindAll()
         {
-            throw new NotImplementedException();
+            ObservableCollection<Materiel> lesMateriel = new ObservableCollection<Materiel>();
+            DataAccess accesBD = new DataAccess();
+            String requete = "select idmateriel, codebarre, nommateriel, referencemateriel from etudiants ;";
+            DataTable datas = accesBD.GetData(requete);
+            if (datas != null)
+            {
+                foreach (DataRow row in datas.Rows)
+                {
+                    Materiel e = new Materiel(int.Parse(row["idmateriel"].ToString()), (String)row["codebarre"], (String)row["nommateriel"], (String)row[referencemateriel]);
+                    lesMateriel.Add(e);
+                }
+            }
+            return lesMateriel;
         }
 
         public ObservableCollection<Materiel> FindBySelection(string criteres)
