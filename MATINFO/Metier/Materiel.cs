@@ -47,13 +47,13 @@ namespace MATINFO
         {
             ObservableCollection<Materiel> lesMateriel = new ObservableCollection<Materiel>();
             DataAccess accesBD = new DataAccess();
-            String requete = "select idmateriel, codebarre, nommateriel, referencemateriel from etudiants ;";
+            String requete = "select idmateriel, codebarre, nommateriel, referencemateriel from materiel ;";
             DataTable datas = accesBD.GetData(requete);
             if (datas != null)
             {
                 foreach (DataRow row in datas.Rows)
                 {
-                    Materiel e = new Materiel(int.Parse(row["idmateriel"].ToString()), (String)row["codebarre"], (String)row["nommateriel"], (String)row[referencemateriel]);
+                    Materiel e = new Materiel(int.Parse(row["idmateriel"].ToString()), (String)row["codebarre"], (String)row["nommateriel"], (String)row["referencemateriel"]);
                     lesMateriel.Add(e);
                 }
             }

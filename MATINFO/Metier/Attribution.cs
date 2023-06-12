@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,7 +13,7 @@ namespace MATINFO
     {
         private Materiel unMateriel;
         private Personnel unPersonnel;
-        private DateTime date;
+        private DateTime dateatttribut;
         private string commentaire;
 
         public Attribution()
@@ -21,10 +22,10 @@ namespace MATINFO
 
         public Attribution(Materiel unMateriel, Personnel unPersonnel,DateTime date, string commentaire)
         {
+            this.unMateriel = unMateriel;
             this.UnPersonnel = unPersonnel;
             this.Date = date;
             this.Commentaire = commentaire;
-
         }
 
         public Materiel UnMateriel { get => unMateriel; set => unMateriel = value; }
@@ -44,7 +45,19 @@ namespace MATINFO
 
         public ObservableCollection<Attribution> FindAll()
         {
-            throw new NotImplementedException();
+            ObservableCollection<Attribution> lesAttribution = new ObservableCollection<Attribution>();
+            DataAccess accesBD = new DataAccess();
+            String requete = "select dateatttribut, commentaire from attribution ;";
+            DataTable datas = accesBD.GetData(requete);
+            if (datas != null)
+            {
+                foreach (DataRow row in datas.Rows)
+                {
+                    Attribution e = new Attribution(DateTime.Parse(row["date"].ToString()), (String)row["commentaire"]);
+                    lesAttribution.Add(e);
+                }
+            }
+            return lesAttribution;
         }
 
         public ObservableCollection<Attribution> FindBySelection(string criteres)
