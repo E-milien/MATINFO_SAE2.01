@@ -59,7 +59,7 @@ namespace MATINFO
             {
                 foreach (DataRow row in datas.Rows)
                 {
-                    Attribution e = new Attribution(gestionAttribution. DateTime.Parse(row["dateatttribut"].ToString()), (String)row["commentaire"]);
+                    Attribution e = new Attribution( DateTime.Parse(row["dateatttribut"].ToString()), (String)row["commentaire"]);
                     lesAttribution.Add(e);
                 }
             }

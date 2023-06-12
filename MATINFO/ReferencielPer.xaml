@@ -47,8 +47,7 @@
             x:Name="dgPersonnel"
             Grid.Row="1"
             Margin="10,10,10,56"
-            ItemsSource="{Binding LesPersonnel}"
-            SelectionChanged="dgCategorie_SelectionChanged">
+            ItemsSource="{Binding LesPersonnel}">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Prenompersonnel}" Header="Prenom" />
                 <DataGridTextColumn Binding="{Binding Nompersonnel}" Header="Nom" />

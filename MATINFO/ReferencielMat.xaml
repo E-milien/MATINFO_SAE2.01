@@ -44,7 +44,7 @@
             </Button.RenderTransform>
         </Button>
         <DataGrid
-            x:Name="dgCategorie"
+            x:Name="dgMateriel"
             Grid.Row="1"
             Margin="10,10,10,56"
             ItemsSource="{Binding LesMateriel}">
