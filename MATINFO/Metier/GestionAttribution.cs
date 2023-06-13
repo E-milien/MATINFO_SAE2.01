@@ -24,6 +24,10 @@ namespace MATINFO
             Attribution a = new Attribution();
             LesAttribution = a.FindAll();
         }
+        public void Maj()
+        {
+
+        }
 
         public Materiel SearchMat(int idMat)
         {

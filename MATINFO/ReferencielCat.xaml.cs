@@ -44,10 +44,13 @@ namespace MATINFO
 
         private void btOK_Click(object sender, RoutedEventArgs e)
         {
+
             foreach(Categorie cat in listeCategorie)
             {
                 cat.Create();
+                MessageBox.Show(cat.Nomcategorie);
             }
+            //listeCategorie = new List<Categorie>();
         }
     }
 }

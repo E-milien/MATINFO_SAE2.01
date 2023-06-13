@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +11,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Media.TextFormatting;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
@@ -34,6 +36,7 @@ namespace MATINFO
         {
             login.ShowDialog();
             InitializeComponent();
+            Maj();
         }
 
 
@@ -60,6 +63,22 @@ namespace MATINFO
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             lvAttribution.UpdateLayout();
+        }
+
+        public void Maj()
+        {
+            ObservableCollection<Materiel> materiels= new ObservableCollection<Materiel>();
+            ObservableCollection<Attribution> attributions = new ObservableCollection<Attribution>();
+            foreach(Materiel tmpMat in gestionAttribution.LesMateriel)
+            {
+                materiels.Add(new Materiel((Categorie)gestionAttribution.SearchCat(tmpMat.IdCategorie), tmpMat.Idmateriel, tmpMat.Codebarre, tmpMat.Nommateriel,tmpMat.Referencemateriel));
+            }
+            foreach (Attribution tmpAtt in gestionAttribution.LesAttribution)
+            {
+                attributions.Add(new Attribution((Materiel)gestionAttribution.SearchMat(tmpAtt.IdMateriel),(Personnel)gestionAttribution.SearchPer(tmpAtt.IdPersonnel),tmpAtt.DateAtttribut,tmpAtt.Commentaire));
+            }
+            gestionAttribution.LesMateriel = materiels;
+            gestionAttribution.LesAttribution = attributions;
         }
     }
 }

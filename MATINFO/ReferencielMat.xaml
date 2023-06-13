@@ -47,8 +47,10 @@
             x:Name="dgMateriel"
             Grid.Row="1"
             Margin="10,10,10,102"
-            ItemsSource="{Binding LesMateriel}">
+            ItemsSource="{Binding Path=LesMateriel}" SelectedIndex="0"
+            AutoGenerateColumns="false">
             <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Idmateriel}" Header="ID" IsReadOnly="True"/>
                 <DataGridTextColumn Binding="{Binding Nommateriel}" Header="Nom" />
                 <DataGridTextColumn Binding="{Binding Codebarre}" Header="Code barre" />
                 <DataGridTextColumn Binding="{Binding Referencemateriel}" Header="Reference" />
@@ -72,11 +74,6 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <TextBox
-            Grid.Row="1"
-            Margin="264,9,10,387"
-            Text=""
-            TextWrapping="Wrap" />
         <Button
             x:Name="btOK"
             Grid.Row="1"

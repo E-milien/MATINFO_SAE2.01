@@ -28,7 +28,9 @@ namespace MATINFO
 
         public void Create()
         {
-            throw new NotImplementedException();
+            DataAccess accesBD = new DataAccess();
+            string sql = $"insert into categorie (idcategorie, nomcategorie) values (nextval('categorie_idcategorie_seq'::regclass), '{this.Nomcategorie}')";
+            DataTable datas = accesBD.GetData(sql);
         }
 
         public void Delete()
