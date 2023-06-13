@@ -61,7 +61,9 @@ namespace MATINFO
 
         public void Delete()
         {
-            throw new NotImplementedException();
+            DataAccess accesBD = new DataAccess();
+            string sql = $"DELETE FROM materiel WHERE idmateriel = {this.Idmateriel}";
+            accesBD.GetData(sql);
         }
 
         public ObservableCollection<Materiel> FindAll()

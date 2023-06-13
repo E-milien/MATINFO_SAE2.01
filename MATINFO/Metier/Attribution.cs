@@ -54,13 +54,15 @@ namespace MATINFO
         public void Create()
         {
             DataAccess accesBD = new DataAccess();
-            string sql = $"insert into attributions (idenseignant, dateatttribut, idmateriel, commentaire) values ('{this.IdPersonnel}', '{this.DateAtttribut}', '{this.IdMateriel}, '{this.Commentaire}')";
+            string sql = $"insert into attributions (idenseignant, dateatttribut, idmateriel, commentaire) values ('{this.IdPersonnel}', '{this.DateAtttribut.Date.ToString()}', '{this.IdMateriel}, '{this.Commentaire}')";
             DataTable datas = accesBD.GetData(sql);
         }
 
         public void Delete()
         {
-            throw new NotImplementedException();
+            DataAccess accesBD = new DataAccess();
+            string sql = $"DELETE FROM attributions WHERE idenseignant = {this.idPersonnel} AND dateatttribut = {this.DateAtttribut.Date.ToString()} AND idmateriel = {this.IdMateriel}" ;
+            accesBD.GetData(sql);
         }
 
         public ObservableCollection<Attribution> FindAll()

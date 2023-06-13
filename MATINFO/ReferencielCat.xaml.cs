@@ -32,7 +32,9 @@ namespace MATINFO
 
         private void btSupprimer_Click(object sender, RoutedEventArgs e)
         {
-            gestionAttribution.Remove((Categorie)dgCategorie.SelectedItem);
+            Categorie c = (Categorie)dgCategorie.SelectedItem;
+            c.Delete();
+            gestionAttribution.Remove(c);
         }
 
         private void btAjouter_Click(object sender, RoutedEventArgs e)

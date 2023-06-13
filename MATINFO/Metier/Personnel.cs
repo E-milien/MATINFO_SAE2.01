@@ -48,7 +48,9 @@ namespace MATINFO
 
         public void Delete()
         {
-            throw new NotImplementedException();
+            DataAccess accesBD = new DataAccess();
+            string sql = $"DELETE FROM enseignant WHERE idenseignant = {this.Idpersonnel}";
+            accesBD.GetData(sql);
         }
 
         public ObservableCollection<Personnel> FindAll()
