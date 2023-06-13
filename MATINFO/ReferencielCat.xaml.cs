@@ -39,7 +39,7 @@ namespace MATINFO
         {
             Categorie categorie = new Categorie();
             listeCategorie.Add(categorie);
-            gestionAttribution.LesCategorie.Insert(0, new Categorie());
+            gestionAttribution.LesCategorie.Insert(0, new Categorie(""));
         }
 
         private void btOK_Click(object sender, RoutedEventArgs e)

@@ -32,7 +32,9 @@ namespace MATINFO
 
         public async void btEnregistrer_Click(object sender, RoutedEventArgs e)
         {
-            gestionAttribution.LesAttribution.Insert(0, new Attribution((Materiel)lvMat.SelectedItem,(Personnel)lvPer.SelectedItem,(DateTime)dpDate.DisplayDate,(string)tbCom.Text));
+            Attribution a = new Attribution(gestionAttribution.SearchMat((Materiel)lvMat.SelectedItem), gestionAttribution.SearchPer((Personnel)lvPer.SelectedItem), (DateTime)dpDate.DisplayDate, (string)tbCom.Text);
+            a.Create();
+            gestionAttribution.LesAttribution.Insert(0,a);
             await Task.Delay(1000);
             
             Hide();

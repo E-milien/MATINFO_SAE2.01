@@ -19,6 +19,13 @@ namespace MATINFO
         {
         }
 
+        public Personnel(string emailpersonnel, string nompersonnel, string prenompersonnel)
+        {
+            Emailpersonnel = emailpersonnel;
+            Nompersonnel = nompersonnel;
+            Prenompersonnel = prenompersonnel;
+        }
+
         public Personnel(int idpersonnel, string emailpersonnel, string nompersonnel, string prenompersonnel)
         {
             Idpersonnel = idpersonnel;
@@ -34,7 +41,9 @@ namespace MATINFO
 
         public void Create()
         {
-            throw new NotImplementedException();
+            DataAccess accesBD = new DataAccess();
+            string sql = $"insert into enseignant (idenseignant, email, nomenseignant, prenomenseignant) values (nextval('enseignant_idenseignant_seq'::regclass), '{this.Emailpersonnel}', '{this.Nompersonnel}', '{this.Prenompersonnel}')";
+            DataTable datas = accesBD.GetData(sql);
         }
 
         public void Delete()

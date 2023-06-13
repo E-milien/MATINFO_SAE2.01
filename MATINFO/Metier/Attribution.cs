@@ -53,7 +53,9 @@ namespace MATINFO
 
         public void Create()
         {
-            throw new NotImplementedException();
+            DataAccess accesBD = new DataAccess();
+            string sql = $"insert into attributions (idenseignant, dateatttribut, idmateriel, commentaire) values ('{this.IdPersonnel}', '{this.DateAtttribut}', '{this.IdMateriel}, '{this.Commentaire}')";
+            DataTable datas = accesBD.GetData(sql);
         }
 
         public void Delete()

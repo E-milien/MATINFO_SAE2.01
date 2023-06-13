@@ -15,21 +15,21 @@
             <ListView x:Name="lvCat" Width="177" ItemsSource="{Binding LesCategorie}" SelectedIndex="0">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="Categorie" Width="100" DisplayMemberBinding="{Binding Nom}"/>
+                        <GridViewColumn Header="Categorie" Width="100" DisplayMemberBinding="{Binding Nomcategorie}"/>
                     </GridView>
                 </ListView.View>
             </ListView>
             <ListView x:Name="lvMat" Width="177" ItemsSource="{Binding LesMateriel}" SelectedIndex="0">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="Materiel" Width="50" DisplayMemberBinding="{Binding Nom}"/>
+                        <GridViewColumn Header="Materiel" Width="50" DisplayMemberBinding="{Binding Nommateriel}"/>
                     </GridView>
                 </ListView.View>
             </ListView>
             <ListView x:Name="lvPer" Width="177" ItemsSource="{Binding LesPersonnel}" SelectedIndex="0">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="Personnel" Width="100" DisplayMemberBinding="{Binding Nom}"/>
+                        <GridViewColumn Header="Personnel" Width="100" DisplayMemberBinding="{Binding Nompersonnel}"/>
                     </GridView>
                 </ListView.View>
             </ListView>

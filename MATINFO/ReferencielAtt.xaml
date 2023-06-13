@@ -58,10 +58,10 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <DataGrid x:Name="dgAttribution" ItemsSource="{Binding LesAttribution}" Margin="10,33,10,62" Grid.Row="1" AutoGenerateColumns="False" SelectedIndex="0">
+        <DataGrid x:Name="dgAttribution" ItemsSource="{Binding LesAttribution}" Margin="10,33,10,62" Grid.Row="1" AutoGenerateColumns="False" SelectedIndex="0" CanUserAddRows="False">
             <DataGrid.Columns>
-           <!--     <DataGridTextColumn Header="Materiel" Binding="{Binding UnMateriel.Idmateriel}" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Personnel" Binding="{Binding UnPersonnel.}" IsReadOnly="True"/> -->
+                <DataGridTextColumn Header="Materiel" Binding="{Binding UnMateriel.Nommateriel}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Personnel" Binding="{Binding UnPersonnel.Nompersonnel}" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Date" Binding="{Binding DateAtttribut}"/>
                 <DataGridTextColumn Header="Commentaire" Binding="{Binding Commentaire}"/>
             </DataGrid.Columns>

@@ -41,13 +41,5 @@ namespace MATINFO
                 MessageBox.Show("Nom d'utilisateur ou mot de passe incorrect.");
             }
         }
-        private void TextBox_PreviewKeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.Enter)
-            {
-                e.Handled = true; // Empêche la propagation de l'événement
-                LoginButton_Click(sender, e); // Déclenche le clic du bouton de connexion
-            }
-        }
     }
 }

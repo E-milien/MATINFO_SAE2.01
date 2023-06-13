@@ -21,13 +21,13 @@ namespace MATINFO
         {
         }
 
-        public Materiel(int idmateriel, string codebarre, string nommateriel, string referencemateriel)
+        public Materiel(string codebarre, string nommateriel, string referencemateriel)
         {
-            Idmateriel= idmateriel;
             Codebarre = codebarre;
             Nommateriel = nommateriel;
             Referencemateriel = referencemateriel;
         }
+
         public Materiel(int idCategorie, int idmateriel, string codebarre, string nommateriel, string referencemateriel)
         {
             IdCategorie = idCategorie;
@@ -54,7 +54,9 @@ namespace MATINFO
 
         public void Create()
         {
-            throw new NotImplementedException();
+            DataAccess accesBD = new DataAccess();
+            string sql = $"insert into materiel (idmateriel, idcategorie, codebarre, nommateriel, referencemateriel) values (nextval('materiel_idmateriel_seq'::regclass), '{this.idCategorie}', '{this.Codebarre}', '{this.Nommateriel}', '{this.Referencemateriel}')";
+            DataTable datas = accesBD.GetData(sql);
         }
 
         public void Delete()

@@ -37,7 +37,7 @@ namespace MATINFO
 
         private void btAjouter_Click(object sender, RoutedEventArgs e)
         {
-            Personnel p = new Personnel();
+            Personnel p = new Personnel("","","");
             personnels.Add(p);
             gestionAttribution.LesPersonnel.Insert(0,p);
         }
@@ -48,6 +48,7 @@ namespace MATINFO
             {
                 personnel.Create();
             }
+            personnels = new List<Personnel>();
         }
     }
 }

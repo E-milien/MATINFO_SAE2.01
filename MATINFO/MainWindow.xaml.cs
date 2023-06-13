@@ -73,11 +73,11 @@ namespace MATINFO
             {
                 materiels.Add(new Materiel((Categorie)gestionAttribution.SearchCat(tmpMat.IdCategorie), tmpMat.Idmateriel, tmpMat.Codebarre, tmpMat.Nommateriel,tmpMat.Referencemateriel));
             }
+            gestionAttribution.LesMateriel = materiels;
             foreach (Attribution tmpAtt in gestionAttribution.LesAttribution)
             {
                 attributions.Add(new Attribution((Materiel)gestionAttribution.SearchMat(tmpAtt.IdMateriel),(Personnel)gestionAttribution.SearchPer(tmpAtt.IdPersonnel),tmpAtt.DateAtttribut,tmpAtt.Commentaire));
             }
-            gestionAttribution.LesMateriel = materiels;
             gestionAttribution.LesAttribution = attributions;
         }
     }

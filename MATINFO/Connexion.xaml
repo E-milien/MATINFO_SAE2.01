@@ -26,8 +26,7 @@
             <Button
                 Width="100"
                 Click="LoginButton_Click"
-                Content="Connexion" 
-                PreviewKeyDown="TextBox_PreviewKeyDown" />
+                Content="Connexion" ></Button>
         </StackPanel>
     </Grid>
 </Window>

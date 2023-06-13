@@ -17,9 +17,13 @@ namespace MATINFO
         {
         }
 
+        public Categorie(string nomcategorie)
+        {
+            this.Nomcategorie = nomcategorie;
+        }
         public Categorie(int idcategorie, string nomcategorie)
         {
-            this.Idcategorie = idcategorie;
+            this.Idcategorie= idcategorie;
             this.Nomcategorie = nomcategorie;
         }
 
