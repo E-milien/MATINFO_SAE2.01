@@ -47,9 +47,13 @@ namespace MATINFO
 
         private void btOK_Click(object sender, RoutedEventArgs e)
         {
-            foreach(Materiel materiel in listeMat)
+            if (listeMat.Count > 0)
             {
-                materiel.Create();
+                foreach (Materiel materiel in listeMat)
+                {
+                    materiel.Create();
+                }
+                listeMat = new List<Materiel>();
             }
         }
     }

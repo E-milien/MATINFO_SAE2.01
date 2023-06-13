@@ -47,11 +47,15 @@ namespace MATINFO
 
         private void btOK_Click(object sender, RoutedEventArgs e)
         {
-            foreach(Personnel personnel in personnels) 
+            if (personnels.Count > 0)
             {
-                personnel.Create();
+                foreach (Personnel personnel in personnels)
+                {
+                    personnel.Create();
+                }
+                personnels = new List<Personnel>();
             }
-            personnels = new List<Personnel>();
+            
         }
     }
 }

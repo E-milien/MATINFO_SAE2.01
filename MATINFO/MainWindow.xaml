@@ -85,24 +85,24 @@
 
                 </StackPanel>
 
-                <ListView x:Name="lvAttribution" Grid.Row="1" ItemsSource="{Binding LesAttribution}">
+                <ListView x:Name="lvAttribution" Grid.Row="1" ItemsSource="{Binding Path=LesAttribution}">
                     <ListView.View>
                         <GridView>
                            <GridViewColumn
                                 Width="100"
-                                DisplayMemberBinding="{Binding UnMateriel.Nommateriel}"
+                                DisplayMemberBinding="{Binding Path=UnMateriel.Nommateriel}"
                                 Header="Matériel" />
                             <GridViewColumn
                                 Width="100"
-                                DisplayMemberBinding="{Binding UnPersonnel.Nompersonnel}"
+                                DisplayMemberBinding="{Binding Path=UnPersonnel.Nompersonnel}"
                                 Header="Personnel" />
                             <GridViewColumn
                                 Width="150"
-                                DisplayMemberBinding="{Binding DateAtttribut}"
+                                DisplayMemberBinding="{Binding Path=DateAtttribut}"
                                 Header="Date d'attribution" />
                             <GridViewColumn
                                 Width="150"
-                                DisplayMemberBinding="{Binding Commentaire}"
+                                DisplayMemberBinding="{Binding Path=Commentaire}"
                                 Header="Commentaire" />
                         </GridView>
                     </ListView.View>

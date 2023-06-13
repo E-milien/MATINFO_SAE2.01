@@ -51,10 +51,10 @@
             AutoGenerateColumns="false"
             CanUserAddRows="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Idmateriel}" Header="ID" IsReadOnly="True"/>
-                <DataGridTextColumn Binding="{Binding Nommateriel}" Header="Nom" />
-                <DataGridTextColumn Binding="{Binding Codebarre}" Header="Code barre" />
-                <DataGridTextColumn Binding="{Binding Referencemateriel}" Header="Reference" />
+                <DataGridTextColumn Binding="{Binding Path=Idmateriel}" Header="ID" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding Path=Nommateriel}" Header="Nom" />
+                <DataGridTextColumn Binding="{Binding Path=Codebarre}" Header="Code barre" />
+                <DataGridTextColumn Binding="{Binding Path=Referencemateriel}" Header="Reference" />
             </DataGrid.Columns>
         </DataGrid>
         <Button

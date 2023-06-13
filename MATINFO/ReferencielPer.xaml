@@ -47,15 +47,15 @@
             x:Name="dgPersonnel"
             Grid.Row="1"
             Margin="10,10,10,102"
-            ItemsSource="{Binding LesPersonnel}"
+            ItemsSource="{Binding Path=LesPersonnel}"
             CanUserAddRows="False"
             AutoGenerateColumns="False">
 
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Idpersonnel}" Header="ID" IsReadOnly="True"/>
-                <DataGridTextColumn Binding="{Binding Prenompersonnel}" Header="Prenom" />
-                <DataGridTextColumn Binding="{Binding Nompersonnel}" Header="Nom" />
-                <DataGridTextColumn Binding="{Binding Emailpersonnel}" Header="Email" />
+                <DataGridTextColumn Binding="{Binding Path=Idpersonnel}" Header="ID" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding Path=Prenompersonnel}" Header="Prenom" />
+                <DataGridTextColumn Binding="{Binding Path=Nompersonnel}" Header="Nom" />
+                <DataGridTextColumn Binding="{Binding Path=Emailpersonnel}" Header="Email" />
             </DataGrid.Columns>
         </DataGrid>
         <Button

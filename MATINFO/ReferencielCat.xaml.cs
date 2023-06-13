@@ -40,20 +40,23 @@ namespace MATINFO
 
         private void btAjouter_Click(object sender, RoutedEventArgs e)
         {
-            Categorie categorie = new Categorie();
+            Categorie categorie = new Categorie("");
             listeCategorie.Add(categorie);
-            gestionAttribution.LesCategorie.Insert(0, new Categorie(""));
+            gestionAttribution.LesCategorie.Insert(0, categorie);
+
         }
 
         private void btOK_Click(object sender, RoutedEventArgs e)
         {
-
-            foreach(Categorie cat in listeCategorie)
+            if (listeCategorie.Count > 0)
             {
-                cat.Create();
-                MessageBox.Show(cat.Nomcategorie);
+                foreach (Categorie cat in listeCategorie)
+                {
+                    cat.Create();
+                    MessageBox.Show(cat.Nomcategorie);
+                }
+                listeCategorie = new List<Categorie>();
             }
-            //listeCategorie = new List<Categorie>();
         }
     }
 }
