@@ -35,6 +35,7 @@ namespace MATINFO
             Materiel m = (Materiel)dgMateriel.SelectedItem;
             m.Delete();
             gestionAttribution.Remove(m);
+            dgMateriel.SelectedIndex = 0;
         }
 
         private void btAjouter_Click(object sender, RoutedEventArgs e)

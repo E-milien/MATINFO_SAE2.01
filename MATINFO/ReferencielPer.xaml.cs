@@ -35,6 +35,7 @@ namespace MATINFO
             Personnel p = (Personnel)dgPersonnel.SelectedItem;
             p.Delete();
             gestionAttribution.Remove(p);
+            dgPersonnel.SelectedIndex= 0;
         }
 
         private void btAjouter_Click(object sender, RoutedEventArgs e)

@@ -35,6 +35,7 @@ namespace MATINFO
             Categorie c = (Categorie)dgCategorie.SelectedItem;
             c.Delete();
             gestionAttribution.Remove(c);
+            dgCategorie.SelectedIndex= 0;
         }
 
         private void btAjouter_Click(object sender, RoutedEventArgs e)
