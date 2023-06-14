@@ -37,6 +37,7 @@ namespace MATINFO
             a.UnPersonnel = (Personnel)lvPer.SelectedItem;
             a.Create();
             gestionAttribution.LesAttribution.Insert(0,a);
+            MessageBox.Show("" + gestionAttribution.SearchMat((Materiel)lvMat.SelectedItem) + " et " + gestionAttribution.SearchPer((Personnel)lvPer.SelectedItem) + " et " + ((DateTime)dpDate.DisplayDate).ToString() + " et " + (string)tbCom.Text);
             await Task.Delay(1000);
             Hide();
         }

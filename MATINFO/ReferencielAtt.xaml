@@ -58,7 +58,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <DataGrid x:Name="dgAttribution" ItemsSource="{Binding Path=LesAttribution}" Margin="10,33,10,62" Grid.Row="1" AutoGenerateColumns="False" SelectedIndex="0" CanUserAddRows="False">
+        <DataGrid x:Name="dgAttribution" ItemsSource="{Binding Path=LesAttribution}" Margin="10,10,10,62" Grid.Row="1" AutoGenerateColumns="False" SelectedIndex="0" CanUserAddRows="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID Materiel" Binding="{Binding Path=IdMateriel}" IsReadOnly="True"/>
                 <DataGridTextColumn Header="ID Personnel" Binding="{Binding Path=IdPersonnel}" IsReadOnly="True"/>
@@ -66,6 +66,6 @@
                 <DataGridTextColumn Header="Commentaire" Binding="{Binding Path=Commentaire}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Content="Button" Margin="335,5,0,0" Grid.Row="1" Click="Button_Click" Height="21" VerticalAlignment="Top" HorizontalAlignment="Left" Width="105"/>
+        
     </Grid>
 </Window>

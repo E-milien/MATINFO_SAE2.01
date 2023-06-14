@@ -55,7 +55,7 @@ namespace MATINFO
         public void Create()
         {
             DataAccess accesBD = new DataAccess();
-            string sql = $"insert into materiel (idmateriel, idcategorie, nommateriel, referenceconstructeurmateriel, codebarreinventaire) values (nextval('materiel_idmateriel_seq'::regclass), '{this.idCategorie}', '{this.Nommateriel}', '{this.Referencemateriel}', '{this.Codebarre}')";
+            string sql = $"insert into materiel (idmateriel, idcategorie, nommateriel, referenceconstructeurmateriel, codebarreinventaire) values (nextval('materiel_idmateriel_seq'::regclass), {this.idCategorie}, '{this.Nommateriel}', '{this.Referencemateriel}', '{this.Codebarre}')";
             DataTable datas = accesBD.GetData(sql);
         }
 
