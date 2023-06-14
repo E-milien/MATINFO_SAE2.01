@@ -55,7 +55,7 @@
             Margin="0,10,10,102"
             ItemsSource="{Binding Path=LesMateriel}" SelectedIndex="0"
             AutoGenerateColumns="false"
-            CanUserAddRows="False">
+            CanUserAddRows="False" Background="#FFBAC1F9">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Path=Idmateriel}" Header="ID" IsReadOnly="True"/>
                 <DataGridTextColumn Binding="{Binding Path=Nommateriel}" Header="Nom" />
@@ -88,8 +88,8 @@
             Margin="10,0,10,10"
             VerticalAlignment="Bottom"
             Click="btOK_Click"
-            Content="OK"
-            RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
+            Content="Valider Ajout"
+            RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Background="#FF2A77F3">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleX="1" />
@@ -103,7 +103,7 @@
             Grid.Row="1"
             Grid.Column="0" Margin="10,10,0,102"
             ItemsSource="{Binding Path=LesMateriel}" HorizontalAlignment="Left" Width="140"
-                  SelectedIndex="0">
+                  SelectedIndex="0" Background="#FFBAC1F9">
             <ListView.View>
                 <GridView>
                     <GridViewColumn
