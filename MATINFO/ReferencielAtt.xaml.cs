@@ -30,6 +30,7 @@ namespace MATINFO
         public ReferencielAtt()
         {
             InitializeComponent();
+            dgAttribution.CellEditEnding += DataGrid_CellEditEnding;
         }
 
         private void btSupprimer_Click(object sender, RoutedEventArgs e)
@@ -52,6 +53,11 @@ namespace MATINFO
 
         private void btOK_Click(object sender, RoutedEventArgs e)
         {
+        }
+        private void DataGrid_CellEditEnding(object sender, DataGridCellEditEndingEventArgs e)
+        {
+            Attribution attribution = (Attribution)e.Row.Item;
+            attribution.Update();
         }
     }
 }

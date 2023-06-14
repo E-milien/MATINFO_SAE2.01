@@ -82,7 +82,9 @@ namespace MATINFO
 
         public void Update()
         {
-            throw new NotImplementedException();
+            DataAccess accesBD = new DataAccess();
+            string sql = $"UPDATE enseignant SET email = '{this.Emailpersonnel}', nomenseignant = '{this.Nompersonnel}', prenomenseignant = '{this.Prenompersonnel}' WHERE idenseignant = {this.Idpersonnel}";
+            DataTable datas = accesBD.GetData(sql);
         }
     }
 }

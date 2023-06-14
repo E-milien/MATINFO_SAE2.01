@@ -73,7 +73,9 @@ namespace MATINFO
 
         public void Update()
         {
-            throw new NotImplementedException();
+            DataAccess accesBD = new DataAccess();
+            string sql = $"UPDATE categorie SET nomcategorie = '{this.Nomcategorie}' WHERE idcategorie = {this.Idcategorie}";
+            DataTable datas = accesBD.GetData(sql);
         }
     }
 }

@@ -67,18 +67,16 @@ namespace MATINFO
 
         public void Maj()
         {
-            ObservableCollection<Materiel> materiels= new ObservableCollection<Materiel>();
-            ObservableCollection<Attribution> attributions = new ObservableCollection<Attribution>();
-            foreach(Materiel tmpMat in gestionAttribution.LesMateriel)
+
+            foreach(Materiel mat in gestionAttribution.LesMateriel)
             {
-                materiels.Add(new Materiel((Categorie)gestionAttribution.SearchCat(tmpMat.IdCategorie), tmpMat.Idmateriel, tmpMat.Codebarre, tmpMat.Nommateriel,tmpMat.Referencemateriel));
+                mat.LaCategorie=(Categorie)gestionAttribution.SearchCat(mat.IdCategorie);
             }
-            gestionAttribution.LesMateriel = materiels;
-            foreach (Attribution tmpAtt in gestionAttribution.LesAttribution)
+            foreach (Attribution att in gestionAttribution.LesAttribution)
             {
-                attributions.Add(new Attribution((Materiel)gestionAttribution.SearchMat(tmpAtt.IdMateriel),(Personnel)gestionAttribution.SearchPer(tmpAtt.IdPersonnel),tmpAtt.DateAtttribut,tmpAtt.Commentaire));
+                att.UnMateriel = (Materiel)gestionAttribution.SearchMat(att.IdMateriel);
+                att.UnPersonnel = (Personnel)gestionAttribution.SearchPer(att.IdPersonnel);
             }
-            gestionAttribution.LesAttribution = attributions;
         }
     }
 }

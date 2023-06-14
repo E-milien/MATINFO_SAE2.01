@@ -95,7 +95,9 @@ namespace MATINFO
 
         public void Update()
         {
-            throw new NotImplementedException();
+            DataAccess accesBD = new DataAccess();
+            string sql = $"UPDATE materiel SET codebarre = '{this.Codebarre}', nommateriel = '{this.Nommateriel}', referencemateriel = '{this.Referencemateriel}' WHERE idmateriel = {this.Idmateriel}";
+            DataTable datas = accesBD.GetData(sql);
         }
     }
 }

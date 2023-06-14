@@ -94,7 +94,9 @@ namespace MATINFO
 
         public void Update()
         {
-            throw new NotImplementedException();
+            DataAccess accesBD = new DataAccess();
+            string sql = $"UPDATE attributions SET dateatttribut = '{this.DateAtttribut.ToString("yyyy-MM-dd")}', commentaire = '{this.Commentaire}' WHERE idmateriel = {this.IdMateriel} AND idenseignant = {this.IdPersonnel}";
+            DataTable datas = accesBD.GetData(sql);
         }
     }
 }
