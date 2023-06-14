@@ -28,6 +28,7 @@ namespace MATINFO
         public ReferencielCat()
         {
             InitializeComponent();
+            dgCategorie.CellEditEnding += DgCategorie_CellEditEnding;
         }
 
         private void btSupprimer_Click(object sender, RoutedEventArgs e)
@@ -57,6 +58,11 @@ namespace MATINFO
                 }
                 listeCategorie = new List<Categorie>();
             }
+        }
+        private void DgCategorie_CellEditEnding(object sender, DataGridCellEditEndingEventArgs e)
+        {
+            Categorie categorie = (Categorie)e.Row.Item;
+            categorie.Update();
         }
     }
 }

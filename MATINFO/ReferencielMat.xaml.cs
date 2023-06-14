@@ -28,6 +28,7 @@ namespace MATINFO
         public ReferencielMat()
         {
             InitializeComponent();
+            dgMateriel.CellEditEnding += DgMateriel_CellEditEnding;
         }
 
         private void btSupprimer_Click(object sender, RoutedEventArgs e)
@@ -55,6 +56,11 @@ namespace MATINFO
                 }
                 listeMat = new List<Materiel>();
             }
+        }
+        private void DgMateriel_CellEditEnding(object sender, DataGridCellEditEndingEventArgs e)
+        {
+            Materiel materiel = (Materiel)e.Row.Item;
+            materiel.Update();
         }
     }
 }

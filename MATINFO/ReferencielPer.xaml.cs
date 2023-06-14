@@ -28,6 +28,7 @@ namespace MATINFO
         public ReferencielPer()
         {
             InitializeComponent();
+            dgPersonnel.CellEditEnding += DgPersonnel_CellEditEnding;
         }
 
         private void btSupprimer_Click(object sender, RoutedEventArgs e)
@@ -56,6 +57,11 @@ namespace MATINFO
                 personnels = new List<Personnel>();
             }
             
+        }
+        private void DgPersonnel_CellEditEnding(object sender, DataGridCellEditEndingEventArgs e)
+        {
+            Personnel personnel = (Personnel)e.Row.Item;
+            personnel.Update();
         }
     }
 }
