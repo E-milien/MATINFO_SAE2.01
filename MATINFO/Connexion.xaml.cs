@@ -38,8 +38,17 @@ namespace MATINFO
             }
             else
             {
-                MessageBox.Show("Nom d'utilisateur ou mot de passe incorrect.");
+                usernameTextBox.BorderBrush = Brushes.Red;
+                passwordBox.BorderBrush = Brushes.Red;
+                MessageBox.Show("Nom d'utilisateur ou mot de passe incorrect.","Attention",MessageBoxButton.OK,MessageBoxImage.Warning);
             }
         }
+
+        private void usernameTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            usernameTextBox.BorderBrush = Brushes.Black;
+            passwordBox.BorderBrush = Brushes.Black;
+        }
+
     }
 }

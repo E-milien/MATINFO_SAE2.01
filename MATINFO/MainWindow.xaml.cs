@@ -34,7 +34,7 @@ namespace MATINFO
         }
         public MainWindow()
         {
-            //login.ShowDialog();
+            login.ShowDialog();
             InitializeComponent();
             Maj();
         }
