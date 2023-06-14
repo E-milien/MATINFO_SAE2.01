@@ -15,12 +15,16 @@
         <local:GestionAttribution x:Name="gestionAttribution" />
     </Window.DataContext>
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" MinHeight="19" />
             <RowDefinition />
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0" Orientation="Horizontal">
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Grid.ColumnSpan="2">
             <TextBlock x:Name="txTitre" Text="Liste des matériels" />
 
         </StackPanel>
@@ -29,11 +33,11 @@
             x:Name="btSupprimer"
             Grid.Row="1"
             Height="41"
-            Margin="230,0,10,56"
+            Margin="0,0,10,56"
             VerticalAlignment="Bottom"
             Click="btSupprimer_Click"
             Content="Supprimer"
-            RenderTransformOrigin="0.5,0.5">
+            RenderTransformOrigin="0.5,0.5" Grid.Column="1" Width="204" HorizontalAlignment="Right" Background="#FFFB2222">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleX="1" />
@@ -43,10 +47,12 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
+
         <DataGrid
             x:Name="dgMateriel"
             Grid.Row="1"
-            Margin="10,10,10,102"
+            Grid.Column="1"
+            Margin="0,10,10,102"
             ItemsSource="{Binding Path=LesMateriel}" SelectedIndex="0"
             AutoGenerateColumns="false"
             CanUserAddRows="False">
@@ -61,11 +67,11 @@
             x:Name="btAjouter"
             Grid.Row="1"
             Height="41"
-            Margin="10,0,225,56"
+            Margin="10,0,0,56"
             VerticalAlignment="Bottom"
             Click="btAjouter_Click"
             Content="Ajouter"
-            RenderTransformOrigin="0.5,0.5">
+            RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Width="204" HorizontalAlignment="Left" Background="#FF22FB22">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleX="1" />
@@ -83,7 +89,7 @@
             VerticalAlignment="Bottom"
             Click="btOK_Click"
             Content="OK"
-            RenderTransformOrigin="0.5,0.5">
+            RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleX="1" />
@@ -93,5 +99,18 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
+        <ListView x:Name="lvCategorie"
+            Grid.Row="1"
+            Grid.Column="0" Margin="10,10,0,102"
+            ItemsSource="{Binding Path=LesMateriel}" HorizontalAlignment="Left" Width="140">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn
+                        Header="Nom categorie"
+                        DisplayMemberBinding="{Binding Path=LaCategorie.Nomcategorie}"
+                        Width="Auto"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Window>

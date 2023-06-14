@@ -28,10 +28,10 @@
         <Button
             x:Name="btSupprimer"
             Grid.Row="1"
-            Margin="230,0,10,10"
+            Margin="0,0,8,10"
             Click="btSupprimer_Click"
             Content="Supprimer"
-            RenderTransformOrigin="0.5,0.5" Height="41" VerticalAlignment="Bottom">
+            RenderTransformOrigin="0.5,0.5" Height="41" VerticalAlignment="Bottom" Background="#FFFB2222" HorizontalAlignment="Right" Width="204">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleX="1" />
@@ -45,10 +45,10 @@
         <Button
             x:Name="btAjouter"
             Grid.Row="1"
-            Margin="10,0,225,10"
+            Margin="10,0,0,10"
             Click="btAjouter_Click"
             Content="Ajouter"
-            RenderTransformOrigin="0.5,0.5" Height="41" VerticalAlignment="Bottom">
+            RenderTransformOrigin="0.5,0.5" Height="41" VerticalAlignment="Bottom" Background="#FF22FB22" HorizontalAlignment="Left" Width="204">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleX="1" />
@@ -60,8 +60,8 @@
         </Button>
         <DataGrid x:Name="dgAttribution" ItemsSource="{Binding Path=LesAttribution}" Margin="10,33,10,62" Grid.Row="1" AutoGenerateColumns="False" SelectedIndex="0" CanUserAddRows="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Materiel" Binding="{Binding Path=UnMateriel.Nommateriel}" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Personnel" Binding="{Binding Path=UnPersonnel.Nompersonnel}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="ID Materiel" Binding="{Binding Path=IdMateriel}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="ID Personnel" Binding="{Binding Path=IdPersonnel}" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Date" Binding="{Binding Path=DateAtttribut}"/>
                 <DataGridTextColumn Header="Commentaire" Binding="{Binding Path=Commentaire}"/>
             </DataGrid.Columns>

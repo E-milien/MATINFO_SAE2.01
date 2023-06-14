@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -42,6 +43,7 @@ namespace MATINFO
         private void btAjouter_Click(object sender, RoutedEventArgs e)
         {
             Materiel materiel = new Materiel();
+            materiel.IdCategorie = ((Categorie)lvCategorie.SelectedItem).Idcategorie;
             listeMat.Add(materiel);
             gestionAttribution.LesMateriel.Insert(0, materiel);
         }
@@ -62,5 +64,6 @@ namespace MATINFO
             Materiel materiel = (Materiel)e.Row.Item;
             materiel.Update();
         }
+
     }
 }
