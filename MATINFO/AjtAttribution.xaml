@@ -37,8 +37,8 @@
                 <Label Height="26" Content="Date :"/>
                 <DatePicker x:Name="dpDate" Height="28" FirstDayOfWeek="Monday"/>
                 <Label Height="26" Content="Commentaire :"/>
-                <TextBox x:Name="tbCom" TextWrapping="Wrap" Text="" Width="268" Height="316"/>
-                <Button x:Name="btEnregistrer" Height="39" Content="Enregistrer" Click="btEnregistrer_Click"/>
+                <TextBox x:Name="tbCom" TextWrapping="Wrap" Text="" Width="268" Height="286"/>
+                <Button x:Name="btEnregistrer" Height="50" Content="Enregistrer" Click="btEnregistrer_Click"/>
             </StackPanel>
         </StackPanel>
 

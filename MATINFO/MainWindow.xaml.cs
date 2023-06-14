@@ -62,7 +62,7 @@ namespace MATINFO
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            lvAttribution.UpdateLayout();
+            lvAttribution.Items.Refresh();
         }
 
         public void Maj()
