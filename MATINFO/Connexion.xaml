@@ -48,7 +48,8 @@
             <Button
                 Width="100"
                 Click="LoginButton_Click"
-                Content="Connexion" ></Button>
+                Content="Connexion" 
+                IsDefault="True"></Button>
         </StackPanel>
     </Grid>
 </Window>

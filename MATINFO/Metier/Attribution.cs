@@ -54,14 +54,14 @@ namespace MATINFO
         public void Create()
         {
             DataAccess accesBD = new DataAccess();
-            string sql = $"insert into attributions (idenseignant, dateatttribut, idmateriel, commentaire) values ('{this.IdPersonnel}', '{this.DateAtttribut.Date.ToString()}', '{this.IdMateriel}, '{this.Commentaire}')";
+            string sql = $"insert into est_attribue (idpersonnel, idmateriel, dateattribution, commentaireattribution) values ('{this.IdPersonnel}', '{this.IdMateriel}, '{this.DateAtttribut.Date.ToString()}', '{this.Commentaire}')";
             DataTable datas = accesBD.GetData(sql);
         }
 
         public void Delete()
         {
             DataAccess accesBD = new DataAccess();
-            string sql = $"DELETE FROM attributions WHERE idenseignant = {this.idPersonnel} AND dateatttribut = {this.DateAtttribut.Date.ToString()} AND idmateriel = {this.IdMateriel}" ;
+            string sql = $"DELETE FROM est_attribue WHERE idpersonnel = {this.idPersonnel} AND dateattribution = {this.DateAtttribut.Date.ToString()} AND idmateriel = {this.IdMateriel}" ;
             accesBD.GetData(sql);
         }
 
@@ -69,13 +69,13 @@ namespace MATINFO
         {
             ObservableCollection<Attribution> lesAttribution = new ObservableCollection<Attribution>();
             DataAccess accesBD = new DataAccess();
-            String requete = "select idmateriel, idenseignant, dateatttribut, commentaire from attributions ;";
+            String requete = "select idpersonnel, idmateriel, dateattribution, commentaireattribution from est_attribue ;";
             DataTable datas = accesBD.GetData(requete);
             if (datas != null)
             {
                 foreach (DataRow row in datas.Rows)
                 {
-                    Attribution e = new Attribution(int.Parse(row["idmateriel"].ToString()), int.Parse(row["idenseignant"].ToString()), DateTime.Parse(row["dateatttribut"].ToString()), (String)row["commentaire"]);
+                    Attribution e = new Attribution(int.Parse(row["idmateriel"].ToString()), int.Parse(row["idenseignant"].ToString()), DateTime.Parse(row["dateattribution"].ToString()), (String)row["commentaireattribution"]);
                     lesAttribution.Add(e);
                 }
             }
@@ -95,7 +95,7 @@ namespace MATINFO
         public void Update()
         {
             DataAccess accesBD = new DataAccess();
-            string sql = $"UPDATE attributions SET dateatttribut = '{this.DateAtttribut.ToString("yyyy-MM-dd")}', commentaire = '{this.Commentaire}' WHERE idmateriel = {this.IdMateriel} AND idenseignant = {this.IdPersonnel}";
+            string sql = $"UPDATE est_attribue SET dateattribution = '{this.DateAtttribut.ToString("yyyy-MM-dd")}', dateattribution = '{this.Commentaire}' WHERE idmateriel = {this.IdMateriel} AND idpersonnel = {this.IdPersonnel}";
             DataTable datas = accesBD.GetData(sql);
         }
     }

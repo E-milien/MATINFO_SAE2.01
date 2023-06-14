@@ -33,14 +33,14 @@ namespace MATINFO
         public void Create()
         {
             DataAccess accesBD = new DataAccess();
-            string sql = $"insert into categorie (idcategorie, nomcategorie) values (nextval('categorie_idcategorie_seq'::regclass), '{this.Nomcategorie}')";
+            string sql = $"insert into categorie_materiel (idcategorie, nomcategorie) values (nextval('categorie_idcategorie_seq'::regclass), '{this.Nomcategorie}')";
             DataTable datas = accesBD.GetData(sql);
         }
 
         public void Delete()
         {
             DataAccess accesBD = new DataAccess();
-            string sql = $"DELETE FROM categorie WHERE idcategorie = {this.Idcategorie}";
+            string sql = $"DELETE FROM catcategorie_materielegorie WHERE idcategorie = {this.Idcategorie}";
             accesBD.GetData(sql);
         }
 
@@ -48,7 +48,7 @@ namespace MATINFO
         {
             ObservableCollection<Categorie> lesCategorie = new ObservableCollection<Categorie>();
             DataAccess accesBD = new DataAccess();
-            String requete = "select idcategorie, nomcategorie from categorie ;";
+            String requete = "select idcategorie, nomcategorie from categorie_materiel ;";
             DataTable datas = accesBD.GetData(requete);
             if (datas != null)
             {
@@ -74,7 +74,7 @@ namespace MATINFO
         public void Update()
         {
             DataAccess accesBD = new DataAccess();
-            string sql = $"UPDATE categorie SET nomcategorie = '{this.Nomcategorie}' WHERE idcategorie = {this.Idcategorie}";
+            string sql = $"UPDATE categorie_materiel SET nomcategorie = '{this.Nomcategorie}' WHERE idcategorie = {this.Idcategorie}";
             DataTable datas = accesBD.GetData(sql);
         }
     }

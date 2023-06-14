@@ -35,7 +35,7 @@ namespace MATINFO /// A MODIFIER SI VOTRE PROJET A UN AUTRE NOM
           {
               NpgSQLConnect = new NpgsqlConnection
               {
-                  ConnectionString = "Server=51.83.36.122;port=5432;Database=rouemi;Search Path=saezeroun;uid=rouemi;password=dBHSdQ;" // A MODIFIER POUR VOTR BD
+                  ConnectionString = "Server=51.83.36.122;port=5432;Database=rouemi;Search Path=saematinfo;uid=rouemi;password=dBHSdQ;" // A MODIFIER POUR VOTR BD
               };
               NpgSQLConnect.Open();
                 

@@ -55,7 +55,7 @@ namespace MATINFO
         public void Create()
         {
             DataAccess accesBD = new DataAccess();
-            string sql = $"insert into materiel (idmateriel, idcategorie, codebarre, nommateriel, referencemateriel) values (nextval('materiel_idmateriel_seq'::regclass), '{this.idCategorie}', '{this.Codebarre}', '{this.Nommateriel}', '{this.Referencemateriel}')";
+            string sql = $"insert into materiel (idmateriel, idcategorie, codebarre, nommateriel, referenceconstructeurmateriel) values (nextval('materiel_idmateriel_seq'::regclass), '{this.idCategorie}', '{this.Codebarre}', '{this.Nommateriel}', '{this.Referencemateriel}')";
             DataTable datas = accesBD.GetData(sql);
         }
 
@@ -70,13 +70,13 @@ namespace MATINFO
         {
             ObservableCollection<Materiel> lesMateriel = new ObservableCollection<Materiel>();
             DataAccess accesBD = new DataAccess();
-            String requete = "select idcategorie, idmateriel, codebarre, nommateriel, referencemateriel from materiel ;";
+            String requete = "select idcategorie, idmateriel, codebarre, nommateriel, referenceconstructeurmateriel from materiel ;";
             DataTable datas = accesBD.GetData(requete);
             if (datas != null)
             {
                 foreach (DataRow row in datas.Rows)
                 {
-                    Materiel e = new Materiel(int.Parse(row["idcategorie"].ToString()), int.Parse(row["idmateriel"].ToString()), (String)row["codebarre"], (String)row["nommateriel"], (String)row["referencemateriel"]);
+                    Materiel e = new Materiel(int.Parse(row["idcategorie"].ToString()), int.Parse(row["idmateriel"].ToString()), (String)row["codebarre"], (String)row["nommateriel"], (String)row["referenceconstructeurmateriel"]);
                     lesMateriel.Add(e);
                 }
             }
@@ -96,7 +96,7 @@ namespace MATINFO
         public void Update()
         {
             DataAccess accesBD = new DataAccess();
-            string sql = $"UPDATE materiel SET codebarre = '{this.Codebarre}', nommateriel = '{this.Nommateriel}', referencemateriel = '{this.Referencemateriel}' WHERE idmateriel = {this.Idmateriel}";
+            string sql = $"UPDATE materiel SET codebarre = '{this.Codebarre}', nommateriel = '{this.Nommateriel}', referenceconstructeurmateriel = '{this.Referencemateriel}' WHERE idmateriel = {this.Idmateriel}";
             DataTable datas = accesBD.GetData(sql);
         }
     }
