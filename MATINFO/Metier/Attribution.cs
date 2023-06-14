@@ -15,53 +15,53 @@ namespace MATINFO
         private int idPersonnel;
         private Materiel unMateriel;
         private Personnel unPersonnel;
-        private DateTime dateAtttribut;
+        private DateTime dateAttribut;
         private string commentaire;
 
         public Attribution()
         {
         }
 
-        public Attribution(DateTime dateAtttribut, string commentaire)
+        public Attribution(DateTime dateAttribut, string commentaire)
         {
             Commentaire = commentaire;
-            DateAtttribut = dateAtttribut;
+            DateAttribut = dateAttribut;
         }
 
-        public Attribution(int idMateriel, int idPersonnel, DateTime dateAtttribut, string commentaire)
+        public Attribution(int idMateriel, int idPersonnel, DateTime dateAttribut, string commentaire)
         {
             this.IdMateriel = idMateriel;
             this.IdPersonnel = idPersonnel;
-            this.DateAtttribut = dateAtttribut;
+            this.DateAttribut = dateAttribut;
             this.Commentaire = commentaire;
         }
 
-        public Attribution(Materiel unMateriel, Personnel unPersonnel,DateTime dateAtttribut, string commentaire)
+        public Attribution(Materiel unMateriel, Personnel unPersonnel,DateTime dateAttribut, string commentaire)
         {
             this.unMateriel = unMateriel;
             this.UnPersonnel = unPersonnel;
-            this.DateAtttribut = dateAtttribut;
+            this.DateAttribut = dateAttribut;
             this.Commentaire = commentaire;
         }
 
         public Materiel UnMateriel { get => unMateriel; set => unMateriel = value; }
         public Personnel UnPersonnel { get => unPersonnel; set => unPersonnel = value; }
         public string Commentaire { get => commentaire; set => commentaire = value; }
-        public DateTime DateAtttribut { get => dateAtttribut; set => dateAtttribut = value; }
+        public DateTime DateAttribut { get => dateAttribut; set => dateAttribut = value; }
         public int IdMateriel { get => idMateriel; set => idMateriel = value; }
         public int IdPersonnel { get => idPersonnel; set => idPersonnel = value; }
 
         public void Create()
         {
             DataAccess accesBD = new DataAccess();
-            string sql = $"insert into est_attribue (idpersonnel, idmateriel, dateattribution, commentaireattribution) values ('{this.IdPersonnel}', '{this.IdMateriel}, '{this.DateAtttribut.Date.ToString()}', '{this.Commentaire}')";
+            string sql = $"insert into est_attribue (idpersonnel, idmateriel, dateattribution, commentaireattribution) values ('{this.IdPersonnel}', '{this.IdMateriel}, '{this.DateAttribut.Date.ToString()}', '{this.Commentaire}')";
             DataTable datas = accesBD.GetData(sql);
         }
 
         public void Delete()
         {
             DataAccess accesBD = new DataAccess();
-            string sql = $"DELETE FROM est_attribue WHERE idpersonnel = {this.idPersonnel} AND dateattribution = {this.DateAtttribut.Date.ToString()} AND idmateriel = {this.IdMateriel}" ;
+            string sql = $"DELETE FROM est_attribue WHERE idpersonnel = {this.idPersonnel} AND idmateriel = {this.IdMateriel}" ;
             accesBD.GetData(sql);
         }
 
@@ -75,7 +75,7 @@ namespace MATINFO
             {
                 foreach (DataRow row in datas.Rows)
                 {
-                    Attribution e = new Attribution(int.Parse(row["idmateriel"].ToString()), int.Parse(row["idenseignant"].ToString()), DateTime.Parse(row["dateattribution"].ToString()), (String)row["commentaireattribution"]);
+                    Attribution e = new Attribution(int.Parse(row["idmateriel"].ToString()), int.Parse(row["idpersonnel"].ToString()), DateTime.Parse(row["dateattribution"].ToString()), (String)row["commentaireattribution"]);
                     lesAttribution.Add(e);
                 }
             }
@@ -95,7 +95,7 @@ namespace MATINFO
         public void Update()
         {
             DataAccess accesBD = new DataAccess();
-            string sql = $"UPDATE est_attribue SET dateattribution = '{this.DateAtttribut.ToString("yyyy-MM-dd")}', dateattribution = '{this.Commentaire}' WHERE idmateriel = {this.IdMateriel} AND idpersonnel = {this.IdPersonnel}";
+            string sql = $"UPDATE est_attribue SET dateattribution = '{this.DateAttribut.ToString("yyyy-MM-dd")}', commentaireattribution = '{this.Commentaire}' WHERE idmateriel = {this.IdMateriel} AND idpersonnel = {this.IdPersonnel}";
             DataTable datas = accesBD.GetData(sql);
         }
     }

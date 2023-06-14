@@ -103,7 +103,7 @@
                                 Header="Personnel" />
                             <GridViewColumn
                                 Width="150"
-                                DisplayMemberBinding="{Binding Path=DateAtttribut.Date}"
+                                DisplayMemberBinding="{Binding Path=DateAttribut.Date}"
                                 Header="Date d'attribution" />
                             <GridViewColumn
                                 Width="150"

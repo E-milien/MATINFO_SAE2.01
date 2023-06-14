@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TVS7LW4h9f4tx1iGeQznxtRJ+pywDddvZUhO9t3dlrBh6TmvjBVu95MtjxdPNPM1xdoJ0+xcN2DPz83d5mcChA==",
+  "dgSpecHash": "CGuR+bGJw1NHLmvZjBr2MMobN0SLPmhOwbQGGsY55UuFlRoRx6HVQSQiqazl7ir0Viv2bRqHpOFmD3UFPsEqfg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\roukinee\\Source\\Repos\\MATINFO_SAE2.01\\MATINFO\\MATINFO.csproj",
+  "projectFilePath": "C:\\Users\\roukinee\\source\\repos\\MATINFO_SAE2.01\\MATINFO\\MATINFO.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\roukinee\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\roukinee\\.nuget\\packages\\npgsql\\7.0.4\\npgsql.7.0.4.nupkg.sha512",

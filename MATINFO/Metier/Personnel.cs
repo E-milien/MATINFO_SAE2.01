@@ -42,14 +42,14 @@ namespace MATINFO
         public void Create()
         {
             DataAccess accesBD = new DataAccess();
-            string sql = $"insert into enseignant (idenseignant, email, nomenseignant, prenomenseignant) values (nextval('enseignant_idenseignant_seq'::regclass), '{this.Emailpersonnel}', '{this.Nompersonnel}', '{this.Prenompersonnel}')";
+            string sql = $"insert into personnel (idpersonnel, emailpersonnel, nompersonnel, prenompersonnel) values (nextval('personnel_idpersonnel_seq'::regclass), '{this.Emailpersonnel}', '{this.Nompersonnel}', '{this.Prenompersonnel}')";
             DataTable datas = accesBD.GetData(sql);
         }
 
         public void Delete()
         {
             DataAccess accesBD = new DataAccess();
-            string sql = $"DELETE FROM enseignant WHERE idenseignant = {this.Idpersonnel}";
+            string sql = $"DELETE FROM personnel WHERE idpersonnel = {this.Idpersonnel}";
             accesBD.GetData(sql);
         }
 
@@ -57,13 +57,13 @@ namespace MATINFO
         {
             ObservableCollection<Personnel> lesPersonnel = new ObservableCollection<Personnel>();
             DataAccess accesBD = new DataAccess();
-            String requete = "select idenseignant, email, nomenseignant, prenomenseignant from enseignant ;";
+            String requete = "select idpersonnel, emailpersonnel, nompersonnel, prenompersonnel from personnel ;";
             DataTable datas = accesBD.GetData(requete);
             if (datas != null)
             {
                 foreach (DataRow row in datas.Rows)
                 {
-                    Personnel e = new Personnel(int.Parse(row["idenseignant"].ToString()),(String)row["email"], (String)row["nomenseignant"], (String)row["prenomenseignant"]);
+                    Personnel e = new Personnel(int.Parse(row["idpersonnel"].ToString()),(String)row["emailpersonnel"], (String)row["nompersonnel"], (String)row["prenompersonnel"]);
                     lesPersonnel.Add(e);
                 }
             }
@@ -83,7 +83,7 @@ namespace MATINFO
         public void Update()
         {
             DataAccess accesBD = new DataAccess();
-            string sql = $"UPDATE enseignant SET email = '{this.Emailpersonnel}', nomenseignant = '{this.Nompersonnel}', prenomenseignant = '{this.Prenompersonnel}' WHERE idenseignant = {this.Idpersonnel}";
+            string sql = $"UPDATE personnel SET emailpersonnel = '{this.Emailpersonnel}', nompersonnel = '{this.Nompersonnel}', prenompersonnel = '{this.Prenompersonnel}' WHERE idenseignant = {this.Idpersonnel}";
             DataTable datas = accesBD.GetData(sql);
         }
     }

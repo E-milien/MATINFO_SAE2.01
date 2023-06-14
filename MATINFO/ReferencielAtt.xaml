@@ -62,7 +62,7 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID Materiel" Binding="{Binding Path=IdMateriel}" IsReadOnly="True"/>
                 <DataGridTextColumn Header="ID Personnel" Binding="{Binding Path=IdPersonnel}" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Date" Binding="{Binding Path=DateAtttribut}"/>
+                <DataGridTextColumn Header="Date" Binding="{Binding Path=DateAttribut}"/>
                 <DataGridTextColumn Header="Commentaire" Binding="{Binding Path=Commentaire}"/>
             </DataGrid.Columns>
         </DataGrid>
