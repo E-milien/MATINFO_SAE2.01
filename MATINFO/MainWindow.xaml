@@ -22,7 +22,7 @@
         <Border
             Grid.Row="0"
             Padding="10"
-            Background="#333">
+            Background="#FF5E0BF7">
             <TextBlock
                 Margin="0,-3,0,-2"
                 FontSize="22"
@@ -35,40 +35,45 @@
                 <ColumnDefinition Width="2*" />
                 <ColumnDefinition Width="6*" />
             </Grid.ColumnDefinitions>
-
+            <Rectangle 
+                Grid.Column="0"
+                Grid.Row="0"
+                Stroke="Black" Margin="0,0,10,0" Fill="#FFBAC1F9"  />
             <StackPanel Grid.Column="0" Margin="0,0,10,0">
+                
                 <TextBlock
                     FontSize="24"
                     FontWeight="Bold"
-                    Text="Menu" />
+                    Text="Menu" Margin="5,0,5,0" />
                 <Button
                     x:Name="btCategoriM"
                     Height="50"
-                    Margin="0,0,0,0"
+                    Margin="5,0,5,0"
                     BorderBrush="#FF707070"
                     Click="btCategorie_Click"
-                    Content="Catégorie de Matériel" />
+                    Content="Catégorie de Matériel" Background="#FF5A5DFD" />
                 <Button
                     x:Name="btMat"
                     Height="50"
-                    Margin="0,5,0,0"
+                    Margin="5,5,5,0"
                     BorderBrush="#FF707070"
                     Click="btMat_Click"
-                    Content="Matériel" />
+                    Content="Matériel" Background="#FF5A5DFD" />
                 <Button
                     x:Name="btPersonnel"
                     Height="50"
-                    Margin="0,5,0,0"
+                    Margin="5,5,5,0"
                     BorderBrush="#FF707070"
                     Click="btPersonnel_Click"
-                    Content="Personnel" />
+                    Content="Personnel" Background="#FF5A5DFD" />
                 <Button
                     x:Name="btAttribution"
                     Height="50"
-                    Margin="0,5,0,0"
+                    Margin="5,5,5,0"
                     BorderBrush="#FF707070"
                     Click="btAttribution_Click"
-                    Content="Attribution" />
+                    Content="Attribution" Background="#FF5A5DFD" />
+                <Label Height="28" Margin="0,95,0,0" Content="© 2010-2023                    V8.3.11"/>
             </StackPanel>
 
             <Grid Grid.Column="1">
@@ -81,11 +86,11 @@
                     Grid.Row="0"
                     Margin="0,0,0,10"
                     Orientation="Horizontal">
-                    <Button Width="100" Content="Afficher" Click="Button_Click" />
+                    <Button Width="100" Content="Afficher" Click="Button_Click" Background="#FF5A5DFD" />
 
                 </StackPanel>
 
-                <ListView x:Name="lvAttribution" Grid.Row="1" ItemsSource="{Binding Path=LesAttribution}">
+                <ListView x:Name="lvAttribution" Grid.Row="1" ItemsSource="{Binding Path=LesAttribution}" Background="#FFBAC1F9">
                     <ListView.View>
                         <GridView>
                            <GridViewColumn
