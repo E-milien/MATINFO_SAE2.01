@@ -96,7 +96,7 @@ namespace MATINFO
         public void Update()
         {
             DataAccess accesBD = new DataAccess();
-            string sql = $"UPDATE materiel SET referenceconstructeurmateriel = '{this.Codebarre}', nommateriel = '{this.Nommateriel}', referenceconstructeurmateriel = '{this.Referencemateriel}' WHERE idmateriel = {this.Idmateriel}";
+            string sql = $"UPDATE materiel SET referenceconstructeurmateriel = '{this.Referencemateriel}', nommateriel = '{this.Nommateriel}', codebarreinventaire = '{this.Codebarre}' WHERE idmateriel = {this.Idmateriel}";
             DataTable datas = accesBD.GetData(sql);
         }
     }

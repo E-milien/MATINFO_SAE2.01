@@ -32,12 +32,24 @@ namespace MATINFO
 
         public async void btEnregistrer_Click(object sender, RoutedEventArgs e)
         {
-            Attribution a = new Attribution(gestionAttribution.SearchMat((Materiel)lvMat.SelectedItem), gestionAttribution.SearchPer((Personnel)lvPer.SelectedItem), (DateTime)dpDate.DisplayDate, (string)tbCom.Text);
-            a.UnMateriel = (Materiel)lvMat.SelectedItem;
-            a.UnPersonnel = (Personnel)lvPer.SelectedItem;
-            a.Create();
-            gestionAttribution.LesAttribution.Insert(0,a);
-            MessageBox.Show("" + gestionAttribution.SearchMat((Materiel)lvMat.SelectedItem) + " et " + gestionAttribution.SearchPer((Personnel)lvPer.SelectedItem) + " et " + ((DateTime)dpDate.DisplayDate).ToString() + " et " + (string)tbCom.Text);
+            bool ok = true;
+            foreach (Attribution att in gestionAttribution.LesAttribution)
+            {
+
+                if (gestionAttribution.SearchMat((Materiel)lvMat.SelectedItem)==att.IdMateriel && gestionAttribution.SearchPer((Personnel)lvPer.SelectedItem)==att.IdPersonnel)
+                {
+                    MessageBox.Show($"{((Materiel)lvMat.SelectedItem).Nommateriel} est déjà assigné à {((Personnel)lvPer.SelectedItem).Prenompersonnel} {((Personnel)lvPer.SelectedItem).Nompersonnel}", "Attention!", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    ok = false;
+                }
+            }
+            if (ok)
+            {
+                Attribution a = new Attribution(gestionAttribution.SearchMat((Materiel)lvMat.SelectedItem), gestionAttribution.SearchPer((Personnel)lvPer.SelectedItem), (DateTime)dpDate.DisplayDate, (string)tbCom.Text);
+                a.UnMateriel = (Materiel)lvMat.SelectedItem;
+                a.UnPersonnel = (Personnel)lvPer.SelectedItem;
+                a.Create();
+                gestionAttribution.LesAttribution.Insert(0, a);
+            }
             await Task.Delay(1000);
             Hide();
         }

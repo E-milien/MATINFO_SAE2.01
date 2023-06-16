@@ -23,13 +23,16 @@ namespace MATINFO
         List<Materiel> listeMat = new List<Materiel>();
         private void Modale_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
+            foreach (Materiel mat in gestionAttribution.LesMateriel)
+            {
+                mat.Update();
+            }
             e.Cancel = true;
             this.Hide();
         }
         public ReferencielMat()
         {
             InitializeComponent();
-            dgMateriel.CellEditEnding += DgMateriel_CellEditEnding;
         }
 
         private void btSupprimer_Click(object sender, RoutedEventArgs e)
@@ -59,11 +62,5 @@ namespace MATINFO
                 listeMat = new List<Materiel>();
             }
         }
-        private void DgMateriel_CellEditEnding(object sender, DataGridCellEditEndingEventArgs e)
-        {
-            Materiel materiel = (Materiel)e.Row.Item;
-            materiel.Update();
-        }
-
     }
 }

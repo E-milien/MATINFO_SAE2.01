@@ -83,7 +83,7 @@ namespace MATINFO
         public void Update()
         {
             DataAccess accesBD = new DataAccess();
-            string sql = $"UPDATE personnel SET emailpersonnel = '{this.Emailpersonnel}', nompersonnel = '{this.Nompersonnel}', prenompersonnel = '{this.Prenompersonnel}' WHERE idenseignant = {this.Idpersonnel}";
+            string sql = $"UPDATE personnel SET emailpersonnel = '{this.Emailpersonnel}', nompersonnel = '{this.Nompersonnel}', prenompersonnel = '{this.Prenompersonnel}' WHERE idpersonnel = {this.Idpersonnel}";
             DataTable datas = accesBD.GetData(sql);
         }
     }

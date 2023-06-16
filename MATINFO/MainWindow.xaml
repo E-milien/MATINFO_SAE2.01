@@ -9,38 +9,40 @@
     Width="800"
     Height="450"
     Closing="MainWindow_Closed"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    MinHeight="450"
+    MinWidth="800">
     <Window.DataContext>
         <local:GestionAttribution x:Name="gestionAttribution" />
     </Window.DataContext>
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="43.404" />
             <RowDefinition />
-            <RowDefinition Height="9*" />
         </Grid.RowDefinitions>
 
         <Border
             Grid.Row="0"
             Padding="10"
-            Background="#FF5E0BF7">
+            Background="#FF5E0BF7" Height="43" VerticalAlignment="Top">
             <TextBlock
                 Margin="0,-3,0,-2"
                 FontSize="22"
                 Foreground="White"
-                Text="MATINFO - Gestion des attributions de matériel" />
+                Text="MATINFO - Gestion des attributions de matériel" HorizontalAlignment="Left" Width="780" />
         </Border>
 
         <Grid Grid.Row="1" Margin="10">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="2*" />
-                <ColumnDefinition Width="6*" />
+                <ColumnDefinition Width="195" />
+                <ColumnDefinition />
             </Grid.ColumnDefinitions>
             <Rectangle 
                 Grid.Column="0"
                 Grid.Row="0"
                 Stroke="Black" Margin="0,0,10,0" Fill="#FFBAC1F9"  />
             <StackPanel Grid.Column="0" Margin="0,0,10,0">
-                
+
                 <TextBlock
                     FontSize="24"
                     FontWeight="Bold"
@@ -73,9 +75,9 @@
                     BorderBrush="#FF707070"
                     Click="btAttribution_Click"
                     Content="Attribution" Background="#FF5A5DFD" />
-                <Label Height="28" Margin="0,95,0,0" Content="© 2010-2023                    V8.3.11"/>
-            </StackPanel>
 
+            </StackPanel>
+            <Label Height="28" Margin="0,343,0,0" Content="© 2010-2023                    V8.3.11" VerticalAlignment="Top"/>
             <Grid Grid.Column="1">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="29.96" />
@@ -84,8 +86,7 @@
 
                 <StackPanel
                     Grid.Row="0"
-                    Margin="0,0,0,10"
-                    Orientation="Horizontal">
+                    Orientation="Horizontal" HorizontalAlignment="Left" Width="585" Height="20" VerticalAlignment="Top">
                     <Button Width="100" Content="Actualiser" Click="Button_Click" Background="#FF5A5DFD" />
 
                 </StackPanel>
@@ -93,7 +94,7 @@
                 <ListView x:Name="lvAttribution" Grid.Row="1" ItemsSource="{Binding Path=LesAttribution}" Background="#FFBAC1F9">
                     <ListView.View>
                         <GridView>
-                           <GridViewColumn
+                            <GridViewColumn
                                 Width="100"
                                 DisplayMemberBinding="{Binding Path=UnMateriel.Nommateriel}"
                                 Header="Matériel" />

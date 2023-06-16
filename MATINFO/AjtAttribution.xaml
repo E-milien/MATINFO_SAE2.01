@@ -5,39 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MATINFO"
         mc:Ignorable="d"
-        Title="AjtAttribution" Height="450" Width="800"
+        Title="AjtAttribution" Height="400" Width="400"
         Closing="Modale_Closing" ResizeMode="NoResize">
     <Window.DataContext>
         <local:GestionAttribution x:Name="gestionAttribution"/>
     </Window.DataContext>
     <Grid>
-        <StackPanel Orientation="Horizontal">
-            <ListView x:Name="lvCat" Width="177" ItemsSource="{Binding LesCategorie}" SelectedIndex="0" Background="#FFBAC1F9">
-                <ListView.View>
-                    <GridView>
-                        <GridViewColumn Header="Categorie" Width="100" DisplayMemberBinding="{Binding Nomcategorie}"/>
-                    </GridView>
-                </ListView.View>
-            </ListView>
-            <ListView x:Name="lvMat" Width="177" ItemsSource="{Binding LesMateriel}" SelectedIndex="0" Background="#FFBAC1F9">
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+            <ListView x:Name="lvMat" Width="124" ItemsSource="{Binding LesMateriel}" SelectedIndex="0" Background="#FFBAC1F9">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="Materiel" Width="50" DisplayMemberBinding="{Binding Nommateriel}"/>
                     </GridView>
                 </ListView.View>
             </ListView>
-            <ListView x:Name="lvPer" Width="177" ItemsSource="{Binding LesPersonnel}" SelectedIndex="0" Background="#FFBAC1F9">
+            <ListView x:Name="lvPer" Width="112" ItemsSource="{Binding LesPersonnel}" SelectedIndex="0" Background="#FFBAC1F9">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="Personnel" Width="100" DisplayMemberBinding="{Binding Nompersonnel}"/>
                     </GridView>
                 </ListView.View>
             </ListView>
-            <StackPanel Width="268">
+            <StackPanel Width="157">
                 <Label Height="26" Content="Date :" Background="#FF5A5DFD"/>
                 <DatePicker x:Name="dpDate" Height="28" FirstDayOfWeek="Monday" Background="#FFBAC1F9"/>
                 <Label Height="26" Content="Commentaire :" Background="#FF5A5DFD"/>
-                <TextBox x:Name="tbCom" TextWrapping="Wrap" Text="" Width="268" Height="286" Background="#FFBAC1F9"/>
+                <TextBox x:Name="tbCom" TextWrapping="Wrap" Text="" Height="238" Background="#FFBAC1F9"/>
                 <Button x:Name="btEnregistrer" Height="50" Content="Enregistrer" Click="btEnregistrer_Click" Background="#FF2A77F3"/>
             </StackPanel>
         </StackPanel>

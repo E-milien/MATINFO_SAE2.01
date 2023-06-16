@@ -22,13 +22,16 @@ namespace MATINFO
         List<Categorie> listeCategorie = new List<Categorie>();
         private void Modale_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
+            foreach(Categorie cat in gestionAttribution.LesCategorie)
+            {
+                cat.Update();
+            }
             e.Cancel = true;
             this.Hide();
         }
         public ReferencielCat()
         {
             InitializeComponent();
-            dgCategorie.CellEditEnding += DgCategorie_CellEditEnding;
         }
 
         private void btSupprimer_Click(object sender, RoutedEventArgs e)
@@ -58,11 +61,6 @@ namespace MATINFO
                 }
                 listeCategorie = new List<Categorie>();
             }
-        }
-        private void DgCategorie_CellEditEnding(object sender, DataGridCellEditEndingEventArgs e)
-        {
-            Categorie categorie = (Categorie)e.Row.Item;
-            categorie.Update();
         }
     }
 }
