@@ -33,7 +33,7 @@
             x:Name="btSupprimer"
             Grid.Row="1"
             Height="41"
-            Margin="0,0,10,56"
+            Margin="0,0,10,10"
             VerticalAlignment="Bottom"
             Click="btSupprimer_Click"
             Content="Supprimer"
@@ -48,26 +48,41 @@
             </Button.RenderTransform>
         </Button>
 
-        <DataGrid
-            x:Name="dgMateriel"
+        <ListView x:Name="lvCategorie"
             Grid.Row="1"
-            Grid.Column="1"
-            Margin="0,10,10,102"
-            ItemsSource="{Binding Path=LesMateriel}" SelectedIndex="0"
+            Grid.Column="0" Margin="10,10,0,56"
+            ItemsSource="{Binding Path=LesCategorie}"
+            Background="#FFBAC1F9"
+            SelectionMode="Multiple" SelectionChanged="lvCategorie_SelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn
+                        Header="Nom categorie"
+                        DisplayMemberBinding="{Binding Path=Nomcategorie}"
+                        Width="130"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <Grid Grid.Column="1" Margin="10,10,10,56" Grid.Row="1" >
+            <DataGrid
+            x:Name="dgMateriel"
             AutoGenerateColumns="false"
+            ItemsSource="{Binding Path=LesMateriel}"
             CanUserAddRows="False" Background="#FFBAC1F9">
-            <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Path=Idmateriel}" Header="ID" IsReadOnly="True"/>
-                <DataGridTextColumn Binding="{Binding Path=Nommateriel}" Header="Nom" />
-                <DataGridTextColumn Binding="{Binding Path=Codebarre}" Header="Code barre" />
-                <DataGridTextColumn Binding="{Binding Path=Referencemateriel}" Header="Reference" />
-            </DataGrid.Columns>
-        </DataGrid>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Idmateriel}" Header="ID" IsReadOnly="True"/>
+                    <DataGridTextColumn Binding="{Binding Nommateriel}" Header="Nom" />
+                    <DataGridTextColumn Binding="{Binding Codebarre}" Header="Code barre" />
+                    <DataGridTextColumn Binding="{Binding Referencemateriel}" Header="Reference" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
         <Button
             x:Name="btAjouter"
             Grid.Row="1"
             Height="41"
-            Margin="10,0,0,56"
+            Margin="10,0,0,10"
             VerticalAlignment="Bottom"
             Click="btAjouter_Click"
             Content="Ajouter"
@@ -81,37 +96,6 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button
-            x:Name="btOK"
-            Grid.Row="1"
-            Height="41"
-            Margin="10,0,10,10"
-            VerticalAlignment="Bottom"
-            Click="btOK_Click"
-            Content="Valider Ajout"
-            RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Background="#FF2A77F3">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleX="1" />
-                    <SkewTransform />
-                    <RotateTransform />
-                    <TranslateTransform />
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
-        <ListView x:Name="lvCategorie"
-            Grid.Row="1"
-            Grid.Column="0" Margin="10,10,0,102"
-            ItemsSource="{Binding Path=LesMateriel}" HorizontalAlignment="Left" Width="140"
-                  SelectedIndex="0" Background="#FFBAC1F9">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn
-                        Header="Nom categorie"
-                        DisplayMemberBinding="{Binding Path=LaCategorie.Nomcategorie}"
-                        Width="Auto"/>
-                </GridView>
-            </ListView.View>
-        </ListView>
+
     </Grid>
 </Window>

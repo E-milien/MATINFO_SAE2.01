@@ -23,6 +23,15 @@ namespace MATINFO
             LesPersonnel = p.FindAll();
             Attribution a = new Attribution();
             LesAttribution = a.FindAll();
+            foreach(Materiel mat in LesMateriel)
+            {
+                mat.LaCategorie = LesCategorie.First(c => c.Idcategorie == mat.IdCategorie);
+            }
+            foreach (Attribution att in LesAttribution)
+            {
+                att.UnPersonnel = LesPersonnel.First(c => c.Idpersonnel == att.IdPersonnel);
+                att.UnMateriel = LesMateriel.First(c => c.Idmateriel == att.IdMateriel);
+            }
         }
 
 

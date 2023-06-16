@@ -36,7 +36,6 @@ namespace MATINFO
         {
             //login.ShowDialog();
             InitializeComponent();
-            Maj();
         }
 
 
@@ -63,20 +62,6 @@ namespace MATINFO
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             lvAttribution.Items.Refresh();
-        }
-
-        public void Maj()
-        {
-
-            foreach(Materiel mat in gestionAttribution.LesMateriel)
-            {
-                mat.LaCategorie=(Categorie)gestionAttribution.SearchCat(mat.IdCategorie);
-            }
-            foreach (Attribution att in gestionAttribution.LesAttribution)
-            {
-                att.UnMateriel = (Materiel)gestionAttribution.SearchMat(att.IdMateriel);
-                att.UnPersonnel = (Personnel)gestionAttribution.SearchPer(att.IdPersonnel);
-            }
-        }
+        }    
     }
 }

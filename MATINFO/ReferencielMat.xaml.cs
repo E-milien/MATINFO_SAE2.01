@@ -11,6 +11,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Media.Media3D;
 using System.Windows.Shapes;
 
 namespace MATINFO
@@ -26,6 +27,7 @@ namespace MATINFO
             foreach (Materiel mat in gestionAttribution.LesMateriel)
             {
                 mat.Update();
+                mat.IdCategorie = ((Categorie)lvCategorie.SelectedItem).Idcategorie;
             }
             e.Cancel = true;
             this.Hide();
@@ -46,7 +48,7 @@ namespace MATINFO
         private void btAjouter_Click(object sender, RoutedEventArgs e)
         {
             Materiel materiel = new Materiel();
-            materiel.IdCategorie = ((Categorie)lvCategorie.SelectedItem).Idcategorie;
+            
             listeMat.Add(materiel);
             gestionAttribution.LesMateriel.Insert(0, materiel);
         }
@@ -61,6 +63,20 @@ namespace MATINFO
                 }
                 listeMat = new List<Materiel>();
             }
+        }
+
+        private void lvCategorie_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+            dgMateriel.Items.Filter = FiltreMateriel;
+
+        }
+
+        public bool FiltreMateriel(object obj)
+        {
+            Materiel mat = (Materiel)obj;
+            return lvCategorie.SelectedItems.Contains(mat.LaCategorie);
+
         }
     }
 }

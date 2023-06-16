@@ -46,10 +46,6 @@ namespace MATINFO
             ajouter.ShowDialog();
         }
 
-
-        private void btOK_Click(object sender, RoutedEventArgs e)
-        {
-        }
         private void DgAttribution_CellEditEnding(object sender, DataGridCellEditEndingEventArgs e)
         {
             Attribution attribution = (Attribution)e.Row.Item;
