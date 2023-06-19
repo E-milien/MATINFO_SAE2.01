@@ -59,7 +59,7 @@ namespace MATINFO
                 }
                 personnels = new List<Personnel>();
             }
-            
+            gestionAttribution.Refresh();
         }
     }
 }

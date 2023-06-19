@@ -61,6 +61,7 @@ namespace MATINFO
                 }
                 listeCategorie = new List<Categorie>();
             }
+            gestionAttribution.Refresh();
         }
     }
 }
