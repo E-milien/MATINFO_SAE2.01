@@ -320,3 +320,5 @@ C:\Users\roukinee\Source\Repos\MATINFO_SAE2.01\MATINFO\obj\Debug\net6.0-windows\
 C:\Users\roukinee\Source\Repos\MATINFO_SAE2.01\MATINFO\obj\Debug\net6.0-windows\MATINFO.pdb
 C:\Users\roukinee\Source\Repos\MATINFO_SAE2.01\MATINFO\obj\Debug\net6.0-windows\MATINFO.genruntimeconfig.cache
 C:\Users\roukinee\Source\Repos\MATINFO_SAE2.01\MATINFO\obj\Debug\net6.0-windows\ref\MATINFO.dll
+C:\Users\roukinee\Source\Repos\MATINFO_SAE2.01\MATINFO\obj\Debug\net6.0-windows\AjtMateriel.g.cs
+C:\Users\roukinee\Source\Repos\MATINFO_SAE2.01\MATINFO\obj\Debug\net6.0-windows\AjtMateriel.baml

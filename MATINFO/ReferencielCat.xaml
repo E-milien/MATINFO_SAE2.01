@@ -80,7 +80,7 @@
             Margin="10,0,10,10"
             VerticalAlignment="Bottom"
             Click="btOK_Click"
-            Content="OK"
+            Content="Valider Ajout"
             RenderTransformOrigin="0.5,0.5" Background="#FF2A77F3">
             <Button.RenderTransform>
                 <TransformGroup>

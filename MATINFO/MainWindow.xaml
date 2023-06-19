@@ -77,7 +77,7 @@
                     Content="Attribution" Background="#FF5A5DFD" />
 
             </StackPanel>
-            <Label Height="28" Margin="0,343,0,0" Content="© 2010-2023                    V8.3.11" VerticalAlignment="Top"/>
+            <Label Content="© 2010-2023                    V8.3.11" Height="28" VerticalAlignment="Bottom"/>
             <Grid Grid.Column="1">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="29.96" />
@@ -86,10 +86,18 @@
 
                 <StackPanel
                     Grid.Row="0"
-                    Orientation="Horizontal" HorizontalAlignment="Left" Width="585" Height="20" VerticalAlignment="Top">
-                    <Button Width="100" Content="Actualiser" Click="Button_Click" Background="#FF5A5DFD" />
+                    Orientation="Horizontal" HorizontalAlignment="Left" Width="585" Height="25" VerticalAlignment="Top">
+                    <Button Width="100" Content="Afficher tout" Click="Button_Click" Background="#FF5A5DFD" />
+
 
                 </StackPanel>
+                <ComboBox x:Name="cbMat" ItemsSource="{Binding LesMateriel}" Width="200" Margin="0,-1,0,0" HorizontalAlignment="Right" Height="26" VerticalAlignment="Top" SelectionChanged="cbMat_SelectionChanged">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <ComboBoxItem Content="{Binding Nommateriel}" />
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
 
                 <ListView x:Name="lvAttribution" Grid.Row="1" ItemsSource="{Binding Path=LesAttribution}" Background="#FFBAC1F9">
                     <ListView.View>

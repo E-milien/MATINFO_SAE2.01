@@ -1,0 +1,34 @@
+﻿<Window x:Class="MATINFO.AjtMateriel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MATINFO"
+        mc:Ignorable="d"
+        Title="Ajouter Materiel" Height="225" Width="400"
+        Closing="Modale_Closing" ResizeMode="NoResize">
+    <Window.DataContext>
+        <local:GestionAttribution x:Name="gestionAttribution"/>
+    </Window.DataContext>
+    <Grid>
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+            <ListView x:Name="lvCat" Width="124" ItemsSource="{Binding LesCategorie}" SelectedIndex="0" Background="#FFBAC1F9">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Materiel" Width="50" DisplayMemberBinding="{Binding Nomcategorie}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <StackPanel Width="276">
+                <Label Height="26" Content="Nom Materiel" Background="#FF5A5DFD"/>
+                <TextBox x:Name="tbNom" TextWrapping="Wrap" Text="" Height="25" Background="#FFBAC1F9"/>
+                <Label Height="26" Content="Code Barre :" Background="#FF5A5DFD"/>
+                <TextBox x:Name="tbCB" TextWrapping="Wrap" Text="" Height="25" Background="#FFBAC1F9"/>
+                <Label Height="26" Content="Referenciel Materiel :" Background="#FF5A5DFD"/>
+                <TextBox x:Name="tbRefe" TextWrapping="Wrap" Text="" Height="25" Background="#FFBAC1F9"/>
+                <Button x:Name="btEnregistrer" Height="50" Content="Enregistrer" Click="btEnregistrer_Click" Background="#FF2A77F3"/>
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</Window>

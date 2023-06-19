@@ -21,13 +21,13 @@ namespace MATINFO
     /// </summary>
     public partial class ReferencielMat : Window
     {
-        List<Materiel> listeMat = new List<Materiel>();
+        AjtMateriel ajouter = new AjtMateriel();
+
         private void Modale_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             foreach (Materiel mat in gestionAttribution.LesMateriel)
             {
                 mat.Update();
-                mat.IdCategorie = ((Categorie)lvCategorie.SelectedItem).Idcategorie;
             }
             e.Cancel = true;
             this.Hide();
@@ -47,22 +47,7 @@ namespace MATINFO
 
         private void btAjouter_Click(object sender, RoutedEventArgs e)
         {
-            Materiel materiel = new Materiel();
-            
-            listeMat.Add(materiel);
-            gestionAttribution.LesMateriel.Insert(0, materiel);
-        }
-
-        private void btOK_Click(object sender, RoutedEventArgs e)
-        {
-            if (listeMat.Count > 0)
-            {
-                foreach (Materiel materiel in listeMat)
-                {
-                    materiel.Create();
-                }
-                listeMat = new List<Materiel>();
-            }
+            ajouter.ShowDialog();
         }
 
         private void lvCategorie_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -76,7 +61,6 @@ namespace MATINFO
         {
             Materiel mat = (Materiel)obj;
             return lvCategorie.SelectedItems.Contains(mat.LaCategorie);
-
         }
     }
 }

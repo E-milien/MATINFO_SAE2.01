@@ -34,6 +34,36 @@ namespace MATINFO
             }
         }
 
+        public void Refresh()
+        {
+            Categorie c = new Categorie();
+            LesCategorie = c.FindAll();
+            Materiel m = new Materiel();
+            LesMateriel = m.FindAll();
+            Personnel p = new Personnel();
+            LesPersonnel = p.FindAll();
+            Attribution a = new Attribution();
+            LesAttribution = a.FindAll();
+            foreach (Materiel mat in LesMateriel)
+            {
+                mat.LaCategorie = LesCategorie.First(c => c.Idcategorie == mat.IdCategorie);
+            }
+            foreach (Attribution att in LesAttribution)
+            {
+                att.UnPersonnel = LesPersonnel.First(c => c.Idpersonnel == att.IdPersonnel);
+                att.UnMateriel = LesMateriel.First(c => c.Idmateriel == att.IdMateriel);
+            }
+        }
+
+        public ObservableCollection<Attribution> Filtre(Materiel mat)
+        {
+
+            ObservableCollection<Attribution> filtreAttribution = new ObservableCollection<Attribution>(
+                LesAttribution.Where(attribution => attribution.UnMateriel == mat));
+
+            return filtreAttribution;
+        }
+
 
         public Materiel SearchMat(int idMat)
         {

@@ -7,11 +7,17 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="AjtMateriel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Connexion.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="AjtMateriel.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Connexion.xaml">
       <SubType>Designer</SubType>
     </Page>

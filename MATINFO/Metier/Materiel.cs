@@ -28,18 +28,26 @@ namespace MATINFO
             Referencemateriel = referencemateriel;
         }
 
-        public Materiel(int idCategorie, int idmateriel, string codebarre, string nommateriel, string referencemateriel)
+        public Materiel(int idCategorie, int idmateriel,string codebarre, string nommateriel, string referencemateriel)
         {
+
             IdCategorie = idCategorie;
             Idmateriel = idmateriel;
             Codebarre = codebarre;
             Nommateriel = nommateriel;
             Referencemateriel = referencemateriel;
         }
-        public Materiel(Categorie laCategorie, int idmateriel, string codebarre, string nommateriel, string referencemateriel)
+
+        public Materiel(int idCategorie, string codebarre, string nommateriel, string referencemateriel)
+        {
+            IdCategorie = idCategorie;
+            Codebarre = codebarre;
+            Nommateriel = nommateriel;
+            Referencemateriel = referencemateriel;
+        }
+        public Materiel(Categorie laCategorie, string codebarre, string nommateriel, string referencemateriel)
         {
             LaCategorie = laCategorie;
-            Idmateriel = idmateriel;
             Codebarre = codebarre;
             Nommateriel = nommateriel;
             Referencemateriel = referencemateriel;

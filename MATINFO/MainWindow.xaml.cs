@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Media.TextFormatting;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static System.Collections.Specialized.BitVector32;
 
 namespace MATINFO
 {
@@ -61,7 +62,20 @@ namespace MATINFO
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            lvAttribution.Items.Refresh();
-        }    
+            cbMat.SelectedItem = null;
+            lvAttribution.ItemsSource = gestionAttribution.LesAttribution;
+        }
+
+
+        private void cbMat_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Materiel selectedMateriel = (Materiel)cbMat.SelectedItem;
+
+            if (selectedMateriel != null)
+            {
+                ObservableCollection<Attribution> filteredAttributions = gestionAttribution.Filtre(selectedMateriel);
+                lvAttribution.ItemsSource = filteredAttributions;
+            }
+        }
     }
 }
