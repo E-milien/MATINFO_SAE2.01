@@ -61,7 +61,7 @@ namespace MATINFO
         public void Delete()
         {
             DataAccess accesBD = new DataAccess();
-            string sql = $"DELETE FROM est_attribue WHERE idpersonnel = {this.idPersonnel} AND idmateriel = {this.IdMateriel}" ;
+            string sql = $"DELETE FROM est_attribue WHERE idpersonnel = {this.idPersonnel} AND idmateriel = {this.IdMateriel} AND dateattribution = '{this.DateAttribut.ToString("yyyy-MM-dd")}'";
             accesBD.GetData(sql);
         }
 

@@ -40,7 +40,7 @@ namespace MATINFO
         public void Delete()
         {
             DataAccess accesBD = new DataAccess();
-            string sql = $"DELETE FROM catcategorie_materielegorie WHERE idcategorie = {this.Idcategorie}";
+            string sql = $"DELETE FROM categorie_materiel WHERE idcategorie = {this.Idcategorie}";
             accesBD.GetData(sql);
         }
 

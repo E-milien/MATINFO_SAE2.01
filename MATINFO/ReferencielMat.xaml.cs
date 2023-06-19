@@ -40,10 +40,13 @@ namespace MATINFO
 
         private void btSupprimer_Click(object sender, RoutedEventArgs e)
         {
-            Materiel m = (Materiel)dgMateriel.SelectedItem;
-            m.Delete();
-            gestionAttribution.Remove(m);
-            dgMateriel.SelectedIndex = 0;
+            if (dgMateriel.SelectedIndex>0)
+            {
+                Materiel m = (Materiel)dgMateriel.SelectedItem;
+                m.Delete();
+                gestionAttribution.Remove(m);
+                dgMateriel.SelectedIndex = 0;
+            }
         }
 
         private void btAjouter_Click(object sender, RoutedEventArgs e)

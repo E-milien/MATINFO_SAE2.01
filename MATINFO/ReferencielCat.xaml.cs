@@ -57,7 +57,6 @@ namespace MATINFO
                 foreach (Categorie cat in listeCategorie)
                 {
                     cat.Create();
-                    MessageBox.Show(cat.Nomcategorie);
                 }
                 listeCategorie = new List<Categorie>();
             }

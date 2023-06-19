@@ -36,10 +36,13 @@ namespace MATINFO
 
         private void btSupprimer_Click(object sender, RoutedEventArgs e)
         {
-            Personnel p = (Personnel)dgPersonnel.SelectedItem;
-            p.Delete();
-            gestionAttribution.Remove(p);
-            dgPersonnel.SelectedIndex= 0;
+            if (dgPersonnel.SelectedIndex > 0)
+            {
+                Personnel p = (Personnel)dgPersonnel.SelectedItem;
+                p.Delete();
+                gestionAttribution.Remove(p);
+                dgPersonnel.SelectedIndex = 0;
+            }
         }
 
         private void btAjouter_Click(object sender, RoutedEventArgs e)

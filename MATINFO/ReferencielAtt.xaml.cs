@@ -24,32 +24,32 @@ namespace MATINFO
 
         private void Modale_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
+            foreach(Attribution att in gestionAttribution.LesAttribution)
+            {
+                att.Update();
+            }
             e.Cancel = true;
             this.Hide();
         }
         public ReferencielAtt()
         {
             InitializeComponent();
-            dgAttribution.CellEditEnding += DgAttribution_CellEditEnding;
         }
 
         private void btSupprimer_Click(object sender, RoutedEventArgs e)
         {
-            Attribution a = (Attribution)dgAttribution.SelectedItem;
-            a.Delete();
-            gestionAttribution.LesAttribution.Remove(a);
-            dgAttribution.SelectedIndex = 0;
+            if (dgAttribution.SelectedIndex > 0)
+            {
+                Attribution a = (Attribution)dgAttribution.SelectedItem;
+                a.Delete();
+                gestionAttribution.LesAttribution.Remove(a);
+                dgAttribution.SelectedIndex = 0;
+            }
         }
 
         private void btAjouter_Click(object sender, RoutedEventArgs e)
         {
             ajouter.ShowDialog();
-        }
-
-        private void DgAttribution_CellEditEnding(object sender, DataGridCellEditEndingEventArgs e)
-        {
-            Attribution attribution = (Attribution)e.Row.Item;
-            attribution.Update();
         }
     }
 }
