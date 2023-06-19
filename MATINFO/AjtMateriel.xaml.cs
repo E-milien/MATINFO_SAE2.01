@@ -34,11 +34,17 @@ namespace MATINFO
 
         public async void btEnregistrer_Click(object sender, RoutedEventArgs e)
         {
-
-            Materiel m = new Materiel(gestionAttribution.SearchCat((Categorie)lvCat.SelectedItem),tbCB.Text,tbNom.Text,tbRefe.Text);
-            m.LaCategorie = (Categorie)lvCat.SelectedItem;
-            m.Create();
-            gestionAttribution.LesMateriel.Insert(0, m);
+            if (String.IsNullOrEmpty(tbCB.Text) || String.IsNullOrEmpty(tbNom.Text) || String.IsNullOrEmpty(tbRefe.Text))
+            {
+                MessageBox.Show("Les Nom ou le code barre ou la référence du matériel est vide ou non vallable","Attention",MessageBoxButton.OK,MessageBoxImage.Error);
+            }
+            else
+            {
+                Materiel m = new Materiel(gestionAttribution.SearchCat((Categorie)lvCat.SelectedItem), tbCB.Text, tbNom.Text, tbRefe.Text);
+                m.LaCategorie = (Categorie)lvCat.SelectedItem;
+                m.Create();
+                gestionAttribution.LesMateriel.Insert(0, m);
+            }
             await Task.Delay(1000);
             Hide();
         }

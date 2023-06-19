@@ -35,6 +35,7 @@ namespace MATINFO
         public ReferencielMat()
         {
             InitializeComponent();
+            dgMateriel.ItemsSource = null;
         }
 
         private void btSupprimer_Click(object sender, RoutedEventArgs e)
@@ -52,9 +53,13 @@ namespace MATINFO
 
         private void lvCategorie_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
-            dgMateriel.Items.Filter = FiltreMateriel;
-
+            if (lvCategorie.SelectedItems == null)
+                dgMateriel.ItemsSource = null;
+            else
+            {
+                dgMateriel.ItemsSource = gestionAttribution.LesMateriel;
+                dgMateriel.Items.Filter = FiltreMateriel;
+            }
         }
 
         public bool FiltreMateriel(object obj)
