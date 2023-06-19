@@ -21,7 +21,6 @@ namespace MATINFO
     {
         AjtAttribution ajouter = new AjtAttribution();
 
-
         private void Modale_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             foreach(Attribution att in gestionAttribution.LesAttribution)
