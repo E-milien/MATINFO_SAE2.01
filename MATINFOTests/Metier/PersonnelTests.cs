@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections.ObjectModel;
 using System.Data;
+using System.Net.PeerToPeer.Collaboration;
 
 namespace MATINFO.Tests
 {
@@ -30,7 +31,21 @@ namespace MATINFO.Tests
         [TestMethod()]
         public void DeleteTest()
         {
-            Assert.Fail();
+            Personnel personnel = new Personnel("fauxMail@email.com", "PauxPrenom", "FauxNom");
+            DataAccess accesBD = new DataAccess();
+            String requete = "select idpersonnel, emailpersonnel, nompersonnel, prenompersonnel from personnel ;";
+            DataTable datas = accesBD.GetData(requete);
+            DataRow row = datas.Rows[0];
+            Personnel personnelImport = new Personnel(int.Parse(row["idpersonnel"].ToString()), (String)row["emailpersonnel"], (String)row["nompersonnel"], (String)row["prenompersonnel"]);
+            personnelImport.Delete();
+            requete = "select idpersonnel, emailpersonnel, nompersonnel, prenompersonnel from personnel ;";
+            datas = accesBD.GetData(requete);
+            if (datas != null)
+            {
+                row = datas.Rows[0];
+                personnel = new Personnel((String)row["emailpersonnel"], (String)row["nompersonnel"], (String)row["prenompersonnel"]);
+            }
+            Assert.AreNotEqual(personnel, personnelImport,"Suppression non reussi du personnelImport");
         }
 
         [TestMethod()]
@@ -42,7 +57,22 @@ namespace MATINFO.Tests
         [TestMethod()]
         public void UpdateTest()
         {
-            Assert.Fail();
+            Personnel personnel = new Personnel("fauxMail@email.com", "PauxPrenom", "FauxNom");
+            personnel.Create();
+            DataAccess accesBD = new DataAccess();
+            String requete = "select idpersonnel, emailpersonnel, nompersonnel, prenompersonnel from personnel ;";
+            DataTable datas = accesBD.GetData(requete);
+            DataRow row = datas.Rows[0];
+            Personnel personnelImport = new Personnel(int.Parse(row["idpersonnel"].ToString()), "email@email.fr", "Kilian", "Mbappe");
+            personnelImport.Update();
+            requete = "select idpersonnel, emailpersonnel, nompersonnel, prenompersonnel from personnel ;";
+            datas = accesBD.GetData(requete);
+            if (datas != null)
+            {
+                row = datas.Rows[0];
+                personnel = new Personnel(int.Parse(row["idpersonnel"].ToString()), (String)row["emailpersonnel"], (String)row["nompersonnel"], (String)row["prenompersonnel"]);
+            }
+            Assert.AreEqual(personnelImport, personnel, "Modification non envoyé");
         }
     }
 }
