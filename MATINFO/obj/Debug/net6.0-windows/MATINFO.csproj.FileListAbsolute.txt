@@ -292,7 +292,6 @@ C:\Users\roukinee\Source\Repos\MATINFO_SAE2.01\MATINFO\bin\Debug\net6.0-windows\
 C:\Users\roukinee\Source\Repos\MATINFO_SAE2.01\MATINFO\bin\Debug\net6.0-windows\Npgsql.dll
 C:\Users\roukinee\Source\Repos\MATINFO_SAE2.01\MATINFO\obj\Debug\net6.0-windows\MATINFO.csproj.AssemblyReference.cache
 C:\Users\roukinee\Source\Repos\MATINFO_SAE2.01\MATINFO\obj\Debug\net6.0-windows\AjtAttribution.g.cs
-C:\Users\roukinee\Source\Repos\MATINFO_SAE2.01\MATINFO\obj\Debug\net6.0-windows\Connexion.g.cs
 C:\Users\roukinee\Source\Repos\MATINFO_SAE2.01\MATINFO\obj\Debug\net6.0-windows\MainWindow.g.cs
 C:\Users\roukinee\Source\Repos\MATINFO_SAE2.01\MATINFO\obj\Debug\net6.0-windows\ReferencielAtt.g.cs
 C:\Users\roukinee\Source\Repos\MATINFO_SAE2.01\MATINFO\obj\Debug\net6.0-windows\ReferencielCat.g.cs
@@ -303,7 +302,6 @@ C:\Users\roukinee\Source\Repos\MATINFO_SAE2.01\MATINFO\obj\Debug\net6.0-windows\
 C:\Users\roukinee\Source\Repos\MATINFO_SAE2.01\MATINFO\obj\Debug\net6.0-windows\MATINFO_MarkupCompile.cache
 C:\Users\roukinee\Source\Repos\MATINFO_SAE2.01\MATINFO\obj\Debug\net6.0-windows\MATINFO_MarkupCompile.lref
 C:\Users\roukinee\Source\Repos\MATINFO_SAE2.01\MATINFO\obj\Debug\net6.0-windows\AjtAttribution.baml
-C:\Users\roukinee\Source\Repos\MATINFO_SAE2.01\MATINFO\obj\Debug\net6.0-windows\Connexion.baml
 C:\Users\roukinee\Source\Repos\MATINFO_SAE2.01\MATINFO\obj\Debug\net6.0-windows\MainWindow.baml
 C:\Users\roukinee\Source\Repos\MATINFO_SAE2.01\MATINFO\obj\Debug\net6.0-windows\ReferencielAtt.baml
 C:\Users\roukinee\Source\Repos\MATINFO_SAE2.01\MATINFO\obj\Debug\net6.0-windows\ReferencielCat.baml

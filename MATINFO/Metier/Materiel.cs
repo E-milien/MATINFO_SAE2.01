@@ -94,14 +94,16 @@ namespace MATINFO
             return lesMateriel;
         }
 
-        public ObservableCollection<Materiel> FindBySelection(string criteres)
+        public ObservableCollection<Personnel> FindBySelection(string criteres)
         {
             throw new NotImplementedException();
         }
 
         public void Read()
         {
-            throw new NotImplementedException();
+            DataAccess accesBD = new DataAccess();
+            string sql = $"select * FROM materiel WHERE idmateriel = {this.Idmateriel}";
+            accesBD.GetData(sql);
         }
 
         public void Update()
@@ -109,6 +111,11 @@ namespace MATINFO
             DataAccess accesBD = new DataAccess();
             string sql = $"UPDATE materiel SET referenceconstructeurmateriel = '{this.Referencemateriel}', nommateriel = '{this.Nommateriel}', codebarreinventaire = '{this.Codebarre}' WHERE idmateriel = {this.Idmateriel}";
             DataTable datas = accesBD.GetData(sql);
+        }
+
+        ObservableCollection<Materiel> Crud<Materiel>.FindBySelection(string criteres)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -20,6 +20,7 @@ namespace MATINFO
     public partial class ReferencielPer : Window
     {
         List<Personnel> personnels = new List<Personnel>();
+        public GestionAttribution gestionAttribution => ((MainWindow)Application.Current.MainWindow).gestionAttribution;
         private void Modale_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             foreach (Personnel per in gestionAttribution.LesPersonnel)

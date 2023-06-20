@@ -27,7 +27,6 @@ namespace MATINFO
         ReferencielCat categorie = new ReferencielCat();
         ReferencielPer personnel = new ReferencielPer();
         ReferencielAtt attribution = new ReferencielAtt();
-        Connexion login = new Connexion();
 
         private void MainWindow_Closed(object sender, EventArgs e)
         {
@@ -35,7 +34,6 @@ namespace MATINFO
         }
         public MainWindow()
         {
-            //login.ShowDialog();
             InitializeComponent();
         }
 

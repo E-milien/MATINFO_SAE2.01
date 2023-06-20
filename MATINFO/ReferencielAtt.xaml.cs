@@ -20,6 +20,7 @@ namespace MATINFO
     public partial class ReferencielAtt : Window
     {
         AjtAttribution ajouter = new AjtAttribution();
+        public GestionAttribution gestionAttribution => ((MainWindow)Application.Current.MainWindow).gestionAttribution;
 
         private void Modale_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {

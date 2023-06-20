@@ -80,7 +80,9 @@ namespace MATINFO
 
         public void Read()
         {
-            throw new NotImplementedException();
+            DataAccess accesBD = new DataAccess();
+            string sql = $"select * FROM personnel WHERE idpersonnel = {this.Idpersonnel}";
+            accesBD.GetData(sql);
         }
 
         public void Update()
