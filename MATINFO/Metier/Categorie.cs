@@ -72,8 +72,13 @@ namespace MATINFO
         public void Read()
         {
             DataAccess accesBD = new DataAccess();
-            string sql = $"select * from categorie_materiel WHERE idcategorie = {this.Idcategorie}";
-            accesBD.GetData(sql);
+            string sql = $"select * FROM categorie_materiel WHERE idcategorie = {this.Idcategorie}";
+            DataTable datas = accesBD.GetData(sql);
+            if (datas != null)
+            {
+                DataRow row = datas.Rows[0];
+                this.Nomcategorie = (String)row["nomcategorie"];
+            }
         }
 
         public void Update()

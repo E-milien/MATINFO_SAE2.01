@@ -36,10 +36,17 @@ namespace MATINFO
 
         private void btSupprimer_Click(object sender, RoutedEventArgs e)
         {
-            Categorie c = (Categorie)dgCategorie.SelectedItem;
-            c.Delete();
-            gestionAttribution.Remove(c);
-            dgCategorie.SelectedIndex= 0;
+            if (dgCategorie.SelectedIndex >= 0)
+            {
+                Categorie c = (Categorie)dgCategorie.SelectedItem;
+                if (MessageBox.Show($"Est vous sur de supprimer {c.Nomcategorie} ?", "Attention", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                {
+
+                    c.Delete();
+                    gestionAttribution.Remove(c);
+                    dgCategorie.SelectedIndex = 0;
+                }
+            }
         }
 
         private void btAjouter_Click(object sender, RoutedEventArgs e)

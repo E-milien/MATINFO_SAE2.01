@@ -41,9 +41,13 @@ namespace MATINFO
             if (dgAttribution.SelectedIndex >= 0)
             {
                 Attribution a = (Attribution)dgAttribution.SelectedItem;
-                a.Delete();
-                gestionAttribution.LesAttribution.Remove(a);
-                dgAttribution.SelectedIndex = 0;
+                if (MessageBox.Show($"Est vous sur de supprimer l'attriution de {a.UnPersonnel.Prenompersonnel} {a.UnPersonnel.Nompersonnel} au materiel {a.UnMateriel.Nommateriel}" +
+                    $"?", "Attention", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                {
+                    a.Delete();
+                    gestionAttribution.LesAttribution.Remove(a);
+                    dgAttribution.SelectedIndex = 0;
+                }
             }
         }
 

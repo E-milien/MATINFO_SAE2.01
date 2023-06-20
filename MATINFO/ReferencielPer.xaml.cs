@@ -40,9 +40,12 @@ namespace MATINFO
             if (dgPersonnel.SelectedIndex >= 0)
             {
                 Personnel p = (Personnel)dgPersonnel.SelectedItem;
-                p.Delete();
-                gestionAttribution.Remove(p);
-                dgPersonnel.SelectedIndex = 0;
+                if (MessageBox.Show($"Est vous sur de supprimer {p.Prenompersonnel} {p.Nompersonnel} ?", "Attention", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                { 
+                    p.Delete();
+                    gestionAttribution.Remove(p);
+                    dgPersonnel.SelectedIndex = 0;
+                }
             }
         }
 

@@ -43,7 +43,7 @@ namespace MATINFO
         {
             DataAccess accesBD = new DataAccess();
             string sql = $"insert into personnel (idpersonnel, emailpersonnel, nompersonnel, prenompersonnel) values (nextval('personnel_idpersonnel_seq'::regclass), '{this.Emailpersonnel}', '{this.Nompersonnel}', '{this.Prenompersonnel}')";
-            DataTable datas = accesBD.GetData(sql);
+            accesBD.GetData(sql);
         }
 
         public void Delete()
@@ -82,7 +82,14 @@ namespace MATINFO
         {
             DataAccess accesBD = new DataAccess();
             string sql = $"select * FROM personnel WHERE idpersonnel = {this.Idpersonnel}";
-            accesBD.GetData(sql);
+            DataTable datas = accesBD.GetData(sql);
+            if (datas != null)
+            {
+                DataRow row = datas.Rows[0];
+                this.emailpersonnel = (String)row["emailpersonnel"];
+                this.Nompersonnel = (String)row["nompersonnel"];
+                this.Prenompersonnel=(String)row["prenompersonnel"];
+            }
         }
 
         public void Update()

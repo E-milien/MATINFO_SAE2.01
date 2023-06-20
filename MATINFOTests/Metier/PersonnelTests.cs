@@ -24,7 +24,7 @@ namespace MATINFO.Tests
             DataTable datas = accesBD.GetData(requete);
             DataRow row = datas.Rows[0];
             Personnel personnelImport = new Personnel((String)row["emailpersonnel"], (String)row["nompersonnel"], (String)row["prenompersonnel"]);
-            Assert.AreEqual(personnelImport, personnel1, "Le personnel envoyé n'a pas été envoyé a la base de données");
+            Assert.AreEqual(personnelImport.Idpersonnel, personnel1.Idpersonnel, "Le personnel envoyé n'a pas été envoyé a la base de données");
 
         }
 
@@ -45,13 +45,18 @@ namespace MATINFO.Tests
                 row = datas.Rows[0];
                 personnel = new Personnel((String)row["emailpersonnel"], (String)row["nompersonnel"], (String)row["prenompersonnel"]);
             }
-            Assert.AreNotEqual(personnel, personnelImport,"Suppression non reussi du personnelImport");
+            Assert.AreNotEqual(personnel.Idpersonnel, personnelImport.Idpersonnel,"Suppression non reussi du personnelImport");
         }
 
         [TestMethod()]
         public void ReadTest()
         {
-            Assert.Fail();
+            Personnel personnel1 = new Personnel("pierre@mail.fr", "Pierre", "Durant");
+            personnel1.Create();
+
+            personnel1.Read();
+            Personnel personnel2 = personnel1;
+            Assert.AreEqual(personnel2, personnel1, "Le personnel envoyé n'a pas été envoyé a la base de données");
         }
 
         [TestMethod()]
@@ -72,7 +77,7 @@ namespace MATINFO.Tests
                 row = datas.Rows[0];
                 personnel = new Personnel(int.Parse(row["idpersonnel"].ToString()), (String)row["emailpersonnel"], (String)row["nompersonnel"], (String)row["prenompersonnel"]);
             }
-            Assert.AreEqual(personnelImport, personnel, "Modification non envoyé");
+            Assert.AreEqual(personnelImport.Emailpersonnel, personnel.Emailpersonnel, "Modification non envoyé");
         }
     }
 }

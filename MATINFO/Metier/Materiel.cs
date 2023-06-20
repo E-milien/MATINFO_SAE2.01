@@ -103,7 +103,15 @@ namespace MATINFO
         {
             DataAccess accesBD = new DataAccess();
             string sql = $"select * FROM materiel WHERE idmateriel = {this.Idmateriel}";
-            accesBD.GetData(sql);
+            DataTable datas = accesBD.GetData(sql);
+            if (datas != null)
+            {
+                DataRow row = datas.Rows[0];
+                this.IdCategorie = int.Parse(row["idcategorie"].ToString());
+                this.Codebarre = (String)row["codebarreinventaire"];
+                this.Nommateriel = (String)row["nommateriel"];
+                this.Referencemateriel = (String)row["referenceconstructeurmateriel"];
+            }
         }
 
         public void Update()

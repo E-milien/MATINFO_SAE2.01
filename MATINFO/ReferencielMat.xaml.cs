@@ -43,9 +43,12 @@ namespace MATINFO
             if (dgMateriel.SelectedIndex>=0)
             {
                 Materiel m = (Materiel)dgMateriel.SelectedItem;
-                m.Delete();
-                gestionAttribution.Remove(m);
-                dgMateriel.SelectedIndex = 0;
+                if (MessageBox.Show($"Est vous sur de supprimer {m.Nommateriel} ?", "Attention", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                {
+                    m.Delete();
+                    gestionAttribution.Remove(m);
+                    dgMateriel.SelectedIndex = 0;
+                }
             }
         }
 

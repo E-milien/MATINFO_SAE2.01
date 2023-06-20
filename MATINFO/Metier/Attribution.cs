@@ -90,8 +90,14 @@ namespace MATINFO
         public void Read()
         {
             DataAccess accesBD = new DataAccess();
-            string sql = $"select * from est_attribue WHERE idpersonnel = {this.idPersonnel} AND idmateriel = {this.IdMateriel} AND dateattribution = '{this.DateAttribut.ToString("yyyy-MM-dd")}'";
-            accesBD.GetData(sql);
+            string sql = $"select * FROM est_attribue WHERE idpersonnel = {this.IdPersonnel} AND idmateriel = {this.IdMateriel}";
+            DataTable datas = accesBD.GetData(sql);
+            if (datas != null)
+            {
+                DataRow row = datas.Rows[0];
+                this.DateAttribut = DateTime.Parse(row["dateattribution"].ToString());
+                this.Commentaire = (String)row["commentaireattribution"];
+            }
         }
 
         public void Update()
