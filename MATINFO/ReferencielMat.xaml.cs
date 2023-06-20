@@ -21,6 +21,8 @@ namespace MATINFO
     /// </summary>
     public partial class ReferencielMat : Window
     {
+        private 
+
         AjtMateriel ajouter = new AjtMateriel();
 
         private void Modale_Closing(object sender, System.ComponentModel.CancelEventArgs e)
@@ -42,8 +44,13 @@ namespace MATINFO
         {
             if (dgMateriel.SelectedIndex>=0)
             {
+                string txt = "";
                 Materiel m = (Materiel)dgMateriel.SelectedItem;
-                if (MessageBox.Show($"Est vous sur de supprimer {m.Nommateriel} ?", "Attention", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                foreach(Attribution att in gestionAttribution.LesAttribution)
+                {
+                    txt += att.UnPersonnel.Nompersonnel + " ";
+                }
+                    if (MessageBox.Show($"Est vous sur de supprimer {m.Nommateriel} ? \n Cela va supprimer les attribution lier avec ces personne: {txt}", "Attention", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                 {
                     m.Delete();
                     gestionAttribution.Remove(m);

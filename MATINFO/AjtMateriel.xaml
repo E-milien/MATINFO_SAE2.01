@@ -7,12 +7,9 @@
         mc:Ignorable="d"
         Title="Ajouter Materiel" Height="225" Width="400"
         Closing="Modale_Closing" ResizeMode="NoResize">
-    <Window.DataContext>
-        <local:GestionAttribution x:Name="gestionAttribution"/>
-    </Window.DataContext>
     <Grid>
         <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
-            <ListView x:Name="lvCat" Width="124" ItemsSource="{Binding LesCategorie}" SelectedIndex="0" Background="#FFBAC1F9">
+            <ListView x:Name="lvCat" Width="124" ItemsSource="{Binding gestionAttribution.LesCategorie}" SelectedIndex="0" Background="#FFBAC1F9">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="Materiel" Width="50" DisplayMemberBinding="{Binding Nomcategorie}"/>

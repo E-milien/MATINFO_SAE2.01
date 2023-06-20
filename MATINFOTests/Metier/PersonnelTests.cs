@@ -17,14 +17,14 @@ namespace MATINFO.Tests
         [TestMethod()]
         public void CreateTest()
         {
-            Personnel personnel1 = new Personnel("pierre@mail.fr", "Pierre", "Durant");
-            personnel1.Create();
+            Personnel personnel = new Personnel("pierre@mail.fr", "Pierre", "Durant");
+            personnel.Create();
             DataAccess accesBD = new DataAccess();
-            String requete = "select idpersonnel, emailpersonnel, nompersonnel, prenompersonnel from personnel ;";
+            String requete = $"select idpersonnel, emailpersonnel, nompersonnel, prenompersonnel from personnel where nompersonnel = {personnel.Nompersonnel} AND prenompersonnel = {personnel.Prenompersonnel};";
             DataTable datas = accesBD.GetData(requete);
             DataRow row = datas.Rows[0];
             Personnel personnelImport = new Personnel((String)row["emailpersonnel"], (String)row["nompersonnel"], (String)row["prenompersonnel"]);
-            Assert.AreEqual(personnelImport.Idpersonnel, personnel1.Idpersonnel, "Le personnel envoyé n'a pas été envoyé a la base de données");
+            Assert.AreEqual(personnelImport.Idpersonnel, personnel.Idpersonnel, "Le personnel envoyé n'a pas été envoyé a la base de données");
 
         }
 
@@ -51,12 +51,15 @@ namespace MATINFO.Tests
         [TestMethod()]
         public void ReadTest()
         {
-            Personnel personnel1 = new Personnel("pierre@mail.fr", "Pierre", "Durant");
-            personnel1.Create();
-
-            personnel1.Read();
-            Personnel personnel2 = personnel1;
-            Assert.AreEqual(personnel2, personnel1, "Le personnel envoyé n'a pas été envoyé a la base de données");
+            Personnel personnel = new Personnel("pierre@mail.fr", "Pierre", "Durant");
+            personnel.Create();
+            DataAccess accesBD = new DataAccess();
+            String requete = "select idpersonnel, emailpersonnel, nompersonnel, prenompersonnel from personnel ;";
+            DataTable datas = accesBD.GetData(requete);
+            DataRow row = datas.Rows[0];
+            Personnel personnelImport = new Personnel(int.Parse(row["idpersonnel"].ToString()), (String)row["emailpersonnel"], (String)row["nompersonnel"], (String)row["prenompersonnel"]);
+            personnelImport.Read();
+            Assert.AreEqual(personnelImport, personnel, "Le personnel n'as pas reussi a reupéré les information");
         }
 
         [TestMethod()]
@@ -70,7 +73,7 @@ namespace MATINFO.Tests
             DataRow row = datas.Rows[0];
             Personnel personnelImport = new Personnel(int.Parse(row["idpersonnel"].ToString()), "email@email.fr", "Kilian", "Mbappe");
             personnelImport.Update();
-            requete = "select idpersonnel, emailpersonnel, nompersonnel, prenompersonnel from personnel ;";
+            requete = $"select idpersonnel, emailpersonnel, nompersonnel, prenompersonnel from personnel where idpersonnel = {personnelImport.Idpersonnel};";
             datas = accesBD.GetData(requete);
             if (datas != null)
             {

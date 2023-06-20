@@ -20,7 +20,7 @@ namespace MATINFO
     public partial class ReferencielPer : Window
     {
         List<Personnel> personnels = new List<Personnel>();
-        public GestionAttribution gestionAttribution => ((MainWindow)Application.Current.MainWindow).gestionAttribution;
+        public GestionAttribution gestionAttribution { get; set; }
         private void Modale_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             foreach (Personnel per in gestionAttribution.LesPersonnel)
@@ -30,17 +30,26 @@ namespace MATINFO
             e.Cancel = true;
             this.Hide();
         }
-        public ReferencielPer()
+        public ReferencielPer(GestionAttribution gestion)
         {
             InitializeComponent();
+
+            gestionAttribution = gestion;
+
+            DataContext = this;
         }
 
         private void btSupprimer_Click(object sender, RoutedEventArgs e)
         {
             if (dgPersonnel.SelectedIndex >= 0)
             {
+                string txt = "";
                 Personnel p = (Personnel)dgPersonnel.SelectedItem;
-                if (MessageBox.Show($"Est vous sur de supprimer {p.Prenompersonnel} {p.Nompersonnel} ?", "Attention", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                foreach(Attribution att in gestionAttribution.LesAttribution)
+                {
+                    txt += att.UnMateriel.Nommateriel+ " ";
+                }
+                if (MessageBox.Show($"Est vous sur de supprimer {p.Prenompersonnel} {p.Nompersonnel} ? \n Cela va supprimer les attribution avec les materiel : {txt} ", "Attention", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                 { 
                     p.Delete();
                     gestionAttribution.Remove(p);

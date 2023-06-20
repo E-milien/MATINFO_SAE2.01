@@ -38,10 +38,11 @@ namespace MATINFO
         {
             if (dgCategorie.SelectedIndex >= 0)
             {
+                string txt = "";
                 Categorie c = (Categorie)dgCategorie.SelectedItem;
+
                 if (MessageBox.Show($"Est vous sur de supprimer {c.Nomcategorie} ?", "Attention", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                 {
-
                     c.Delete();
                     gestionAttribution.Remove(c);
                     dgCategorie.SelectedIndex = 0;

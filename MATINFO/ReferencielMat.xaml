@@ -11,9 +11,6 @@
     Closing="Modale_Closing"
     ResizeMode="NoResize"
     mc:Ignorable="d">
-    <Window.DataContext>
-        <local:GestionAttribution x:Name="gestionAttribution" />
-    </Window.DataContext>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -51,7 +48,7 @@
         <ListView x:Name="lvCategorie"
             Grid.Row="1"
             Grid.Column="0" Margin="10,10,0,56"
-            ItemsSource="{Binding Path=LesCategorie}"
+            ItemsSource="{Binding Path=gestionAttribution.LesCategorie}"
             Background="#FFBAC1F9"
             SelectionMode="Multiple" SelectionChanged="lvCategorie_SelectionChanged">
             <ListView.View>

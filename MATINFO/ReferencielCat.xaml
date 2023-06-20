@@ -11,9 +11,6 @@
     Closing="Modale_Closing"
     ResizeMode="NoResize"
     mc:Ignorable="d">
-    <Window.DataContext>
-        <local:GestionAttribution x:Name="gestionAttribution" />
-    </Window.DataContext>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" MinHeight="19" />
@@ -48,7 +45,7 @@
             x:Name="dgCategorie"
             Grid.Row="1"
             Margin="10,10,10,104"
-            ItemsSource="{Binding Path=LesCategorie}" SelectedIndex="0"
+            ItemsSource="{Binding Path=gestionAttribution.LesCategorie}" SelectedIndex="0"
             CanUserAddRows="False" Background="#FFBAC1F9">
             <DataGrid.Columns>
                 <DataGridTextColumn  Header="ID" Binding="{Binding Path=Idcategorie}" IsReadOnly="True"/>

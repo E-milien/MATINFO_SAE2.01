@@ -11,7 +11,7 @@
     Closing="Modale_Closing"
     ResizeMode="NoResize"
     mc:Ignorable="d">
-    <Grid DataContext="{Binding ElementName=ReferenceAtt}">
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" MinHeight="19" />
             <RowDefinition />

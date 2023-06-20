@@ -25,7 +25,8 @@ namespace MATINFO
     {
         ReferencielMat materiel = new ReferencielMat();
         ReferencielCat categorie = new ReferencielCat();
-        ReferencielPer personnel = new ReferencielPer();
+        ReferencielPer personnel;
+
         ReferencielAtt attribution = new ReferencielAtt();
 
         private void MainWindow_Closed(object sender, EventArgs e)
@@ -35,6 +36,8 @@ namespace MATINFO
         public MainWindow()
         {
             InitializeComponent();
+
+            personnel = new ReferencielPer(gestionAttribution);
         }
 
 

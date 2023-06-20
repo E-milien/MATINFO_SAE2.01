@@ -7,19 +7,16 @@
         mc:Ignorable="d"
         Title="AjtAttribution" Height="400" Width="400"
         Closing="Modale_Closing" ResizeMode="NoResize">
-    <Window.DataContext>
-        <local:GestionAttribution x:Name="gestionAttribution"/>
-    </Window.DataContext>
     <Grid>
         <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
-            <ListView x:Name="lvMat" Width="124" ItemsSource="{Binding LesMateriel}" SelectedIndex="0" Background="#FFBAC1F9">
+            <ListView x:Name="lvMat" Width="124" ItemsSource="{Binding gestionAttribution.LesMateriel}" SelectedIndex="0" Background="#FFBAC1F9">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="Materiel" Width="50" DisplayMemberBinding="{Binding Nommateriel}"/>
                     </GridView>
                 </ListView.View>
             </ListView>
-            <ListView x:Name="lvPer" Width="112" ItemsSource="{Binding LesPersonnel}" SelectedIndex="0" Background="#FFBAC1F9">
+            <ListView x:Name="lvPer" Width="112" ItemsSource="{Binding gestionAttribution.LesPersonnel}" SelectedIndex="0" Background="#FFBAC1F9">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="Personnel" Width="100" DisplayMemberBinding="{Binding Nompersonnel}"/>

@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using static System.Collections.Specialized.BitVector32;
 
 namespace MATINFO
 {
@@ -19,15 +20,18 @@ namespace MATINFO
     /// </summary>
     public partial class AjtAttribution : Window
     {
+        public GestionAttribution gestionAttribution { get; set; }
         private void Modale_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             e.Cancel = true;
             this.Hide();
         }
-        public AjtAttribution()
+        public AjtAttribution(GestionAttribution gestion)
         {
             InitializeComponent();
             dpDate.SelectedDate = DateTime.Now;
+            gestionAttribution = gestion;
+            DataContext = this;
         }
 
         public async void btEnregistrer_Click(object sender, RoutedEventArgs e)
