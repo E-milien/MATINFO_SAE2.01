@@ -87,8 +87,8 @@
                 <StackPanel
                     Grid.Row="0"
                     Orientation="Horizontal" HorizontalAlignment="Left" Width="585" Height="25" VerticalAlignment="Top">
-                    <Button Width="100" Content="Afficher tout" Click="Button_Click" Background="#FF5A5DFD" />
-
+                    <Button Width="100" Content="Afficher tout" Click="Afficher_Click" Background="#FF5A5DFD" />
+                    <Button Width="100" Content="Refresh" Click="Refresh_Click" Background="#FF5A5DFD" />
 
                 </StackPanel>
                 <ComboBox x:Name="cbMat" ItemsSource="{Binding LesMateriel}" Width="200" Margin="0,-1,0,0" HorizontalAlignment="Right" Height="26" VerticalAlignment="Top" SelectionChanged="cbMat_SelectionChanged">
@@ -115,7 +115,7 @@
                                 DisplayMemberBinding="{Binding Path=DateAttribut, StringFormat=D}"
                                 Header="Date d'attribution" />
                             <GridViewColumn
-                                Width="150"
+                                Width="Auto"
                                 DisplayMemberBinding="{Binding Path=Commentaire}"
                                 Header="Commentaire" />
                         </GridView>

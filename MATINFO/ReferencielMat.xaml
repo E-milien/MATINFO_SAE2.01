@@ -59,7 +59,7 @@
                     <GridViewColumn
                         Header="Nom categorie"
                         DisplayMemberBinding="{Binding Path=Nomcategorie}"
-                        Width="130"/>
+                        Width="125"/>
                 </GridView>
             </ListView.View>
         </ListView>

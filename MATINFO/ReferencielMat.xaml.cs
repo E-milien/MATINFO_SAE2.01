@@ -40,7 +40,7 @@ namespace MATINFO
 
         private void btSupprimer_Click(object sender, RoutedEventArgs e)
         {
-            if (dgMateriel.SelectedIndex>0)
+            if (dgMateriel.SelectedIndex>=0)
             {
                 Materiel m = (Materiel)dgMateriel.SelectedItem;
                 m.Delete();

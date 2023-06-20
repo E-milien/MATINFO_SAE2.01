@@ -89,7 +89,9 @@ namespace MATINFO
 
         public void Read()
         {
-            throw new NotImplementedException();
+            DataAccess accesBD = new DataAccess();
+            string sql = $"select * from est_attribue WHERE idpersonnel = {this.idPersonnel} AND idmateriel = {this.IdMateriel} AND dateattribution = '{this.DateAttribut.ToString("yyyy-MM-dd")}'";
+            accesBD.GetData(sql);
         }
 
         public void Update()

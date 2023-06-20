@@ -49,8 +49,11 @@ namespace MATINFO
         public void Delete()
         {
             DataAccess accesBD = new DataAccess();
-            string sql = $"DELETE FROM personnel WHERE idpersonnel = {this.Idpersonnel}";
+            string sql = $"DELETE FROM est_attribue WHERE idpersonnel = {this.Idpersonnel}";
             accesBD.GetData(sql);
+            sql = $"DELETE FROM personnel WHERE idpersonnel = {this.Idpersonnel}";
+            accesBD.GetData(sql);
+            
         }
 
         public ObservableCollection<Personnel> FindAll()

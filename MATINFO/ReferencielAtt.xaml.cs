@@ -37,7 +37,7 @@ namespace MATINFO
 
         private void btSupprimer_Click(object sender, RoutedEventArgs e)
         {
-            if (dgAttribution.SelectedIndex > 0)
+            if (dgAttribution.SelectedIndex >= 0)
             {
                 Attribution a = (Attribution)dgAttribution.SelectedItem;
                 a.Delete();

@@ -60,7 +60,7 @@ namespace MATINFO
             attribution.ShowDialog();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Afficher_Click(object sender, RoutedEventArgs e)
         {
             cbMat.SelectedItem = null;
             lvAttribution.ItemsSource = gestionAttribution.LesAttribution;
@@ -76,6 +76,11 @@ namespace MATINFO
                 ObservableCollection<Attribution> filteredAttributions = gestionAttribution.Filtre(selectedMateriel);
                 lvAttribution.ItemsSource = filteredAttributions;
             }
+        }
+
+        private void Refresh_Click(object sender, RoutedEventArgs e)
+        {
+            gestionAttribution.Refresh();
         }
     }
 }

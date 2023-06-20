@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Data;
@@ -40,7 +41,11 @@ namespace MATINFO
         public void Delete()
         {
             DataAccess accesBD = new DataAccess();
-            string sql = $"DELETE FROM categorie_materiel WHERE idcategorie = {this.Idcategorie}";
+            //string sql = $"DELETE FROM est_attribue JOIN materiel ON est_attribue.idmateriel = materiel.idmateriel WHERE materiel.idcategorie = {this.Idcategorie};";
+            //accesBD.GetData(sql);
+            string sql = $"DELETE FROM materiel WHERE idcategorie = {this.Idcategorie}";
+            accesBD.GetData(sql);
+            sql = $"DELETE FROM categorie_materiel WHERE idcategorie = {this.Idcategorie}";
             accesBD.GetData(sql);
         }
 

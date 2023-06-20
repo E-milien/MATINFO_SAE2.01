@@ -36,7 +36,7 @@ namespace MATINFO
 
         private void btSupprimer_Click(object sender, RoutedEventArgs e)
         {
-            if (dgPersonnel.SelectedIndex > 0)
+            if (dgPersonnel.SelectedIndex >= 0)
             {
                 Personnel p = (Personnel)dgPersonnel.SelectedItem;
                 p.Delete();

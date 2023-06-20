@@ -52,7 +52,7 @@ namespace MATINFO
 
         private void btOK_Click(object sender, RoutedEventArgs e)
         {
-            if (listeCategorie.Count > 0)
+            if (listeCategorie.Count >= 0)
             {
                 foreach (Categorie cat in listeCategorie)
                 {
