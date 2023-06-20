@@ -46,9 +46,10 @@ namespace MATINFO
                 Personnel p = (Personnel)dgPersonnel.SelectedItem;
                 foreach(Attribution att in gestionAttribution.LesAttribution)
                 {
-                    txt += att.UnMateriel.Nommateriel+ " ";
+                    if(p.Idpersonnel == att.IdPersonnel)
+                        txt += att.UnMateriel.Nommateriel+ " ";
                 }
-                if (MessageBox.Show($"Est vous sur de supprimer {p.Prenompersonnel} {p.Nompersonnel} ? \n Cela va supprimer les attribution avec les materiel : {txt} ", "Attention", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                if (MessageBox.Show($"Est vous sur de supprimer {p.Prenompersonnel} {p.Nompersonnel} ? \nCela va supprimer les attribution avec les materiel : {txt} ", "Attention", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                 { 
                     p.Delete();
                     gestionAttribution.Remove(p);

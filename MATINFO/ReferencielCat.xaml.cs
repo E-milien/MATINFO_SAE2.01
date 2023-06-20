@@ -42,10 +42,27 @@ namespace MATINFO
         {
             if (dgCategorie.SelectedIndex >= 0)
             {
-                string txt = "";
+                string txtMat = "";
+                string txtAtt = "";
                 Categorie c = (Categorie)dgCategorie.SelectedItem;
+                foreach(Materiel mat in gestionAttribution.LesMateriel)
+                {
+                    if (c.Idcategorie == mat.IdCategorie)
+                    {
+                        txtMat += mat.Nommateriel + " ";
+                        foreach(Attribution att in gestionAttribution.LesAttribution)
+                        {
+                            if(mat.Idmateriel==att.IdMateriel)
+                            {
+                                txtAtt += att.UnPersonnel.Nompersonnel + " ";
+                            }
 
-                if (MessageBox.Show($"Est vous sur de supprimer {c.Nomcategorie} ?", "Attention", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                        }
+                    }
+                }
+
+                if (MessageBox.Show($"Est vous sur de supprimer {c.Nomcategorie} ? \nCela va supprimer les materiels : {txtMat}. " +
+                    $"\nEt les attribution : {txtAtt}.", "Attention", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                 {
                     c.Delete();
                     gestionAttribution.Remove(c);
