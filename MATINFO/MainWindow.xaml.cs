@@ -23,11 +23,11 @@ namespace MATINFO
     /// </summary>
     public partial class MainWindow : Window
     {
-        ReferencielMat materiel = new ReferencielMat();
-        ReferencielCat categorie = new ReferencielCat();
+        ReferencielMat materiel;
+        ReferencielCat categorie;
         ReferencielPer personnel;
 
-        ReferencielAtt attribution = new ReferencielAtt();
+        ReferencielAtt attribution;
 
         private void MainWindow_Closed(object sender, EventArgs e)
         {
@@ -36,8 +36,10 @@ namespace MATINFO
         public MainWindow()
         {
             InitializeComponent();
-
+            materiel = new ReferencielMat(gestionAttribution);
+            categorie = new ReferencielCat(gestionAttribution);
             personnel = new ReferencielPer(gestionAttribution);
+            attribution = new ReferencielAtt(gestionAttribution);
         }
 
 

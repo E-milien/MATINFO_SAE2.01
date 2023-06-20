@@ -35,7 +35,6 @@ namespace MATINFO
             InitializeComponent();
 
             gestionAttribution = gestion;
-
             DataContext = this;
         }
 

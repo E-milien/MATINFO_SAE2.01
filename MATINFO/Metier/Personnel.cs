@@ -41,9 +41,14 @@ namespace MATINFO
 
         public void Create()
         {
+            int id = 0;
             DataAccess accesBD = new DataAccess();
             string sql = $"insert into personnel (idpersonnel, emailpersonnel, nompersonnel, prenompersonnel) values (nextval('personnel_idpersonnel_seq'::regclass), '{this.Emailpersonnel}', '{this.Nompersonnel}', '{this.Prenompersonnel}')";
             accesBD.GetData(sql);
+            String requete = $"select idpersonnel from personnel where emailpersonnel = '{this.Emailpersonnel}' and nompersonnel = '{this.Nompersonnel}' and prenompersonnel = '{this.Prenompersonnel}';";
+            DataTable datas = accesBD.GetData(requete);
+            DataRow row = datas.Rows[0];
+            this.Idpersonnel = int.Parse(row["idpersonnel"].ToString());
         }
 
         public void Delete()

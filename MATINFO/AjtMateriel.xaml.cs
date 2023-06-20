@@ -50,7 +50,6 @@ namespace MATINFO
                 gestionAttribution.LesMateriel.Insert(0, m);
             }
             await Task.Delay(1000);
-            gestionAttribution.Refresh();
             Hide();
         }
     }

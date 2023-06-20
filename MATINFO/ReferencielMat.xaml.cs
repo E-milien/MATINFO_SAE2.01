@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Media.Media3D;
 using System.Windows.Shapes;
+using static System.Collections.Specialized.BitVector32;
 
 namespace MATINFO
 {
@@ -21,9 +22,8 @@ namespace MATINFO
     /// </summary>
     public partial class ReferencielMat : Window
     {
-        private 
-
-        AjtMateriel ajouter = new AjtMateriel();
+        AjtMateriel ajouter;
+        public GestionAttribution gestionAttribution { get; set; }
 
         private void Modale_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
@@ -34,10 +34,13 @@ namespace MATINFO
             e.Cancel = true;
             this.Hide();
         }
-        public ReferencielMat()
+        public ReferencielMat(GestionAttribution gestion)
         {
             InitializeComponent();
+            ajouter = new AjtMateriel(gestionAttribution);
             dgMateriel.ItemsSource = null;
+            gestionAttribution = gestion;
+            DataContext = this;
         }
 
         private void btSupprimer_Click(object sender, RoutedEventArgs e)

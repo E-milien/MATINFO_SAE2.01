@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using static System.Collections.Specialized.BitVector32;
 
 namespace MATINFO
 {
@@ -20,6 +21,7 @@ namespace MATINFO
     public partial class ReferencielCat : Window
     {
         List<Categorie> listeCategorie = new List<Categorie>();
+        public GestionAttribution gestionAttribution { get; set; }
         private void Modale_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             foreach(Categorie cat in gestionAttribution.LesCategorie)
@@ -29,9 +31,11 @@ namespace MATINFO
             e.Cancel = true;
             this.Hide();
         }
-        public ReferencielCat()
+        public ReferencielCat(GestionAttribution gestion)
         {
             InitializeComponent();
+            gestionAttribution = gestion;
+            DataContext = this;
         }
 
         private void btSupprimer_Click(object sender, RoutedEventArgs e)

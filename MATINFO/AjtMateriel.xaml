@@ -12,7 +12,7 @@
             <ListView x:Name="lvCat" Width="124" ItemsSource="{Binding gestionAttribution.LesCategorie}" SelectedIndex="0" Background="#FFBAC1F9">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="Materiel" Width="50" DisplayMemberBinding="{Binding Nomcategorie}"/>
+                        <GridViewColumn Header="Categorie" Width="100" DisplayMemberBinding="{Binding Nomcategorie}"/>
                     </GridView>
                 </ListView.View>
             </ListView>

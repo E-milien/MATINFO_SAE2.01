@@ -55,7 +55,7 @@ namespace MATINFO
         {
             DataAccess accesBD = new DataAccess();
             string sql = $"insert into est_attribue (idpersonnel, idmateriel, dateattribution, commentaireattribution) values ({this.IdPersonnel}, {this.IdMateriel}, '{this.DateAttribut.ToString("yyyy-MM-dd")}', '{this.Commentaire}')";
-            DataTable datas = accesBD.GetData(sql);
+            accesBD.GetData(sql);
         }
 
         public void Delete()

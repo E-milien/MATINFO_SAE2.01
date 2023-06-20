@@ -64,7 +64,11 @@ namespace MATINFO
         {
             DataAccess accesBD = new DataAccess();
             string sql = $"insert into materiel (idmateriel, idcategorie, nommateriel, referenceconstructeurmateriel, codebarreinventaire) values (nextval('materiel_idmateriel_seq'::regclass), {this.idCategorie}, '{this.Nommateriel}', '{this.Referencemateriel}', '{this.Codebarre}')";
-            DataTable datas = accesBD.GetData(sql);
+            accesBD.GetData(sql);
+            String requete = $"select idmateriel from materiel where nommateriel = '{this.Nommateriel}' and referenceconstructeurmateriel = '{this.Referencemateriel}' and codebarreinventaire = '{this.Codebarre}';";
+            DataTable datas = accesBD.GetData(requete);
+            DataRow row = datas.Rows[0];
+            this.Idmateriel = int.Parse(row["idmateriel"].ToString());
         }
 
         public void Delete()

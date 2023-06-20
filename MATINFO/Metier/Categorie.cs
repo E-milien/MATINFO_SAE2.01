@@ -35,7 +35,11 @@ namespace MATINFO
         {
             DataAccess accesBD = new DataAccess();
             string sql = $"insert into categorie_materiel (idcategorie, nomcategorie) values (nextval('categorie_materiel_idcategorie_seq'::regclass), '{this.Nomcategorie}')";
-            DataTable datas = accesBD.GetData(sql);
+            accesBD.GetData(sql);
+            String requete = $"select idcategorie from categorie_materiel where nomcategorie = '{this.Nomcategorie}';";
+            DataTable datas = accesBD.GetData(requete);
+            DataRow row = datas.Rows[0];
+            this.Idcategorie = int.Parse(row["idcategorie"].ToString());
         }
 
         public void Delete()
