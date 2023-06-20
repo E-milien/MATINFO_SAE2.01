@@ -37,10 +37,10 @@ namespace MATINFO
         public ReferencielMat(GestionAttribution gestion)
         {
             InitializeComponent();
-            ajouter = new AjtMateriel(gestionAttribution);
             dgMateriel.ItemsSource = null;
             gestionAttribution = gestion;
             DataContext = this;
+            ajouter = new AjtMateriel(gestionAttribution);
         }
 
         private void btSupprimer_Click(object sender, RoutedEventArgs e)

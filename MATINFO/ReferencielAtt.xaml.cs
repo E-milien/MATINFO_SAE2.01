@@ -35,9 +35,9 @@ namespace MATINFO
         public ReferencielAtt(GestionAttribution gestion)
         {
             InitializeComponent();
-            ajouter = new AjtAttribution(gestionAttribution);
             gestionAttribution = gestion;
             DataContext = this;
+            ajouter = new AjtAttribution(gestionAttribution);
         }
 
         private void btSupprimer_Click(object sender, RoutedEventArgs e)

@@ -9,7 +9,7 @@
         Closing="Modale_Closing" ResizeMode="NoResize">
     <Grid>
         <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
-            <ListView x:Name="lvCat" Width="124" ItemsSource="{Binding gestionAttribution.LesCategorie}" SelectedIndex="0" Background="#FFBAC1F9">
+            <ListView x:Name="lvCat" Width="124" ItemsSource="{Binding Path=gestionAttribution.LesCategorie}" SelectedIndex="0" Background="#FFBAC1F9">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="Categorie" Width="100" DisplayMemberBinding="{Binding Nomcategorie}"/>

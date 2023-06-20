@@ -30,6 +30,7 @@ namespace MATINFO
         {
             InitializeComponent();
             dpDate.SelectedDate = DateTime.Now;
+            tbCom.Text = "";
             gestionAttribution = gestion;
             DataContext = this;
         }

@@ -55,7 +55,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <DataGrid x:Name="dgAttribution" ItemsSource="{Binding Path=LesAttribution}" Margin="10,10,10,62" Grid.Row="1" AutoGenerateColumns="False" SelectedIndex="0" CanUserAddRows="False" Background="#FFBAC1F7">
+        <DataGrid x:Name="dgAttribution" ItemsSource="{Binding Path=gestionAttribution.LesAttribution}" Margin="10,10,10,62" Grid.Row="1" AutoGenerateColumns="False" SelectedIndex="0" CanUserAddRows="False" Background="#FFBAC1F7">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID Materiel" Binding="{Binding Path=IdMateriel}" IsReadOnly="True"/>
                 <DataGridTextColumn Header="ID Personnel" Binding="{Binding Path=IdPersonnel}" IsReadOnly="True"/>

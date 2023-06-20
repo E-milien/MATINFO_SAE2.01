@@ -80,10 +80,5 @@ namespace MATINFO
                 lvAttribution.ItemsSource = filteredAttributions;
             }
         }
-
-        private void Refresh_Click(object sender, RoutedEventArgs e)
-        {
-            gestionAttribution.Refresh();
-        }
     }
 }
