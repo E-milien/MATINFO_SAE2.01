@@ -33,7 +33,6 @@ namespace MATINFO
         public ReferencielPer(GestionAttribution gestion)
         {
             InitializeComponent();
-
             gestionAttribution = gestion;
             DataContext = this;
         }
